@@ -1,67 +1,78 @@
-# =================================================================
-# Vivado Project Specific Gitignore
-# =================================================================
+# ========================================
+# Vivado Project .gitignore
+# ========================================
 
-# Vivado generated directories (temporary/build files)
+# Vivado generated directories - IGNORE these
 *.cache/
 *.gen/
 *.hw/
 *.sim/
 *.runs/
 *.ip_user_files/
-
-# Vivado temporary directories
 .Xil/
-*.tmp/
 
-# Vivado log and journal files
+# Vivado log and temporary files - IGNORE
 *.log
 *.jou
 *.debug
 *.str
-
-# Vivado report files (can be regenerated)
 *.rpt
-
-# Vivado backup files
+*.tmp
 *.backup.*
 *.bak
+hs_err_pid*.log
+.lock
 
-# Implementation checkpoint files (large, can be regenerated)
-*.dcp
-
-# Bitstream files (large, can be regenerated)
+# Vivado build outputs - IGNORE (can be regenerated)
 *.bit
 *.bin
 *.mcs
 *.prm
-
-# Memory files
+*.dcp
 *.mem
 *.coe
 
-# Crash dump files
-hs_err_pid*.log
-
-# Vivado lock files
-.lock
-
-# Simulation files
+# Simulation files - IGNORE
 *.wdb
 *.wcfg
 
-# Keep these important files and directories
-!*.xpr           # Project file
-!*.xdc           # Constraint files  
-!*.tcl           # Scripts
-!scripts/        # Scripts directory
-!src/            # Source files directory
-!constraints/    # Constraints directory
-!hardware/       # Hardware export directory
-!docs/           # Documentation
-!README.md       # Documentation
-!*.v             # Verilog files
-!*.vhd           # VHDL files
-!*.sv            # SystemVerilog files
-!*.xsa           # Hardware export files
+# ========================================
+# KEEP these important files - DO NOT IGNORE
+# ========================================
 
+# Project files - KEEP
+!*.xpr
+
+# Source files - KEEP
+!*.v
+!*.vhd  
+!*.sv
+!*.vhdl
+
+# Constraint files - KEEP
+!*.xdc
+!*.sdc
+
+# Script files - KEEP
+!*.tcl
+
+# Block design files - KEEP  
+!*.bd
+
+# IP core files - KEEP
+!*.xci
+
+# Hardware export - KEEP
+!*.xsa
+
+# Documentation - KEEP
+!*.md
+!*.txt
+!*.rst
+
+# Make sure to keep these directories
+!src/
+!scripts/
+!hardware/
+!constraints/
+!docs/
