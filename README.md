@@ -2,7 +2,7 @@
 
 [![Xilinx Vivado](https://img.shields.io/badge/Xilinx-Vivado%202022.2-red.svg)](https://www.xilinx.com/products/design-tools/vivado.html)
 
-**A comprehensive implementation of the optimized Split-Radix FFT algorithm with novel parallel prefix adder, achieving 23% power reduction and 450 MHz operation on FPGA**
+**implementation of the optimized Split-Radix FFT algorithm
 
 ## Overview
 
