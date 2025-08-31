@@ -1,31 +1,149 @@
-# Vitis HLS build directories and artifacts
-.build/
-.ipcache/
-.log/
-.metadata/
-_synthesis/
-_x/
-vitis_hls.log
-vivado.log
-vitis_hls.jou
+# =================================================================
+# Git Ignore for Hardware-Accelerated Split-Radix FFT Algorithm
+# =================================================================
 
-# Vitis Unified IDE build output (exclude for source control)
-*/build-vitis/
-*/.vitis/
-*.xsa
+# ========================
+# Vivado Project Files
+# ========================
 
-# Vivado project files
-*.xpr
-*.xpr.html
-*.xpr.old
-*.xpr.locked
-*.cache
+# Vivado generated directories
+*.cache/
+*.gen/
+*.hw/
+*.sim/
+*.runs/
+*.ip_user_files/
 
-# Standard ignores
-*.jou
+# Vivado log files
 *.log
+*.jou
+*.debug
 *.str
-*.tgz
-*.tar
-*.zip
+*.rpt
+*.dcp
+
+# Vivado backup files
+*.backup.*
+*.bak
+
+# Vivado temporary files
+.Xil/
+*.tmp
+*.temp
+
+# Implementation results
+*.bit
+*.bin
+*.mcs
+*.prm
+
+# Synthesis checkpoint files
+*.dcp
+
+# Vivado crash dumps
+hs_err_pid*.log
+
+# ========================
+# HLS Project Files  
+# ========================
+
+# HLS generated directories
+*/solution*/
+*/.autopilot/
+*/hls_logs/
+
+# HLS log files
+vivado_hls.log
+vitis_hls.log
+
+# HLS temporary files
+*.tcl.bak
+
+# ========================
+# Build and Output Files
+# ========================
+
+# Object files
+*.o
+*.obj
+*.elf
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Libraries
+*.lib
+*.a
+
+# ========================
+# System Files
+# ========================
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Linux
+*~
+*.swp
+*.swo
+
+# Windows
+*.tmp
+*.temp
+*.bak
+
+# ========================
+# IDE Files
+# ========================
+
+# Vitis/Eclipse workspace
+.metadata/
+.recommenders/
+RemoteSystemsTempFiles/
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# ========================
+# Documentation
+# ========================
+
+# Generated documentation
+docs/build/
+docs/_build/
+
+# ========================
+# Keep Important Files
+# ========================
+
+# DO keep these files (override ignore patterns)
+!*.xpr
+!*.xdc
+!*.tcl
+!*.cpp
+!*.c
+!*.h
+!*.hpp
+!*.v
+!*.vhd
+!*.sv
+!*.xsa
+!README.md
+!LICENSE
+
+# Keep important directories
+!scripts/
+!hardware/
+!src/
+!constraints/
+!docs/
 

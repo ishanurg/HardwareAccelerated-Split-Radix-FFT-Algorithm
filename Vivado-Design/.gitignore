@@ -1,0 +1,67 @@
+# =================================================================
+# Vivado Project Specific Gitignore
+# =================================================================
+
+# Vivado generated directories (temporary/build files)
+*.cache/
+*.gen/
+*.hw/
+*.sim/
+*.runs/
+*.ip_user_files/
+
+# Vivado temporary directories
+.Xil/
+*.tmp/
+
+# Vivado log and journal files
+*.log
+*.jou
+*.debug
+*.str
+
+# Vivado report files (can be regenerated)
+*.rpt
+
+# Vivado backup files
+*.backup.*
+*.bak
+
+# Implementation checkpoint files (large, can be regenerated)
+*.dcp
+
+# Bitstream files (large, can be regenerated)
+*.bit
+*.bin
+*.mcs
+*.prm
+
+# Memory files
+*.mem
+*.coe
+
+# Crash dump files
+hs_err_pid*.log
+
+# Vivado lock files
+.lock
+
+# Simulation files
+*.wdb
+*.wcfg
+
+# Keep these important files and directories
+!*.xpr           # Project file
+!*.xdc           # Constraint files  
+!*.tcl           # Scripts
+!scripts/        # Scripts directory
+!src/            # Source files directory
+!constraints/    # Constraints directory
+!hardware/       # Hardware export directory
+!docs/           # Documentation
+!README.md       # Documentation
+!*.v             # Verilog files
+!*.vhd           # VHDL files
+!*.sv            # SystemVerilog files
+!*.xsa           # Hardware export files
+
