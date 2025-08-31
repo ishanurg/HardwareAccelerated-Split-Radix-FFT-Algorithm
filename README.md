@@ -130,40 +130,7 @@ Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for gui
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## Project Structure
 
-split-radix-fft-fpga/
-├── README.md
-├── LICENSE
-├── requirements.txt
-├── python/
-│ ├── split_radix_fft.py # Main implementation
-│ └── performance_test.py # Benchmarking tools
-├── hls/
-│ ├── src/
-│ │ ├── split_radix_fft.cpp # HLS source
-│ │ └── split_radix_fft.h # Headers
-│ ├── testbench/
-│ │ └── tb_split_radix.cpp # HLS testbench
-│ └── scripts/
-│ ├── create_project.tcl # Project creation
-│ └── run_synthesis.tcl # Synthesis script
-├── vivado/
-│ ├── scripts/
-│ │ └── create_project.tcl # Block design creation
-│ └── constraints/
-│ └── timing.xdc # Timing constraints
-├── notebooks/
-│ ├── split_radix_analysis.ipynb # Main analysis
-│ └── performance_comparison.ipynb
-├── docs/
-│ └── Gilan_Maham_2024.pdf # Reference paper
-└── images/
-├── block_diagram.png
-├── performance_chart.png
-└── results_table.png
-
-text
 
 
 
