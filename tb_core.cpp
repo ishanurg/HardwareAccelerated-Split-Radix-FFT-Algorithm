@@ -1,4 +1,4 @@
-// Minimal testbench for sr_fft core with complex exponential input
+
 
 #include <iostream>
 #include <cmath>
