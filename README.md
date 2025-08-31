@@ -2,7 +2,7 @@
 
 [![Xilinx Vivado](https://img.shields.io/badge/Xilinx-Vivado%202022.2-red.svg)](https://www.xilinx.com/products/design-tools/vivado.html)
 
-**implementation of the optimized Split-Radix FFT algorithm
+
 
 ## Overview
 
