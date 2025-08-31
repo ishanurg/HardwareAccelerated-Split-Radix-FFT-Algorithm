@@ -1,0 +1,169 @@
+
+
+================================================================
+== Vitis HLS Report for 'fft_32pt_Pipeline_VITIS_LOOP_120_1'
+================================================================
+* Date:           Sun Aug 31 16:41:45 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        radixfft
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.232 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_120_1  |        4|        4|         2|          1|          1|     4|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.23>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%i_4 = alloca i32 1"   --->   Operation 5 'alloca' 'i_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (1.58ns)   --->   "%store_ln0 = store i3 0, i3 %i_4"   --->   Operation 6 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body.i"   --->   Operation 7 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%i = load i3 %i_4" [radixfft/core.cpp:122]   --->   Operation 8 'load' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (1.13ns)   --->   "%icmp_ln120 = icmp_eq  i3 %i, i3 4" [radixfft/core.cpp:120]   --->   Operation 9 'icmp' 'icmp_ln120' <Predicate = true> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 4, i64 4, i64 4"   --->   Operation 10 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.65ns)   --->   "%add_ln120 = add i3 %i, i3 1" [radixfft/core.cpp:120]   --->   Operation 11 'add' 'add_ln120' <Predicate = true> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln120 = br i1 %icmp_ln120, void %for.body.i.split, void %for.cond.cleanup.i.exitStub" [radixfft/core.cpp:120]   --->   Operation 12 'br' 'br_ln120' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%trunc_ln122 = trunc i3 %i" [radixfft/core.cpp:122]   --->   Operation 13 'trunc' 'trunc_ln122' <Predicate = (!icmp_ln120)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%shl_ln3 = bitconcatenate i2 @_ssdm_op_BitConcatenate.i2.i1.i1, i1 %trunc_ln122, i1 0" [radixfft/core.cpp:122]   --->   Operation 14 'bitconcatenate' 'shl_ln3' <Predicate = (!icmp_ln120)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i3.i32, i3 %i, i32 1" [radixfft/core.cpp:122]   --->   Operation 15 'bitselect' 'tmp' <Predicate = (!icmp_ln120)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln122_1 = zext i2 %shl_ln3" [radixfft/core.cpp:122]   --->   Operation 16 'zext' 'zext_ln122_1' <Predicate = (!icmp_ln120)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%o1_in_real_V_addr = getelementptr i32 %o1_in_real_V, i64 0, i64 %zext_ln122_1" [radixfft/core.cpp:122]   --->   Operation 17 'getelementptr' 'o1_in_real_V_addr' <Predicate = (!icmp_ln120)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%o1_in_real_V_4_addr = getelementptr i32 %o1_in_real_V_4, i64 0, i64 %zext_ln122_1" [radixfft/core.cpp:122]   --->   Operation 18 'getelementptr' 'o1_in_real_V_4_addr' <Predicate = (!icmp_ln120)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%o1_in_imag_V_addr = getelementptr i32 %o1_in_imag_V, i64 0, i64 %zext_ln122_1" [radixfft/core.cpp:122]   --->   Operation 19 'getelementptr' 'o1_in_imag_V_addr' <Predicate = (!icmp_ln120)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%o1_in_imag_V_4_addr = getelementptr i32 %o1_in_imag_V_4, i64 0, i64 %zext_ln122_1" [radixfft/core.cpp:122]   --->   Operation 20 'getelementptr' 'o1_in_imag_V_4_addr' <Predicate = (!icmp_ln120)> <Delay = 0.00>
+ST_1 : Operation 21 [2/2] (2.32ns)   --->   "%o1_in_real_V_load = load i2 %o1_in_real_V_addr" [radixfft/core.cpp:122]   --->   Operation 21 'load' 'o1_in_real_V_load' <Predicate = (!icmp_ln120)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_1 : Operation 22 [2/2] (2.32ns)   --->   "%o1_in_real_V_4_load = load i2 %o1_in_real_V_4_addr" [radixfft/core.cpp:122]   --->   Operation 22 'load' 'o1_in_real_V_4_load' <Predicate = (!icmp_ln120)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_1 : Operation 23 [2/2] (2.32ns)   --->   "%o1_in_imag_V_load = load i2 %o1_in_imag_V_addr" [radixfft/core.cpp:122]   --->   Operation 23 'load' 'o1_in_imag_V_load' <Predicate = (!icmp_ln120)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_1 : Operation 24 [2/2] (2.32ns)   --->   "%o1_in_imag_V_4_load = load i2 %o1_in_imag_V_4_addr" [radixfft/core.cpp:122]   --->   Operation 24 'load' 'o1_in_imag_V_4_load' <Predicate = (!icmp_ln120)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%br_ln122 = br i1 %trunc_ln122, void %arrayidx11.i.1.case.0, void %arrayidx11.i.1.case.1" [radixfft/core.cpp:122]   --->   Operation 25 'br' 'br_ln122' <Predicate = (!icmp_ln120)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (1.58ns)   --->   "%store_ln120 = store i3 %add_ln120, i3 %i_4" [radixfft/core.cpp:120]   --->   Operation 26 'store' 'store_ln120' <Predicate = (!icmp_ln120)> <Delay = 1.58>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln120 = br void %for.body.i" [radixfft/core.cpp:120]   --->   Operation 27 'br' 'br_ln120' <Predicate = (!icmp_ln120)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 47 'ret' 'ret_ln0' <Predicate = (icmp_ln120)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 6.23>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%specpipeline_ln121 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty" [radixfft/core.cpp:121]   --->   Operation 28 'specpipeline' 'specpipeline_ln121' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%specloopname_ln120 = specloopname void @_ssdm_op_SpecLoopName, void @empty_21" [radixfft/core.cpp:120]   --->   Operation 29 'specloopname' 'specloopname_ln120' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%zext_ln122 = zext i1 %tmp" [radixfft/core.cpp:122]   --->   Operation 30 'zext' 'zext_ln122' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%e_in_real_V_9_addr = getelementptr i32 %e_in_real_V_9, i64 0, i64 %zext_ln122" [radixfft/core.cpp:122]   --->   Operation 31 'getelementptr' 'e_in_real_V_9_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%e_in_real_V_10_addr = getelementptr i32 %e_in_real_V_10, i64 0, i64 %zext_ln122" [radixfft/core.cpp:122]   --->   Operation 32 'getelementptr' 'e_in_real_V_10_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%e_in_imag_V_9_addr = getelementptr i32 %e_in_imag_V_9, i64 0, i64 %zext_ln122" [radixfft/core.cpp:122]   --->   Operation 33 'getelementptr' 'e_in_imag_V_9_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%e_in_imag_V_10_addr = getelementptr i32 %e_in_imag_V_10, i64 0, i64 %zext_ln122" [radixfft/core.cpp:122]   --->   Operation 34 'getelementptr' 'e_in_imag_V_10_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/2] (2.32ns)   --->   "%o1_in_real_V_load = load i2 %o1_in_real_V_addr" [radixfft/core.cpp:122]   --->   Operation 35 'load' 'o1_in_real_V_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 36 [1/2] (2.32ns)   --->   "%o1_in_real_V_4_load = load i2 %o1_in_real_V_4_addr" [radixfft/core.cpp:122]   --->   Operation 36 'load' 'o1_in_real_V_4_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 37 [1/1] (1.58ns)   --->   "%tmp_s = mux i32 @_ssdm_op_Mux.ap_auto.2i32.i1, i32 %o1_in_real_V_load, i32 %o1_in_real_V_4_load, i1 %tmp" [radixfft/core.cpp:122]   --->   Operation 37 'mux' 'tmp_s' <Predicate = true> <Delay = 1.58> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 38 [1/2] (2.32ns)   --->   "%o1_in_imag_V_load = load i2 %o1_in_imag_V_addr" [radixfft/core.cpp:122]   --->   Operation 38 'load' 'o1_in_imag_V_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 39 [1/2] (2.32ns)   --->   "%o1_in_imag_V_4_load = load i2 %o1_in_imag_V_4_addr" [radixfft/core.cpp:122]   --->   Operation 39 'load' 'o1_in_imag_V_4_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 40 [1/1] (1.58ns)   --->   "%tmp_9 = mux i32 @_ssdm_op_Mux.ap_auto.2i32.i1, i32 %o1_in_imag_V_load, i32 %o1_in_imag_V_4_load, i1 %tmp" [radixfft/core.cpp:122]   --->   Operation 40 'mux' 'tmp_9' <Predicate = true> <Delay = 1.58> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 41 [1/1] (2.32ns)   --->   "%store_ln122 = store i32 %tmp_s, i1 %e_in_real_V_9_addr" [radixfft/core.cpp:122]   --->   Operation 41 'store' 'store_ln122' <Predicate = (!trunc_ln122)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 42 [1/1] (2.32ns)   --->   "%store_ln122 = store i32 %tmp_9, i1 %e_in_imag_V_9_addr" [radixfft/core.cpp:122]   --->   Operation 42 'store' 'store_ln122' <Predicate = (!trunc_ln122)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%br_ln122 = br void %arrayidx11.i.1.exit" [radixfft/core.cpp:122]   --->   Operation 43 'br' 'br_ln122' <Predicate = (!trunc_ln122)> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (2.32ns)   --->   "%store_ln122 = store i32 %tmp_s, i1 %e_in_real_V_10_addr" [radixfft/core.cpp:122]   --->   Operation 44 'store' 'store_ln122' <Predicate = (trunc_ln122)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 45 [1/1] (2.32ns)   --->   "%store_ln122 = store i32 %tmp_9, i1 %e_in_imag_V_10_addr" [radixfft/core.cpp:122]   --->   Operation 45 'store' 'store_ln122' <Predicate = (trunc_ln122)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%br_ln122 = br void %arrayidx11.i.1.exit" [radixfft/core.cpp:122]   --->   Operation 46 'br' 'br_ln122' <Predicate = (trunc_ln122)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.24ns
+The critical path consists of the following:
+	'alloca' operation ('i') [9]  (0 ns)
+	'load' operation ('i', radixfft/core.cpp:122) on local variable 'i' [13]  (0 ns)
+	'add' operation ('add_ln120', radixfft/core.cpp:120) [16]  (1.65 ns)
+	'store' operation ('store_ln120', radixfft/core.cpp:120) of variable 'add_ln120', radixfft/core.cpp:120 on local variable 'i' [50]  (1.59 ns)
+
+ <State 2>: 6.23ns
+The critical path consists of the following:
+	'load' operation ('o1_in_real_V_load', radixfft/core.cpp:122) on array 'o1_in_real_V' [34]  (2.32 ns)
+	'mux' operation ('tmp_s', radixfft/core.cpp:122) [36]  (1.59 ns)
+	'store' operation ('store_ln122', radixfft/core.cpp:122) of variable 'tmp_s', radixfft/core.cpp:122 on array 'e_in_real_V_9' [42]  (2.32 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,656 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'fft_64pt'" level="0">
+<item name = "Date">Sun Aug 31 16:41:51 2025
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">radixfft</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.196 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">362, 362, 3.620 us, 3.620 us, 362, 362, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_fft_64pt_Pipeline_VITIS_LOOP_265_1_fu_336">fft_64pt_Pipeline_VITIS_LOOP_265_1, 66, 66, 0.660 us, 0.660 us, 66, 66, no</column>
+<column name="grp_fft_32pt_fu_404">fft_32pt, 150, 150, 1.500 us, 1.500 us, 150, 150, no</column>
+<column name="grp_fft_64pt_Pipeline_VITIS_LOOP_271_2_fu_444">fft_64pt_Pipeline_VITIS_LOOP_271_2, 34, 34, 0.340 us, 0.340 us, 34, 34, no</column>
+<column name="grp_fft_16pt_fu_496">fft_16pt, 54, 54, 0.540 us, 0.540 us, 54, 54, no</column>
+<column name="grp_fft_16pt_fu_520">fft_16pt, 54, 54, 0.540 us, 0.540 us, 54, 54, no</column>
+<column name="grp_fft_64pt_Pipeline_VITIS_LOOP_281_3_fu_544">fft_64pt_Pipeline_VITIS_LOOP_281_3, 85, 85, 0.850 us, 0.850 us, 85, 85, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 4, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">20, 128, 35210, 28762, 0</column>
+<column name="Memory">0, -, 3072, 128, 0</column>
+<column name="Multiplexer">-, -, -, 3632, -</column>
+<column name="Register">-, -, 14, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">7, 58, 35, 61, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_fft_16pt_fu_496">fft_16pt, 4, 32, 7757, 6112, 0</column>
+<column name="grp_fft_16pt_fu_520">fft_16pt, 4, 32, 7757, 6112, 0</column>
+<column name="grp_fft_32pt_fu_404">fft_32pt, 10, 48, 17050, 14751, 0</column>
+<column name="grp_fft_64pt_Pipeline_VITIS_LOOP_265_1_fu_336">fft_64pt_Pipeline_VITIS_LOOP_265_1, 0, 0, 20, 149, 0</column>
+<column name="grp_fft_64pt_Pipeline_VITIS_LOOP_271_2_fu_444">fft_64pt_Pipeline_VITIS_LOOP_271_2, 0, 0, 20, 238, 0</column>
+<column name="grp_fft_64pt_Pipeline_VITIS_LOOP_281_3_fu_544">fft_64pt_Pipeline_VITIS_LOOP_281_3, 2, 0, 1286, 1000, 0</column>
+<column name="mul_32s_18s_48_2_1_U569">mul_32s_18s_48_2_1, 0, 2, 165, 50, 0</column>
+<column name="mul_32s_18s_48_2_1_U570">mul_32s_18s_48_2_1, 0, 2, 165, 50, 0</column>
+<column name="mul_32s_18s_48_2_1_U571">mul_32s_18s_48_2_1, 0, 2, 165, 50, 0</column>
+<column name="mul_32s_18s_48_2_1_U572">mul_32s_18s_48_2_1, 0, 2, 165, 50, 0</column>
+<column name="mul_32s_18s_48_2_1_U573">mul_32s_18s_48_2_1, 0, 2, 165, 50, 0</column>
+<column name="mul_32s_18s_48_2_1_U574">mul_32s_18s_48_2_1, 0, 2, 165, 50, 0</column>
+<column name="mul_32s_18s_48_2_1_U575">mul_32s_18s_48_2_1, 0, 2, 165, 50, 0</column>
+<column name="mul_32s_18s_48_2_1_U576">mul_32s_18s_48_2_1, 0, 2, 165, 50, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="e_in_real_V_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="e_in_real_V_1_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="e_in_real_V_2_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="e_in_real_V_3_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="e_in_real_V_4_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="e_in_real_V_5_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="e_in_real_V_6_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="e_in_real_V_7_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="e_in_imag_V_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="e_in_imag_V_1_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="e_in_imag_V_2_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="e_in_imag_V_3_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="e_in_imag_V_4_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="e_in_imag_V_5_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="e_in_imag_V_6_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="e_in_imag_V_7_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="o1_in_real_V_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="o1_in_real_V_1_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="o1_in_real_V_2_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="o1_in_real_V_3_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="o1_in_imag_V_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="o1_in_imag_V_1_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="o1_in_imag_V_2_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="o1_in_imag_V_3_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="o2_in_real_V_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="o2_in_real_V_1_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="o2_in_real_V_2_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="o2_in_real_V_3_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="o2_in_imag_V_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="o2_in_imag_V_1_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="o2_in_imag_V_2_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="o2_in_imag_V_3_U">fft_16pt_e_in_real_V_16_RAM_AUTO_1R1W, 0, 64, 2, 0, 4, 32, 1, 128</column>
+<column name="e_out_real_V_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="e_out_real_V_1_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="e_out_real_V_2_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="e_out_real_V_3_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="e_out_real_V_4_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="e_out_real_V_5_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="e_out_real_V_6_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="e_out_real_V_7_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="e_out_imag_V_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="e_out_imag_V_1_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="e_out_imag_V_2_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="e_out_imag_V_3_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="e_out_imag_V_4_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="e_out_imag_V_5_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="e_out_imag_V_6_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="e_out_imag_V_7_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="o1_out_real_V_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="o1_out_real_V_1_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="o1_out_real_V_2_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="o1_out_real_V_3_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="o1_out_imag_V_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="o1_out_imag_V_1_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="o1_out_imag_V_2_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="o1_out_imag_V_3_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="o2_out_real_V_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="o2_out_real_V_1_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="o2_out_real_V_2_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="o2_out_real_V_3_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="o2_out_imag_V_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="o2_out_imag_V_1_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="o2_out_imag_V_2_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+<column name="o2_out_imag_V_3_U">fft_64pt_e_out_real_V_RAM_AUTO_1R1W, 0, 32, 2, 0, 4, 32, 1, 128</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_block_state4_on_subcall_done">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state6_on_subcall_done">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">48, 9, 1, 9</column>
+<column name="e_in_imag_V_1_address0">14, 3, 2, 6</column>
+<column name="e_in_imag_V_1_ce0">14, 3, 1, 3</column>
+<column name="e_in_imag_V_1_ce1">9, 2, 1, 2</column>
+<column name="e_in_imag_V_1_we0">9, 2, 1, 2</column>
+<column name="e_in_imag_V_2_address0">14, 3, 2, 6</column>
+<column name="e_in_imag_V_2_ce0">14, 3, 1, 3</column>
+<column name="e_in_imag_V_2_ce1">9, 2, 1, 2</column>
+<column name="e_in_imag_V_2_we0">9, 2, 1, 2</column>
+<column name="e_in_imag_V_3_address0">14, 3, 2, 6</column>
+<column name="e_in_imag_V_3_ce0">14, 3, 1, 3</column>
+<column name="e_in_imag_V_3_ce1">9, 2, 1, 2</column>
+<column name="e_in_imag_V_3_we0">9, 2, 1, 2</column>
+<column name="e_in_imag_V_4_address0">14, 3, 2, 6</column>
+<column name="e_in_imag_V_4_ce0">14, 3, 1, 3</column>
+<column name="e_in_imag_V_4_ce1">9, 2, 1, 2</column>
+<column name="e_in_imag_V_4_we0">9, 2, 1, 2</column>
+<column name="e_in_imag_V_5_address0">14, 3, 2, 6</column>
+<column name="e_in_imag_V_5_ce0">14, 3, 1, 3</column>
+<column name="e_in_imag_V_5_ce1">9, 2, 1, 2</column>
+<column name="e_in_imag_V_5_we0">9, 2, 1, 2</column>
+<column name="e_in_imag_V_6_address0">14, 3, 2, 6</column>
+<column name="e_in_imag_V_6_ce0">14, 3, 1, 3</column>
+<column name="e_in_imag_V_6_ce1">9, 2, 1, 2</column>
+<column name="e_in_imag_V_6_we0">9, 2, 1, 2</column>
+<column name="e_in_imag_V_7_address0">14, 3, 2, 6</column>
+<column name="e_in_imag_V_7_ce0">14, 3, 1, 3</column>
+<column name="e_in_imag_V_7_ce1">9, 2, 1, 2</column>
+<column name="e_in_imag_V_7_we0">9, 2, 1, 2</column>
+<column name="e_in_imag_V_address0">14, 3, 2, 6</column>
+<column name="e_in_imag_V_ce0">14, 3, 1, 3</column>
+<column name="e_in_imag_V_ce1">9, 2, 1, 2</column>
+<column name="e_in_imag_V_we0">9, 2, 1, 2</column>
+<column name="e_in_real_V_1_address0">14, 3, 2, 6</column>
+<column name="e_in_real_V_1_ce0">14, 3, 1, 3</column>
+<column name="e_in_real_V_1_ce1">9, 2, 1, 2</column>
+<column name="e_in_real_V_1_we0">9, 2, 1, 2</column>
+<column name="e_in_real_V_2_address0">14, 3, 2, 6</column>
+<column name="e_in_real_V_2_ce0">14, 3, 1, 3</column>
+<column name="e_in_real_V_2_ce1">9, 2, 1, 2</column>
+<column name="e_in_real_V_2_we0">9, 2, 1, 2</column>
+<column name="e_in_real_V_3_address0">14, 3, 2, 6</column>
+<column name="e_in_real_V_3_ce0">14, 3, 1, 3</column>
+<column name="e_in_real_V_3_ce1">9, 2, 1, 2</column>
+<column name="e_in_real_V_3_we0">9, 2, 1, 2</column>
+<column name="e_in_real_V_4_address0">14, 3, 2, 6</column>
+<column name="e_in_real_V_4_ce0">14, 3, 1, 3</column>
+<column name="e_in_real_V_4_ce1">9, 2, 1, 2</column>
+<column name="e_in_real_V_4_we0">9, 2, 1, 2</column>
+<column name="e_in_real_V_5_address0">14, 3, 2, 6</column>
+<column name="e_in_real_V_5_ce0">14, 3, 1, 3</column>
+<column name="e_in_real_V_5_ce1">9, 2, 1, 2</column>
+<column name="e_in_real_V_5_we0">9, 2, 1, 2</column>
+<column name="e_in_real_V_6_address0">14, 3, 2, 6</column>
+<column name="e_in_real_V_6_ce0">14, 3, 1, 3</column>
+<column name="e_in_real_V_6_ce1">9, 2, 1, 2</column>
+<column name="e_in_real_V_6_we0">9, 2, 1, 2</column>
+<column name="e_in_real_V_7_address0">14, 3, 2, 6</column>
+<column name="e_in_real_V_7_ce0">14, 3, 1, 3</column>
+<column name="e_in_real_V_7_ce1">9, 2, 1, 2</column>
+<column name="e_in_real_V_7_we0">9, 2, 1, 2</column>
+<column name="e_in_real_V_address0">14, 3, 2, 6</column>
+<column name="e_in_real_V_ce0">14, 3, 1, 3</column>
+<column name="e_in_real_V_ce1">9, 2, 1, 2</column>
+<column name="e_in_real_V_we0">9, 2, 1, 2</column>
+<column name="e_out_imag_V_1_address0">14, 3, 2, 6</column>
+<column name="e_out_imag_V_1_ce0">14, 3, 1, 3</column>
+<column name="e_out_imag_V_1_we0">9, 2, 1, 2</column>
+<column name="e_out_imag_V_2_address0">14, 3, 2, 6</column>
+<column name="e_out_imag_V_2_ce0">14, 3, 1, 3</column>
+<column name="e_out_imag_V_2_we0">9, 2, 1, 2</column>
+<column name="e_out_imag_V_3_address0">14, 3, 2, 6</column>
+<column name="e_out_imag_V_3_ce0">14, 3, 1, 3</column>
+<column name="e_out_imag_V_3_we0">9, 2, 1, 2</column>
+<column name="e_out_imag_V_4_address0">14, 3, 2, 6</column>
+<column name="e_out_imag_V_4_ce0">14, 3, 1, 3</column>
+<column name="e_out_imag_V_4_we0">9, 2, 1, 2</column>
+<column name="e_out_imag_V_5_address0">14, 3, 2, 6</column>
+<column name="e_out_imag_V_5_ce0">14, 3, 1, 3</column>
+<column name="e_out_imag_V_5_we0">9, 2, 1, 2</column>
+<column name="e_out_imag_V_6_address0">14, 3, 2, 6</column>
+<column name="e_out_imag_V_6_ce0">14, 3, 1, 3</column>
+<column name="e_out_imag_V_6_we0">9, 2, 1, 2</column>
+<column name="e_out_imag_V_7_address0">14, 3, 2, 6</column>
+<column name="e_out_imag_V_7_ce0">14, 3, 1, 3</column>
+<column name="e_out_imag_V_7_we0">9, 2, 1, 2</column>
+<column name="e_out_imag_V_address0">14, 3, 2, 6</column>
+<column name="e_out_imag_V_ce0">14, 3, 1, 3</column>
+<column name="e_out_imag_V_we0">9, 2, 1, 2</column>
+<column name="e_out_real_V_1_address0">14, 3, 2, 6</column>
+<column name="e_out_real_V_1_ce0">14, 3, 1, 3</column>
+<column name="e_out_real_V_1_we0">9, 2, 1, 2</column>
+<column name="e_out_real_V_2_address0">14, 3, 2, 6</column>
+<column name="e_out_real_V_2_ce0">14, 3, 1, 3</column>
+<column name="e_out_real_V_2_we0">9, 2, 1, 2</column>
+<column name="e_out_real_V_3_address0">14, 3, 2, 6</column>
+<column name="e_out_real_V_3_ce0">14, 3, 1, 3</column>
+<column name="e_out_real_V_3_we0">9, 2, 1, 2</column>
+<column name="e_out_real_V_4_address0">14, 3, 2, 6</column>
+<column name="e_out_real_V_4_ce0">14, 3, 1, 3</column>
+<column name="e_out_real_V_4_we0">9, 2, 1, 2</column>
+<column name="e_out_real_V_5_address0">14, 3, 2, 6</column>
+<column name="e_out_real_V_5_ce0">14, 3, 1, 3</column>
+<column name="e_out_real_V_5_we0">9, 2, 1, 2</column>
+<column name="e_out_real_V_6_address0">14, 3, 2, 6</column>
+<column name="e_out_real_V_6_ce0">14, 3, 1, 3</column>
+<column name="e_out_real_V_6_we0">9, 2, 1, 2</column>
+<column name="e_out_real_V_7_address0">14, 3, 2, 6</column>
+<column name="e_out_real_V_7_ce0">14, 3, 1, 3</column>
+<column name="e_out_real_V_7_we0">9, 2, 1, 2</column>
+<column name="e_out_real_V_address0">14, 3, 2, 6</column>
+<column name="e_out_real_V_ce0">14, 3, 1, 3</column>
+<column name="e_out_real_V_we0">9, 2, 1, 2</column>
+<column name="grp_fu_616_ce">14, 3, 1, 3</column>
+<column name="grp_fu_616_p0">14, 3, 32, 96</column>
+<column name="grp_fu_616_p1">14, 3, 18, 54</column>
+<column name="grp_fu_620_ce">14, 3, 1, 3</column>
+<column name="grp_fu_620_p0">14, 3, 32, 96</column>
+<column name="grp_fu_620_p1">14, 3, 18, 54</column>
+<column name="grp_fu_624_ce">14, 3, 1, 3</column>
+<column name="grp_fu_624_p0">14, 3, 32, 96</column>
+<column name="grp_fu_624_p1">14, 3, 18, 54</column>
+<column name="grp_fu_628_ce">14, 3, 1, 3</column>
+<column name="grp_fu_628_p0">14, 3, 32, 96</column>
+<column name="grp_fu_628_p1">14, 3, 18, 54</column>
+<column name="grp_fu_632_ce">14, 3, 1, 3</column>
+<column name="grp_fu_632_p0">14, 3, 32, 96</column>
+<column name="grp_fu_632_p1">14, 3, 18, 54</column>
+<column name="grp_fu_636_ce">14, 3, 1, 3</column>
+<column name="grp_fu_636_p0">14, 3, 32, 96</column>
+<column name="grp_fu_636_p1">14, 3, 18, 54</column>
+<column name="grp_fu_640_ce">14, 3, 1, 3</column>
+<column name="grp_fu_640_p0">14, 3, 32, 96</column>
+<column name="grp_fu_640_p1">14, 3, 18, 54</column>
+<column name="grp_fu_644_ce">14, 3, 1, 3</column>
+<column name="grp_fu_644_p0">14, 3, 32, 96</column>
+<column name="grp_fu_644_p1">14, 3, 18, 54</column>
+<column name="in_imag_0_address0">14, 3, 3, 9</column>
+<column name="in_imag_0_ce0">14, 3, 1, 3</column>
+<column name="in_imag_0_ce1">9, 2, 1, 2</column>
+<column name="in_imag_1_address0">14, 3, 3, 9</column>
+<column name="in_imag_1_ce0">14, 3, 1, 3</column>
+<column name="in_imag_1_ce1">9, 2, 1, 2</column>
+<column name="in_imag_2_address0">14, 3, 3, 9</column>
+<column name="in_imag_2_ce0">14, 3, 1, 3</column>
+<column name="in_imag_2_ce1">9, 2, 1, 2</column>
+<column name="in_imag_3_address0">14, 3, 3, 9</column>
+<column name="in_imag_3_ce0">14, 3, 1, 3</column>
+<column name="in_imag_3_ce1">9, 2, 1, 2</column>
+<column name="in_imag_4_address0">14, 3, 3, 9</column>
+<column name="in_imag_4_ce0">14, 3, 1, 3</column>
+<column name="in_imag_4_ce1">9, 2, 1, 2</column>
+<column name="in_imag_5_address0">14, 3, 3, 9</column>
+<column name="in_imag_5_ce0">14, 3, 1, 3</column>
+<column name="in_imag_5_ce1">9, 2, 1, 2</column>
+<column name="in_imag_6_address0">14, 3, 3, 9</column>
+<column name="in_imag_6_ce0">14, 3, 1, 3</column>
+<column name="in_imag_6_ce1">9, 2, 1, 2</column>
+<column name="in_imag_7_address0">14, 3, 3, 9</column>
+<column name="in_imag_7_ce0">14, 3, 1, 3</column>
+<column name="in_imag_7_ce1">9, 2, 1, 2</column>
+<column name="in_real_0_address0">14, 3, 3, 9</column>
+<column name="in_real_0_ce0">14, 3, 1, 3</column>
+<column name="in_real_0_ce1">9, 2, 1, 2</column>
+<column name="in_real_1_address0">14, 3, 3, 9</column>
+<column name="in_real_1_ce0">14, 3, 1, 3</column>
+<column name="in_real_1_ce1">9, 2, 1, 2</column>
+<column name="in_real_2_address0">14, 3, 3, 9</column>
+<column name="in_real_2_ce0">14, 3, 1, 3</column>
+<column name="in_real_2_ce1">9, 2, 1, 2</column>
+<column name="in_real_3_address0">14, 3, 3, 9</column>
+<column name="in_real_3_ce0">14, 3, 1, 3</column>
+<column name="in_real_3_ce1">9, 2, 1, 2</column>
+<column name="in_real_4_address0">14, 3, 3, 9</column>
+<column name="in_real_4_ce0">14, 3, 1, 3</column>
+<column name="in_real_4_ce1">9, 2, 1, 2</column>
+<column name="in_real_5_address0">14, 3, 3, 9</column>
+<column name="in_real_5_ce0">14, 3, 1, 3</column>
+<column name="in_real_5_ce1">9, 2, 1, 2</column>
+<column name="in_real_6_address0">14, 3, 3, 9</column>
+<column name="in_real_6_ce0">14, 3, 1, 3</column>
+<column name="in_real_6_ce1">9, 2, 1, 2</column>
+<column name="in_real_7_address0">14, 3, 3, 9</column>
+<column name="in_real_7_ce0">14, 3, 1, 3</column>
+<column name="in_real_7_ce1">9, 2, 1, 2</column>
+<column name="o1_in_imag_V_1_address0">14, 3, 2, 6</column>
+<column name="o1_in_imag_V_1_ce0">14, 3, 1, 3</column>
+<column name="o1_in_imag_V_1_ce1">9, 2, 1, 2</column>
+<column name="o1_in_imag_V_1_we0">9, 2, 1, 2</column>
+<column name="o1_in_imag_V_2_address0">14, 3, 2, 6</column>
+<column name="o1_in_imag_V_2_ce0">14, 3, 1, 3</column>
+<column name="o1_in_imag_V_2_ce1">9, 2, 1, 2</column>
+<column name="o1_in_imag_V_2_we0">9, 2, 1, 2</column>
+<column name="o1_in_imag_V_3_address0">14, 3, 2, 6</column>
+<column name="o1_in_imag_V_3_ce0">14, 3, 1, 3</column>
+<column name="o1_in_imag_V_3_ce1">9, 2, 1, 2</column>
+<column name="o1_in_imag_V_3_we0">9, 2, 1, 2</column>
+<column name="o1_in_imag_V_address0">14, 3, 2, 6</column>
+<column name="o1_in_imag_V_ce0">14, 3, 1, 3</column>
+<column name="o1_in_imag_V_ce1">9, 2, 1, 2</column>
+<column name="o1_in_imag_V_we0">9, 2, 1, 2</column>
+<column name="o1_in_real_V_1_address0">14, 3, 2, 6</column>
+<column name="o1_in_real_V_1_ce0">14, 3, 1, 3</column>
+<column name="o1_in_real_V_1_ce1">9, 2, 1, 2</column>
+<column name="o1_in_real_V_1_we0">9, 2, 1, 2</column>
+<column name="o1_in_real_V_2_address0">14, 3, 2, 6</column>
+<column name="o1_in_real_V_2_ce0">14, 3, 1, 3</column>
+<column name="o1_in_real_V_2_ce1">9, 2, 1, 2</column>
+<column name="o1_in_real_V_2_we0">9, 2, 1, 2</column>
+<column name="o1_in_real_V_3_address0">14, 3, 2, 6</column>
+<column name="o1_in_real_V_3_ce0">14, 3, 1, 3</column>
+<column name="o1_in_real_V_3_ce1">9, 2, 1, 2</column>
+<column name="o1_in_real_V_3_we0">9, 2, 1, 2</column>
+<column name="o1_in_real_V_address0">14, 3, 2, 6</column>
+<column name="o1_in_real_V_ce0">14, 3, 1, 3</column>
+<column name="o1_in_real_V_ce1">9, 2, 1, 2</column>
+<column name="o1_in_real_V_we0">9, 2, 1, 2</column>
+<column name="o1_out_imag_V_1_address0">14, 3, 2, 6</column>
+<column name="o1_out_imag_V_1_ce0">14, 3, 1, 3</column>
+<column name="o1_out_imag_V_1_we0">9, 2, 1, 2</column>
+<column name="o1_out_imag_V_2_address0">14, 3, 2, 6</column>
+<column name="o1_out_imag_V_2_ce0">14, 3, 1, 3</column>
+<column name="o1_out_imag_V_2_we0">9, 2, 1, 2</column>
+<column name="o1_out_imag_V_3_address0">14, 3, 2, 6</column>
+<column name="o1_out_imag_V_3_ce0">14, 3, 1, 3</column>
+<column name="o1_out_imag_V_3_we0">9, 2, 1, 2</column>
+<column name="o1_out_imag_V_address0">14, 3, 2, 6</column>
+<column name="o1_out_imag_V_ce0">14, 3, 1, 3</column>
+<column name="o1_out_imag_V_we0">9, 2, 1, 2</column>
+<column name="o1_out_real_V_1_address0">14, 3, 2, 6</column>
+<column name="o1_out_real_V_1_ce0">14, 3, 1, 3</column>
+<column name="o1_out_real_V_1_we0">9, 2, 1, 2</column>
+<column name="o1_out_real_V_2_address0">14, 3, 2, 6</column>
+<column name="o1_out_real_V_2_ce0">14, 3, 1, 3</column>
+<column name="o1_out_real_V_2_we0">9, 2, 1, 2</column>
+<column name="o1_out_real_V_3_address0">14, 3, 2, 6</column>
+<column name="o1_out_real_V_3_ce0">14, 3, 1, 3</column>
+<column name="o1_out_real_V_3_we0">9, 2, 1, 2</column>
+<column name="o1_out_real_V_address0">14, 3, 2, 6</column>
+<column name="o1_out_real_V_ce0">14, 3, 1, 3</column>
+<column name="o1_out_real_V_we0">9, 2, 1, 2</column>
+<column name="o2_in_imag_V_1_address0">14, 3, 2, 6</column>
+<column name="o2_in_imag_V_1_ce0">14, 3, 1, 3</column>
+<column name="o2_in_imag_V_1_ce1">9, 2, 1, 2</column>
+<column name="o2_in_imag_V_1_we0">9, 2, 1, 2</column>
+<column name="o2_in_imag_V_2_address0">14, 3, 2, 6</column>
+<column name="o2_in_imag_V_2_ce0">14, 3, 1, 3</column>
+<column name="o2_in_imag_V_2_ce1">9, 2, 1, 2</column>
+<column name="o2_in_imag_V_2_we0">9, 2, 1, 2</column>
+<column name="o2_in_imag_V_3_address0">14, 3, 2, 6</column>
+<column name="o2_in_imag_V_3_ce0">14, 3, 1, 3</column>
+<column name="o2_in_imag_V_3_ce1">9, 2, 1, 2</column>
+<column name="o2_in_imag_V_3_we0">9, 2, 1, 2</column>
+<column name="o2_in_imag_V_address0">14, 3, 2, 6</column>
+<column name="o2_in_imag_V_ce0">14, 3, 1, 3</column>
+<column name="o2_in_imag_V_ce1">9, 2, 1, 2</column>
+<column name="o2_in_imag_V_we0">9, 2, 1, 2</column>
+<column name="o2_in_real_V_1_address0">14, 3, 2, 6</column>
+<column name="o2_in_real_V_1_ce0">14, 3, 1, 3</column>
+<column name="o2_in_real_V_1_ce1">9, 2, 1, 2</column>
+<column name="o2_in_real_V_1_we0">9, 2, 1, 2</column>
+<column name="o2_in_real_V_2_address0">14, 3, 2, 6</column>
+<column name="o2_in_real_V_2_ce0">14, 3, 1, 3</column>
+<column name="o2_in_real_V_2_ce1">9, 2, 1, 2</column>
+<column name="o2_in_real_V_2_we0">9, 2, 1, 2</column>
+<column name="o2_in_real_V_3_address0">14, 3, 2, 6</column>
+<column name="o2_in_real_V_3_ce0">14, 3, 1, 3</column>
+<column name="o2_in_real_V_3_ce1">9, 2, 1, 2</column>
+<column name="o2_in_real_V_3_we0">9, 2, 1, 2</column>
+<column name="o2_in_real_V_address0">14, 3, 2, 6</column>
+<column name="o2_in_real_V_ce0">14, 3, 1, 3</column>
+<column name="o2_in_real_V_ce1">9, 2, 1, 2</column>
+<column name="o2_in_real_V_we0">9, 2, 1, 2</column>
+<column name="o2_out_imag_V_1_address0">14, 3, 2, 6</column>
+<column name="o2_out_imag_V_1_ce0">14, 3, 1, 3</column>
+<column name="o2_out_imag_V_1_we0">9, 2, 1, 2</column>
+<column name="o2_out_imag_V_2_address0">14, 3, 2, 6</column>
+<column name="o2_out_imag_V_2_ce0">14, 3, 1, 3</column>
+<column name="o2_out_imag_V_2_we0">9, 2, 1, 2</column>
+<column name="o2_out_imag_V_3_address0">14, 3, 2, 6</column>
+<column name="o2_out_imag_V_3_ce0">14, 3, 1, 3</column>
+<column name="o2_out_imag_V_3_we0">9, 2, 1, 2</column>
+<column name="o2_out_imag_V_address0">14, 3, 2, 6</column>
+<column name="o2_out_imag_V_ce0">14, 3, 1, 3</column>
+<column name="o2_out_imag_V_we0">9, 2, 1, 2</column>
+<column name="o2_out_real_V_1_address0">14, 3, 2, 6</column>
+<column name="o2_out_real_V_1_ce0">14, 3, 1, 3</column>
+<column name="o2_out_real_V_1_we0">9, 2, 1, 2</column>
+<column name="o2_out_real_V_2_address0">14, 3, 2, 6</column>
+<column name="o2_out_real_V_2_ce0">14, 3, 1, 3</column>
+<column name="o2_out_real_V_2_we0">9, 2, 1, 2</column>
+<column name="o2_out_real_V_3_address0">14, 3, 2, 6</column>
+<column name="o2_out_real_V_3_ce0">14, 3, 1, 3</column>
+<column name="o2_out_real_V_3_we0">9, 2, 1, 2</column>
+<column name="o2_out_real_V_address0">14, 3, 2, 6</column>
+<column name="o2_out_real_V_ce0">14, 3, 1, 3</column>
+<column name="o2_out_real_V_we0">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">8, 0, 8, 0</column>
+<column name="grp_fft_16pt_fu_496_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_fft_16pt_fu_520_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_fft_32pt_fu_404_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_fft_64pt_Pipeline_VITIS_LOOP_265_1_fu_336_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_fft_64pt_Pipeline_VITIS_LOOP_271_2_fu_444_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_fft_64pt_Pipeline_VITIS_LOOP_281_3_fu_544_ap_start_reg">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, fft_64pt, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, fft_64pt, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, fft_64pt, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, fft_64pt, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, fft_64pt, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, fft_64pt, return value</column>
+<column name="in_real_0_address0">out, 3, ap_memory, in_real_0, array</column>
+<column name="in_real_0_ce0">out, 1, ap_memory, in_real_0, array</column>
+<column name="in_real_0_q0">in, 32, ap_memory, in_real_0, array</column>
+<column name="in_real_0_address1">out, 3, ap_memory, in_real_0, array</column>
+<column name="in_real_0_ce1">out, 1, ap_memory, in_real_0, array</column>
+<column name="in_real_0_q1">in, 32, ap_memory, in_real_0, array</column>
+<column name="in_real_1_address0">out, 3, ap_memory, in_real_1, array</column>
+<column name="in_real_1_ce0">out, 1, ap_memory, in_real_1, array</column>
+<column name="in_real_1_q0">in, 32, ap_memory, in_real_1, array</column>
+<column name="in_real_1_address1">out, 3, ap_memory, in_real_1, array</column>
+<column name="in_real_1_ce1">out, 1, ap_memory, in_real_1, array</column>
+<column name="in_real_1_q1">in, 32, ap_memory, in_real_1, array</column>
+<column name="in_real_2_address0">out, 3, ap_memory, in_real_2, array</column>
+<column name="in_real_2_ce0">out, 1, ap_memory, in_real_2, array</column>
+<column name="in_real_2_q0">in, 32, ap_memory, in_real_2, array</column>
+<column name="in_real_2_address1">out, 3, ap_memory, in_real_2, array</column>
+<column name="in_real_2_ce1">out, 1, ap_memory, in_real_2, array</column>
+<column name="in_real_2_q1">in, 32, ap_memory, in_real_2, array</column>
+<column name="in_real_3_address0">out, 3, ap_memory, in_real_3, array</column>
+<column name="in_real_3_ce0">out, 1, ap_memory, in_real_3, array</column>
+<column name="in_real_3_q0">in, 32, ap_memory, in_real_3, array</column>
+<column name="in_real_3_address1">out, 3, ap_memory, in_real_3, array</column>
+<column name="in_real_3_ce1">out, 1, ap_memory, in_real_3, array</column>
+<column name="in_real_3_q1">in, 32, ap_memory, in_real_3, array</column>
+<column name="in_real_4_address0">out, 3, ap_memory, in_real_4, array</column>
+<column name="in_real_4_ce0">out, 1, ap_memory, in_real_4, array</column>
+<column name="in_real_4_q0">in, 32, ap_memory, in_real_4, array</column>
+<column name="in_real_4_address1">out, 3, ap_memory, in_real_4, array</column>
+<column name="in_real_4_ce1">out, 1, ap_memory, in_real_4, array</column>
+<column name="in_real_4_q1">in, 32, ap_memory, in_real_4, array</column>
+<column name="in_real_5_address0">out, 3, ap_memory, in_real_5, array</column>
+<column name="in_real_5_ce0">out, 1, ap_memory, in_real_5, array</column>
+<column name="in_real_5_q0">in, 32, ap_memory, in_real_5, array</column>
+<column name="in_real_5_address1">out, 3, ap_memory, in_real_5, array</column>
+<column name="in_real_5_ce1">out, 1, ap_memory, in_real_5, array</column>
+<column name="in_real_5_q1">in, 32, ap_memory, in_real_5, array</column>
+<column name="in_real_6_address0">out, 3, ap_memory, in_real_6, array</column>
+<column name="in_real_6_ce0">out, 1, ap_memory, in_real_6, array</column>
+<column name="in_real_6_q0">in, 32, ap_memory, in_real_6, array</column>
+<column name="in_real_6_address1">out, 3, ap_memory, in_real_6, array</column>
+<column name="in_real_6_ce1">out, 1, ap_memory, in_real_6, array</column>
+<column name="in_real_6_q1">in, 32, ap_memory, in_real_6, array</column>
+<column name="in_real_7_address0">out, 3, ap_memory, in_real_7, array</column>
+<column name="in_real_7_ce0">out, 1, ap_memory, in_real_7, array</column>
+<column name="in_real_7_q0">in, 32, ap_memory, in_real_7, array</column>
+<column name="in_real_7_address1">out, 3, ap_memory, in_real_7, array</column>
+<column name="in_real_7_ce1">out, 1, ap_memory, in_real_7, array</column>
+<column name="in_real_7_q1">in, 32, ap_memory, in_real_7, array</column>
+<column name="in_imag_0_address0">out, 3, ap_memory, in_imag_0, array</column>
+<column name="in_imag_0_ce0">out, 1, ap_memory, in_imag_0, array</column>
+<column name="in_imag_0_q0">in, 32, ap_memory, in_imag_0, array</column>
+<column name="in_imag_0_address1">out, 3, ap_memory, in_imag_0, array</column>
+<column name="in_imag_0_ce1">out, 1, ap_memory, in_imag_0, array</column>
+<column name="in_imag_0_q1">in, 32, ap_memory, in_imag_0, array</column>
+<column name="in_imag_1_address0">out, 3, ap_memory, in_imag_1, array</column>
+<column name="in_imag_1_ce0">out, 1, ap_memory, in_imag_1, array</column>
+<column name="in_imag_1_q0">in, 32, ap_memory, in_imag_1, array</column>
+<column name="in_imag_1_address1">out, 3, ap_memory, in_imag_1, array</column>
+<column name="in_imag_1_ce1">out, 1, ap_memory, in_imag_1, array</column>
+<column name="in_imag_1_q1">in, 32, ap_memory, in_imag_1, array</column>
+<column name="in_imag_2_address0">out, 3, ap_memory, in_imag_2, array</column>
+<column name="in_imag_2_ce0">out, 1, ap_memory, in_imag_2, array</column>
+<column name="in_imag_2_q0">in, 32, ap_memory, in_imag_2, array</column>
+<column name="in_imag_2_address1">out, 3, ap_memory, in_imag_2, array</column>
+<column name="in_imag_2_ce1">out, 1, ap_memory, in_imag_2, array</column>
+<column name="in_imag_2_q1">in, 32, ap_memory, in_imag_2, array</column>
+<column name="in_imag_3_address0">out, 3, ap_memory, in_imag_3, array</column>
+<column name="in_imag_3_ce0">out, 1, ap_memory, in_imag_3, array</column>
+<column name="in_imag_3_q0">in, 32, ap_memory, in_imag_3, array</column>
+<column name="in_imag_3_address1">out, 3, ap_memory, in_imag_3, array</column>
+<column name="in_imag_3_ce1">out, 1, ap_memory, in_imag_3, array</column>
+<column name="in_imag_3_q1">in, 32, ap_memory, in_imag_3, array</column>
+<column name="in_imag_4_address0">out, 3, ap_memory, in_imag_4, array</column>
+<column name="in_imag_4_ce0">out, 1, ap_memory, in_imag_4, array</column>
+<column name="in_imag_4_q0">in, 32, ap_memory, in_imag_4, array</column>
+<column name="in_imag_4_address1">out, 3, ap_memory, in_imag_4, array</column>
+<column name="in_imag_4_ce1">out, 1, ap_memory, in_imag_4, array</column>
+<column name="in_imag_4_q1">in, 32, ap_memory, in_imag_4, array</column>
+<column name="in_imag_5_address0">out, 3, ap_memory, in_imag_5, array</column>
+<column name="in_imag_5_ce0">out, 1, ap_memory, in_imag_5, array</column>
+<column name="in_imag_5_q0">in, 32, ap_memory, in_imag_5, array</column>
+<column name="in_imag_5_address1">out, 3, ap_memory, in_imag_5, array</column>
+<column name="in_imag_5_ce1">out, 1, ap_memory, in_imag_5, array</column>
+<column name="in_imag_5_q1">in, 32, ap_memory, in_imag_5, array</column>
+<column name="in_imag_6_address0">out, 3, ap_memory, in_imag_6, array</column>
+<column name="in_imag_6_ce0">out, 1, ap_memory, in_imag_6, array</column>
+<column name="in_imag_6_q0">in, 32, ap_memory, in_imag_6, array</column>
+<column name="in_imag_6_address1">out, 3, ap_memory, in_imag_6, array</column>
+<column name="in_imag_6_ce1">out, 1, ap_memory, in_imag_6, array</column>
+<column name="in_imag_6_q1">in, 32, ap_memory, in_imag_6, array</column>
+<column name="in_imag_7_address0">out, 3, ap_memory, in_imag_7, array</column>
+<column name="in_imag_7_ce0">out, 1, ap_memory, in_imag_7, array</column>
+<column name="in_imag_7_q0">in, 32, ap_memory, in_imag_7, array</column>
+<column name="in_imag_7_address1">out, 3, ap_memory, in_imag_7, array</column>
+<column name="in_imag_7_ce1">out, 1, ap_memory, in_imag_7, array</column>
+<column name="in_imag_7_q1">in, 32, ap_memory, in_imag_7, array</column>
+<column name="out_real_0_address0">out, 3, ap_memory, out_real_0, array</column>
+<column name="out_real_0_ce0">out, 1, ap_memory, out_real_0, array</column>
+<column name="out_real_0_we0">out, 1, ap_memory, out_real_0, array</column>
+<column name="out_real_0_d0">out, 32, ap_memory, out_real_0, array</column>
+<column name="out_real_1_address0">out, 3, ap_memory, out_real_1, array</column>
+<column name="out_real_1_ce0">out, 1, ap_memory, out_real_1, array</column>
+<column name="out_real_1_we0">out, 1, ap_memory, out_real_1, array</column>
+<column name="out_real_1_d0">out, 32, ap_memory, out_real_1, array</column>
+<column name="out_real_2_address0">out, 3, ap_memory, out_real_2, array</column>
+<column name="out_real_2_ce0">out, 1, ap_memory, out_real_2, array</column>
+<column name="out_real_2_we0">out, 1, ap_memory, out_real_2, array</column>
+<column name="out_real_2_d0">out, 32, ap_memory, out_real_2, array</column>
+<column name="out_real_3_address0">out, 3, ap_memory, out_real_3, array</column>
+<column name="out_real_3_ce0">out, 1, ap_memory, out_real_3, array</column>
+<column name="out_real_3_we0">out, 1, ap_memory, out_real_3, array</column>
+<column name="out_real_3_d0">out, 32, ap_memory, out_real_3, array</column>
+<column name="out_real_4_address0">out, 3, ap_memory, out_real_4, array</column>
+<column name="out_real_4_ce0">out, 1, ap_memory, out_real_4, array</column>
+<column name="out_real_4_we0">out, 1, ap_memory, out_real_4, array</column>
+<column name="out_real_4_d0">out, 32, ap_memory, out_real_4, array</column>
+<column name="out_real_5_address0">out, 3, ap_memory, out_real_5, array</column>
+<column name="out_real_5_ce0">out, 1, ap_memory, out_real_5, array</column>
+<column name="out_real_5_we0">out, 1, ap_memory, out_real_5, array</column>
+<column name="out_real_5_d0">out, 32, ap_memory, out_real_5, array</column>
+<column name="out_real_6_address0">out, 3, ap_memory, out_real_6, array</column>
+<column name="out_real_6_ce0">out, 1, ap_memory, out_real_6, array</column>
+<column name="out_real_6_we0">out, 1, ap_memory, out_real_6, array</column>
+<column name="out_real_6_d0">out, 32, ap_memory, out_real_6, array</column>
+<column name="out_real_7_address0">out, 3, ap_memory, out_real_7, array</column>
+<column name="out_real_7_ce0">out, 1, ap_memory, out_real_7, array</column>
+<column name="out_real_7_we0">out, 1, ap_memory, out_real_7, array</column>
+<column name="out_real_7_d0">out, 32, ap_memory, out_real_7, array</column>
+<column name="out_imag_0_address0">out, 3, ap_memory, out_imag_0, array</column>
+<column name="out_imag_0_ce0">out, 1, ap_memory, out_imag_0, array</column>
+<column name="out_imag_0_we0">out, 1, ap_memory, out_imag_0, array</column>
+<column name="out_imag_0_d0">out, 32, ap_memory, out_imag_0, array</column>
+<column name="out_imag_1_address0">out, 3, ap_memory, out_imag_1, array</column>
+<column name="out_imag_1_ce0">out, 1, ap_memory, out_imag_1, array</column>
+<column name="out_imag_1_we0">out, 1, ap_memory, out_imag_1, array</column>
+<column name="out_imag_1_d0">out, 32, ap_memory, out_imag_1, array</column>
+<column name="out_imag_2_address0">out, 3, ap_memory, out_imag_2, array</column>
+<column name="out_imag_2_ce0">out, 1, ap_memory, out_imag_2, array</column>
+<column name="out_imag_2_we0">out, 1, ap_memory, out_imag_2, array</column>
+<column name="out_imag_2_d0">out, 32, ap_memory, out_imag_2, array</column>
+<column name="out_imag_3_address0">out, 3, ap_memory, out_imag_3, array</column>
+<column name="out_imag_3_ce0">out, 1, ap_memory, out_imag_3, array</column>
+<column name="out_imag_3_we0">out, 1, ap_memory, out_imag_3, array</column>
+<column name="out_imag_3_d0">out, 32, ap_memory, out_imag_3, array</column>
+<column name="out_imag_4_address0">out, 3, ap_memory, out_imag_4, array</column>
+<column name="out_imag_4_ce0">out, 1, ap_memory, out_imag_4, array</column>
+<column name="out_imag_4_we0">out, 1, ap_memory, out_imag_4, array</column>
+<column name="out_imag_4_d0">out, 32, ap_memory, out_imag_4, array</column>
+<column name="out_imag_5_address0">out, 3, ap_memory, out_imag_5, array</column>
+<column name="out_imag_5_ce0">out, 1, ap_memory, out_imag_5, array</column>
+<column name="out_imag_5_we0">out, 1, ap_memory, out_imag_5, array</column>
+<column name="out_imag_5_d0">out, 32, ap_memory, out_imag_5, array</column>
+<column name="out_imag_6_address0">out, 3, ap_memory, out_imag_6, array</column>
+<column name="out_imag_6_ce0">out, 1, ap_memory, out_imag_6, array</column>
+<column name="out_imag_6_we0">out, 1, ap_memory, out_imag_6, array</column>
+<column name="out_imag_6_d0">out, 32, ap_memory, out_imag_6, array</column>
+<column name="out_imag_7_address0">out, 3, ap_memory, out_imag_7, array</column>
+<column name="out_imag_7_ce0">out, 1, ap_memory, out_imag_7, array</column>
+<column name="out_imag_7_we0">out, 1, ap_memory, out_imag_7, array</column>
+<column name="out_imag_7_d0">out, 32, ap_memory, out_imag_7, array</column>
+</table>
+</item>
+</section>
+</profile>

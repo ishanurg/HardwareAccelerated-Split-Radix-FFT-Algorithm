@@ -1,0 +1,224 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'sr_fft_Pipeline_VITIS_LOOP_322_1'" level="0">
+<item name = "Date">Sun Aug 31 16:41:49 2025
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">radixfft</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.948 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">130, 130, 1.300 us, 1.300 us, 130, 130, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_322_1">128, 128, 2, 2, 2, 64, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 25, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 0, 84, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 41, -</column>
+<column name="Register">-, -, 68, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="mux_83_32_1_1_U1">mux_83_32_1_1, 0, 0, 0, 42, 0</column>
+<column name="mux_83_32_1_1_U2">mux_83_32_1_1, 0, 0, 0, 42, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln322_fu_430_p2">+, 0, 0, 14, 7, 1</column>
+<column name="icmp_ln322_fu_424_p2">icmp, 0, 0, 11, 7, 8</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">14, 3, 1, 3</column>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_sig_allocacmp_i_2">9, 2, 7, 14</column>
+<column name="i_fu_116">9, 2, 7, 14</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln322_reg_662">7, 0, 7, 0</column>
+<column name="ap_CS_fsm">2, 0, 2, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="i_fu_116">7, 0, 7, 0</column>
+<column name="trunc_ln1_reg_747">3, 0, 3, 0</column>
+<column name="x_imag_V_1_addr_reg_712">3, 0, 3, 0</column>
+<column name="x_imag_V_2_addr_reg_717">3, 0, 3, 0</column>
+<column name="x_imag_V_3_addr_reg_722">3, 0, 3, 0</column>
+<column name="x_imag_V_4_addr_reg_727">3, 0, 3, 0</column>
+<column name="x_imag_V_5_addr_reg_732">3, 0, 3, 0</column>
+<column name="x_imag_V_6_addr_reg_737">3, 0, 3, 0</column>
+<column name="x_imag_V_7_addr_reg_742">3, 0, 3, 0</column>
+<column name="x_imag_V_addr_reg_707">3, 0, 3, 0</column>
+<column name="x_real_V_1_addr_reg_672">3, 0, 3, 0</column>
+<column name="x_real_V_2_addr_reg_677">3, 0, 3, 0</column>
+<column name="x_real_V_3_addr_reg_682">3, 0, 3, 0</column>
+<column name="x_real_V_4_addr_reg_687">3, 0, 3, 0</column>
+<column name="x_real_V_5_addr_reg_692">3, 0, 3, 0</column>
+<column name="x_real_V_6_addr_reg_697">3, 0, 3, 0</column>
+<column name="x_real_V_7_addr_reg_702">3, 0, 3, 0</column>
+<column name="x_real_V_addr_reg_667">3, 0, 3, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, sr_fft_Pipeline_VITIS_LOOP_322_1, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, sr_fft_Pipeline_VITIS_LOOP_322_1, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, sr_fft_Pipeline_VITIS_LOOP_322_1, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, sr_fft_Pipeline_VITIS_LOOP_322_1, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, sr_fft_Pipeline_VITIS_LOOP_322_1, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, sr_fft_Pipeline_VITIS_LOOP_322_1, return value</column>
+<column name="x_imag_V_7_address0">out, 3, ap_memory, x_imag_V_7, array</column>
+<column name="x_imag_V_7_ce0">out, 1, ap_memory, x_imag_V_7, array</column>
+<column name="x_imag_V_7_we0">out, 1, ap_memory, x_imag_V_7, array</column>
+<column name="x_imag_V_7_d0">out, 32, ap_memory, x_imag_V_7, array</column>
+<column name="x_imag_V_6_address0">out, 3, ap_memory, x_imag_V_6, array</column>
+<column name="x_imag_V_6_ce0">out, 1, ap_memory, x_imag_V_6, array</column>
+<column name="x_imag_V_6_we0">out, 1, ap_memory, x_imag_V_6, array</column>
+<column name="x_imag_V_6_d0">out, 32, ap_memory, x_imag_V_6, array</column>
+<column name="x_imag_V_5_address0">out, 3, ap_memory, x_imag_V_5, array</column>
+<column name="x_imag_V_5_ce0">out, 1, ap_memory, x_imag_V_5, array</column>
+<column name="x_imag_V_5_we0">out, 1, ap_memory, x_imag_V_5, array</column>
+<column name="x_imag_V_5_d0">out, 32, ap_memory, x_imag_V_5, array</column>
+<column name="x_imag_V_4_address0">out, 3, ap_memory, x_imag_V_4, array</column>
+<column name="x_imag_V_4_ce0">out, 1, ap_memory, x_imag_V_4, array</column>
+<column name="x_imag_V_4_we0">out, 1, ap_memory, x_imag_V_4, array</column>
+<column name="x_imag_V_4_d0">out, 32, ap_memory, x_imag_V_4, array</column>
+<column name="x_imag_V_3_address0">out, 3, ap_memory, x_imag_V_3, array</column>
+<column name="x_imag_V_3_ce0">out, 1, ap_memory, x_imag_V_3, array</column>
+<column name="x_imag_V_3_we0">out, 1, ap_memory, x_imag_V_3, array</column>
+<column name="x_imag_V_3_d0">out, 32, ap_memory, x_imag_V_3, array</column>
+<column name="x_imag_V_2_address0">out, 3, ap_memory, x_imag_V_2, array</column>
+<column name="x_imag_V_2_ce0">out, 1, ap_memory, x_imag_V_2, array</column>
+<column name="x_imag_V_2_we0">out, 1, ap_memory, x_imag_V_2, array</column>
+<column name="x_imag_V_2_d0">out, 32, ap_memory, x_imag_V_2, array</column>
+<column name="x_imag_V_1_address0">out, 3, ap_memory, x_imag_V_1, array</column>
+<column name="x_imag_V_1_ce0">out, 1, ap_memory, x_imag_V_1, array</column>
+<column name="x_imag_V_1_we0">out, 1, ap_memory, x_imag_V_1, array</column>
+<column name="x_imag_V_1_d0">out, 32, ap_memory, x_imag_V_1, array</column>
+<column name="x_imag_V_address0">out, 3, ap_memory, x_imag_V, array</column>
+<column name="x_imag_V_ce0">out, 1, ap_memory, x_imag_V, array</column>
+<column name="x_imag_V_we0">out, 1, ap_memory, x_imag_V, array</column>
+<column name="x_imag_V_d0">out, 32, ap_memory, x_imag_V, array</column>
+<column name="x_real_V_7_address0">out, 3, ap_memory, x_real_V_7, array</column>
+<column name="x_real_V_7_ce0">out, 1, ap_memory, x_real_V_7, array</column>
+<column name="x_real_V_7_we0">out, 1, ap_memory, x_real_V_7, array</column>
+<column name="x_real_V_7_d0">out, 32, ap_memory, x_real_V_7, array</column>
+<column name="x_real_V_6_address0">out, 3, ap_memory, x_real_V_6, array</column>
+<column name="x_real_V_6_ce0">out, 1, ap_memory, x_real_V_6, array</column>
+<column name="x_real_V_6_we0">out, 1, ap_memory, x_real_V_6, array</column>
+<column name="x_real_V_6_d0">out, 32, ap_memory, x_real_V_6, array</column>
+<column name="x_real_V_5_address0">out, 3, ap_memory, x_real_V_5, array</column>
+<column name="x_real_V_5_ce0">out, 1, ap_memory, x_real_V_5, array</column>
+<column name="x_real_V_5_we0">out, 1, ap_memory, x_real_V_5, array</column>
+<column name="x_real_V_5_d0">out, 32, ap_memory, x_real_V_5, array</column>
+<column name="x_real_V_4_address0">out, 3, ap_memory, x_real_V_4, array</column>
+<column name="x_real_V_4_ce0">out, 1, ap_memory, x_real_V_4, array</column>
+<column name="x_real_V_4_we0">out, 1, ap_memory, x_real_V_4, array</column>
+<column name="x_real_V_4_d0">out, 32, ap_memory, x_real_V_4, array</column>
+<column name="x_real_V_3_address0">out, 3, ap_memory, x_real_V_3, array</column>
+<column name="x_real_V_3_ce0">out, 1, ap_memory, x_real_V_3, array</column>
+<column name="x_real_V_3_we0">out, 1, ap_memory, x_real_V_3, array</column>
+<column name="x_real_V_3_d0">out, 32, ap_memory, x_real_V_3, array</column>
+<column name="x_real_V_2_address0">out, 3, ap_memory, x_real_V_2, array</column>
+<column name="x_real_V_2_ce0">out, 1, ap_memory, x_real_V_2, array</column>
+<column name="x_real_V_2_we0">out, 1, ap_memory, x_real_V_2, array</column>
+<column name="x_real_V_2_d0">out, 32, ap_memory, x_real_V_2, array</column>
+<column name="x_real_V_1_address0">out, 3, ap_memory, x_real_V_1, array</column>
+<column name="x_real_V_1_ce0">out, 1, ap_memory, x_real_V_1, array</column>
+<column name="x_real_V_1_we0">out, 1, ap_memory, x_real_V_1, array</column>
+<column name="x_real_V_1_d0">out, 32, ap_memory, x_real_V_1, array</column>
+<column name="x_real_V_address0">out, 3, ap_memory, x_real_V, array</column>
+<column name="x_real_V_ce0">out, 1, ap_memory, x_real_V, array</column>
+<column name="x_real_V_we0">out, 1, ap_memory, x_real_V, array</column>
+<column name="x_real_V_d0">out, 32, ap_memory, x_real_V, array</column>
+<column name="input_0_address0">out, 3, ap_memory, input_0, array</column>
+<column name="input_0_ce0">out, 1, ap_memory, input_0, array</column>
+<column name="input_0_q0">in, 64, ap_memory, input_0, array</column>
+<column name="input_1_address0">out, 3, ap_memory, input_1, array</column>
+<column name="input_1_ce0">out, 1, ap_memory, input_1, array</column>
+<column name="input_1_q0">in, 64, ap_memory, input_1, array</column>
+<column name="input_2_address0">out, 3, ap_memory, input_2, array</column>
+<column name="input_2_ce0">out, 1, ap_memory, input_2, array</column>
+<column name="input_2_q0">in, 64, ap_memory, input_2, array</column>
+<column name="input_3_address0">out, 3, ap_memory, input_3, array</column>
+<column name="input_3_ce0">out, 1, ap_memory, input_3, array</column>
+<column name="input_3_q0">in, 64, ap_memory, input_3, array</column>
+<column name="input_4_address0">out, 3, ap_memory, input_4, array</column>
+<column name="input_4_ce0">out, 1, ap_memory, input_4, array</column>
+<column name="input_4_q0">in, 64, ap_memory, input_4, array</column>
+<column name="input_5_address0">out, 3, ap_memory, input_5, array</column>
+<column name="input_5_ce0">out, 1, ap_memory, input_5, array</column>
+<column name="input_5_q0">in, 64, ap_memory, input_5, array</column>
+<column name="input_6_address0">out, 3, ap_memory, input_6, array</column>
+<column name="input_6_ce0">out, 1, ap_memory, input_6, array</column>
+<column name="input_6_q0">in, 64, ap_memory, input_6, array</column>
+<column name="input_7_address0">out, 3, ap_memory, input_7, array</column>
+<column name="input_7_ce0">out, 1, ap_memory, input_7, array</column>
+<column name="input_7_q0">in, 64, ap_memory, input_7, array</column>
+</table>
+</item>
+</section>
+</profile>

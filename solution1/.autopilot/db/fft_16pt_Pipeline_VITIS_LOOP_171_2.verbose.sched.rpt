@@ -1,0 +1,217 @@
+
+
+================================================================
+== Vitis HLS Report for 'fft_16pt_Pipeline_VITIS_LOOP_171_2'
+================================================================
+* Date:           Sun Aug 31 16:41:44 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        radixfft
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.238 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_171_2  |        4|        4|         1|          1|          1|     4|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.23>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 4 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%o1_in_real_V = alloca i32 1"   --->   Operation 5 'alloca' 'o1_in_real_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%o1_in_real_V_5 = alloca i32 1"   --->   Operation 6 'alloca' 'o1_in_real_V_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%o1_in_real_V_6 = alloca i32 1"   --->   Operation 7 'alloca' 'o1_in_real_V_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%o1_in_real_V_7 = alloca i32 1"   --->   Operation 8 'alloca' 'o1_in_real_V_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%o1_in_imag_V = alloca i32 1"   --->   Operation 9 'alloca' 'o1_in_imag_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%o1_in_imag_V_5 = alloca i32 1"   --->   Operation 10 'alloca' 'o1_in_imag_V_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%o1_in_imag_V_6 = alloca i32 1"   --->   Operation 11 'alloca' 'o1_in_imag_V_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%o1_in_imag_V_7 = alloca i32 1"   --->   Operation 12 'alloca' 'o1_in_imag_V_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%o2_in_imag_V = alloca i32 1"   --->   Operation 13 'alloca' 'o2_in_imag_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%o2_in_imag_V_5 = alloca i32 1"   --->   Operation 14 'alloca' 'o2_in_imag_V_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%o2_in_imag_V_6 = alloca i32 1"   --->   Operation 15 'alloca' 'o2_in_imag_V_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%o2_in_imag_V_7 = alloca i32 1"   --->   Operation 16 'alloca' 'o2_in_imag_V_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%o2_in_real_V = alloca i32 1"   --->   Operation 17 'alloca' 'o2_in_real_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%o2_in_real_V_5 = alloca i32 1"   --->   Operation 18 'alloca' 'o2_in_real_V_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%o2_in_real_V_6 = alloca i32 1"   --->   Operation 19 'alloca' 'o2_in_real_V_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%o2_in_real_V_7 = alloca i32 1"   --->   Operation 20 'alloca' 'o2_in_real_V_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%in_imag_3_load_8_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_imag_3_load_8"   --->   Operation 21 'read' 'in_imag_3_load_8_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%in_imag_2_load_8_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_imag_2_load_8"   --->   Operation 22 'read' 'in_imag_2_load_8_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%in_imag_1_load_8_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_imag_1_load_8"   --->   Operation 23 'read' 'in_imag_1_load_8_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%in_imag_0_load_8_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_imag_0_load_8"   --->   Operation 24 'read' 'in_imag_0_load_8_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%in_real_3_load_8_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_real_3_load_8"   --->   Operation 25 'read' 'in_real_3_load_8_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%in_real_2_load_8_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_real_2_load_8"   --->   Operation 26 'read' 'in_real_2_load_8_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%in_real_1_load_8_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_real_1_load_8"   --->   Operation 27 'read' 'in_real_1_load_8_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%in_real_0_load_8_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_real_0_load_8"   --->   Operation 28 'read' 'in_real_0_load_8_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%in_imag_3_load_9_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_imag_3_load_9"   --->   Operation 29 'read' 'in_imag_3_load_9_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%o2_in_imag_V_8_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %o2_in_imag_V_8"   --->   Operation 30 'read' 'o2_in_imag_V_8_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%in_imag_1_load_9_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_imag_1_load_9"   --->   Operation 31 'read' 'in_imag_1_load_9_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%in_imag_0_load_9_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_imag_0_load_9"   --->   Operation 32 'read' 'in_imag_0_load_9_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%in_real_0_load_9_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_real_0_load_9"   --->   Operation 33 'read' 'in_real_0_load_9_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%in_real_1_load_9_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_real_1_load_9"   --->   Operation 34 'read' 'in_real_1_load_9_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%o2_in_real_V_8_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %o2_in_real_V_8"   --->   Operation 35 'read' 'o2_in_real_V_8_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%in_real_3_load_9_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_real_3_load_9"   --->   Operation 36 'read' 'in_real_3_load_9_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (1.58ns)   --->   "%store_ln0 = store i3 0, i3 %i"   --->   Operation 37 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc57"   --->   Operation 38 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%i_6 = load i3 %i" [radixfft/core.cpp:173]   --->   Operation 39 'load' 'i_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (1.13ns)   --->   "%icmp_ln171 = icmp_eq  i3 %i_6, i3 4" [radixfft/core.cpp:171]   --->   Operation 40 'icmp' 'icmp_ln171' <Predicate = true> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 4, i64 4, i64 4"   --->   Operation 41 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (1.65ns)   --->   "%add_ln171 = add i3 %i_6, i3 1" [radixfft/core.cpp:171]   --->   Operation 42 'add' 'add_ln171' <Predicate = true> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%br_ln171 = br i1 %icmp_ln171, void %for.inc57.split, void %for.end59.exitStub" [radixfft/core.cpp:171]   --->   Operation 43 'br' 'br_ln171' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%specpipeline_ln172 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty" [radixfft/core.cpp:172]   --->   Operation 44 'specpipeline' 'specpipeline_ln172' <Predicate = (!icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%specloopname_ln154 = specloopname void @_ssdm_op_SpecLoopName, void @empty_19" [radixfft/core.cpp:154]   --->   Operation 45 'specloopname' 'specloopname_ln154' <Predicate = (!icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%trunc_ln173 = trunc i3 %i_6" [radixfft/core.cpp:173]   --->   Operation 46 'trunc' 'trunc_ln173' <Predicate = (!icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (1.82ns)   --->   "%o1_in_real_V_8 = mux i32 @_ssdm_op_Mux.ap_auto.4i32.i2, i32 %in_real_0_load_8_read, i32 %in_real_1_load_8_read, i32 %in_real_2_load_8_read, i32 %in_real_3_load_8_read, i2 %trunc_ln173" [radixfft/core.cpp:173]   --->   Operation 47 'mux' 'o1_in_real_V_8' <Predicate = (!icmp_ln171)> <Delay = 1.82> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 48 [1/1] (1.82ns)   --->   "%o1_in_imag_V_8 = mux i32 @_ssdm_op_Mux.ap_auto.4i32.i2, i32 %in_imag_0_load_8_read, i32 %in_imag_1_load_8_read, i32 %in_imag_2_load_8_read, i32 %in_imag_3_load_8_read, i2 %trunc_ln173" [radixfft/core.cpp:173]   --->   Operation 48 'mux' 'o1_in_imag_V_8' <Predicate = (!icmp_ln171)> <Delay = 1.82> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 49 [1/1] (0.95ns)   --->   "%switch_ln173 = switch i2 %trunc_ln173, void %arrayidx56.1.case.3, i2 0, void %for.inc57.split.arrayidx56.1.exit_crit_edge17, i2 1, void %arrayidx56.1.case.1, i2 2, void %for.inc57.split.arrayidx56.1.exit_crit_edge" [radixfft/core.cpp:173]   --->   Operation 49 'switch' 'switch_ln173' <Predicate = (!icmp_ln171)> <Delay = 0.95>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%store_ln173 = store i32 %o2_in_real_V_8_read, i32 %o2_in_real_V_5" [radixfft/core.cpp:173]   --->   Operation 50 'store' 'store_ln173' <Predicate = (!icmp_ln171 & trunc_ln173 == 2)> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%store_ln173 = store i32 %o2_in_imag_V_8_read, i32 %o2_in_imag_V_5" [radixfft/core.cpp:173]   --->   Operation 51 'store' 'store_ln173' <Predicate = (!icmp_ln171 & trunc_ln173 == 2)> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%store_ln173 = store i32 %o1_in_imag_V_8, i32 %o1_in_imag_V_6" [radixfft/core.cpp:173]   --->   Operation 52 'store' 'store_ln173' <Predicate = (!icmp_ln171 & trunc_ln173 == 2)> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%store_ln173 = store i32 %o1_in_real_V_8, i32 %o1_in_real_V_6" [radixfft/core.cpp:173]   --->   Operation 53 'store' 'store_ln173' <Predicate = (!icmp_ln171 & trunc_ln173 == 2)> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%br_ln173 = br void %arrayidx56.1.exit" [radixfft/core.cpp:173]   --->   Operation 54 'br' 'br_ln173' <Predicate = (!icmp_ln171 & trunc_ln173 == 2)> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%store_ln174 = store i32 %in_real_1_load_9_read, i32 %o2_in_real_V_6" [radixfft/core.cpp:174]   --->   Operation 55 'store' 'store_ln174' <Predicate = (!icmp_ln171 & trunc_ln173 == 1)> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%store_ln174 = store i32 %in_imag_1_load_9_read, i32 %o2_in_imag_V_6" [radixfft/core.cpp:174]   --->   Operation 56 'store' 'store_ln174' <Predicate = (!icmp_ln171 & trunc_ln173 == 1)> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%store_ln174 = store i32 %o1_in_imag_V_8, i32 %o1_in_imag_V_5" [radixfft/core.cpp:174]   --->   Operation 57 'store' 'store_ln174' <Predicate = (!icmp_ln171 & trunc_ln173 == 1)> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%store_ln174 = store i32 %o1_in_real_V_8, i32 %o1_in_real_V_5" [radixfft/core.cpp:174]   --->   Operation 58 'store' 'store_ln174' <Predicate = (!icmp_ln171 & trunc_ln173 == 1)> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln174 = br void %arrayidx56.1.exit" [radixfft/core.cpp:174]   --->   Operation 59 'br' 'br_ln174' <Predicate = (!icmp_ln171 & trunc_ln173 == 1)> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%store_ln173 = store i32 %in_real_0_load_9_read, i32 %o2_in_real_V_7" [radixfft/core.cpp:173]   --->   Operation 60 'store' 'store_ln173' <Predicate = (!icmp_ln171 & trunc_ln173 == 0)> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%store_ln173 = store i32 %in_imag_0_load_9_read, i32 %o2_in_imag_V_7" [radixfft/core.cpp:173]   --->   Operation 61 'store' 'store_ln173' <Predicate = (!icmp_ln171 & trunc_ln173 == 0)> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%store_ln173 = store i32 %o1_in_imag_V_8, i32 %o1_in_imag_V" [radixfft/core.cpp:173]   --->   Operation 62 'store' 'store_ln173' <Predicate = (!icmp_ln171 & trunc_ln173 == 0)> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%store_ln173 = store i32 %o1_in_real_V_8, i32 %o1_in_real_V" [radixfft/core.cpp:173]   --->   Operation 63 'store' 'store_ln173' <Predicate = (!icmp_ln171 & trunc_ln173 == 0)> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%br_ln173 = br void %arrayidx56.1.exit" [radixfft/core.cpp:173]   --->   Operation 64 'br' 'br_ln173' <Predicate = (!icmp_ln171 & trunc_ln173 == 0)> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%store_ln174 = store i32 %in_real_3_load_9_read, i32 %o2_in_real_V" [radixfft/core.cpp:174]   --->   Operation 65 'store' 'store_ln174' <Predicate = (!icmp_ln171 & trunc_ln173 == 3)> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%store_ln174 = store i32 %in_imag_3_load_9_read, i32 %o2_in_imag_V" [radixfft/core.cpp:174]   --->   Operation 66 'store' 'store_ln174' <Predicate = (!icmp_ln171 & trunc_ln173 == 3)> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%store_ln174 = store i32 %o1_in_imag_V_8, i32 %o1_in_imag_V_7" [radixfft/core.cpp:174]   --->   Operation 67 'store' 'store_ln174' <Predicate = (!icmp_ln171 & trunc_ln173 == 3)> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%store_ln174 = store i32 %o1_in_real_V_8, i32 %o1_in_real_V_7" [radixfft/core.cpp:174]   --->   Operation 68 'store' 'store_ln174' <Predicate = (!icmp_ln171 & trunc_ln173 == 3)> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%br_ln174 = br void %arrayidx56.1.exit" [radixfft/core.cpp:174]   --->   Operation 69 'br' 'br_ln174' <Predicate = (!icmp_ln171 & trunc_ln173 == 3)> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (1.58ns)   --->   "%store_ln171 = store i3 %add_ln171, i3 %i" [radixfft/core.cpp:171]   --->   Operation 70 'store' 'store_ln171' <Predicate = (!icmp_ln171)> <Delay = 1.58>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%br_ln171 = br void %for.inc57" [radixfft/core.cpp:171]   --->   Operation 71 'br' 'br_ln171' <Predicate = (!icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%o1_in_real_V_load = load i32 %o1_in_real_V"   --->   Operation 72 'load' 'o1_in_real_V_load' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%o1_in_real_V_5_load = load i32 %o1_in_real_V_5"   --->   Operation 73 'load' 'o1_in_real_V_5_load' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%o1_in_real_V_6_load = load i32 %o1_in_real_V_6"   --->   Operation 74 'load' 'o1_in_real_V_6_load' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%o1_in_real_V_7_load = load i32 %o1_in_real_V_7"   --->   Operation 75 'load' 'o1_in_real_V_7_load' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%o1_in_imag_V_load = load i32 %o1_in_imag_V"   --->   Operation 76 'load' 'o1_in_imag_V_load' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%o1_in_imag_V_5_load = load i32 %o1_in_imag_V_5"   --->   Operation 77 'load' 'o1_in_imag_V_5_load' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%o1_in_imag_V_6_load = load i32 %o1_in_imag_V_6"   --->   Operation 78 'load' 'o1_in_imag_V_6_load' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%o1_in_imag_V_7_load = load i32 %o1_in_imag_V_7"   --->   Operation 79 'load' 'o1_in_imag_V_7_load' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%o2_in_imag_V_load = load i32 %o2_in_imag_V"   --->   Operation 80 'load' 'o2_in_imag_V_load' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%o2_in_imag_V_5_load = load i32 %o2_in_imag_V_5"   --->   Operation 81 'load' 'o2_in_imag_V_5_load' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%o2_in_imag_V_6_load = load i32 %o2_in_imag_V_6"   --->   Operation 82 'load' 'o2_in_imag_V_6_load' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%o2_in_imag_V_7_load = load i32 %o2_in_imag_V_7"   --->   Operation 83 'load' 'o2_in_imag_V_7_load' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%o2_in_real_V_load = load i32 %o2_in_real_V"   --->   Operation 84 'load' 'o2_in_real_V_load' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%o2_in_real_V_5_load = load i32 %o2_in_real_V_5"   --->   Operation 85 'load' 'o2_in_real_V_5_load' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%o2_in_real_V_6_load = load i32 %o2_in_real_V_6"   --->   Operation 86 'load' 'o2_in_real_V_6_load' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%o2_in_real_V_7_load = load i32 %o2_in_real_V_7"   --->   Operation 87 'load' 'o2_in_real_V_7_load' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %o2_in_real_V_7_out, i32 %o2_in_real_V_7_load"   --->   Operation 88 'write' 'write_ln0' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %o2_in_real_V_6_out, i32 %o2_in_real_V_6_load"   --->   Operation 89 'write' 'write_ln0' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %o2_in_real_V_5_out, i32 %o2_in_real_V_5_load"   --->   Operation 90 'write' 'write_ln0' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %o2_in_real_V_out, i32 %o2_in_real_V_load"   --->   Operation 91 'write' 'write_ln0' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %o2_in_imag_V_7_out, i32 %o2_in_imag_V_7_load"   --->   Operation 92 'write' 'write_ln0' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %o2_in_imag_V_6_out, i32 %o2_in_imag_V_6_load"   --->   Operation 93 'write' 'write_ln0' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %o2_in_imag_V_5_out, i32 %o2_in_imag_V_5_load"   --->   Operation 94 'write' 'write_ln0' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %o2_in_imag_V_out, i32 %o2_in_imag_V_load"   --->   Operation 95 'write' 'write_ln0' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %o1_in_imag_V_7_out, i32 %o1_in_imag_V_7_load"   --->   Operation 96 'write' 'write_ln0' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %o1_in_imag_V_6_out, i32 %o1_in_imag_V_6_load"   --->   Operation 97 'write' 'write_ln0' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %o1_in_imag_V_5_out, i32 %o1_in_imag_V_5_load"   --->   Operation 98 'write' 'write_ln0' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %o1_in_imag_V_out, i32 %o1_in_imag_V_load"   --->   Operation 99 'write' 'write_ln0' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %o1_in_real_V_7_out, i32 %o1_in_real_V_7_load"   --->   Operation 100 'write' 'write_ln0' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %o1_in_real_V_6_out, i32 %o1_in_real_V_6_load"   --->   Operation 101 'write' 'write_ln0' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %o1_in_real_V_5_out, i32 %o1_in_real_V_5_load"   --->   Operation 102 'write' 'write_ln0' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %o1_in_real_V_out, i32 %o1_in_real_V_load"   --->   Operation 103 'write' 'write_ln0' <Predicate = (icmp_ln171)> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 104 'ret' 'ret_ln0' <Predicate = (icmp_ln171)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.24ns
+The critical path consists of the following:
+	'alloca' operation ('i') [33]  (0 ns)
+	'load' operation ('i', radixfft/core.cpp:173) on local variable 'i' [69]  (0 ns)
+	'add' operation ('add_ln171', radixfft/core.cpp:171) [72]  (1.65 ns)
+	'store' operation ('store_ln171', radixfft/core.cpp:171) of variable 'add_ln171', radixfft/core.cpp:171 on local variable 'i' [106]  (1.59 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

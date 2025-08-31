@@ -1,0 +1,23 @@
+<dict>
+  <key>main-file</key>
+  <string>/home/ishan/tools/Vitis_HLS/2022.2/bin/radixfft/solution1/.autopilot/db/core.pp.0.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>radixfft/core.cpp</string>
+      <key>line</key>
+      <integer>314</integer>
+      <key>column</key>
+      <integer>34</integer>
+      <key>message</key>
+      <string>unexpected pragma argument &apos;mul&apos;, expects function/operation</string>
+      <key>ID</key>
+      <integer>5555</integer>
+      <key>WarningOption</key>
+      <string>invalid-hls-pragmas</string>
+    </dict>
+  </array>
+</dict>

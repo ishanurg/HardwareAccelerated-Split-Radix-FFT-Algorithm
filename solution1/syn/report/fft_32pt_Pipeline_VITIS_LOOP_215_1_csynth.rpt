@@ -1,0 +1,224 @@
+
+
+================================================================
+== Vitis HLS Report for 'fft_32pt_Pipeline_VITIS_LOOP_215_1'
+================================================================
+* Date:           Sun Aug 31 16:41:49 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        radixfft
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.948 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       18|       18|  0.180 us|  0.180 us|   18|   18|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_215_1  |       16|       16|         2|          1|          1|    16|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     25|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       0|     84|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     36|    -|
+|Register         |        -|    -|      15|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      15|    145|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------+---------------+---------+----+---+----+-----+
+    |      Instance     |     Module    | BRAM_18K| DSP| FF| LUT| URAM|
+    +-------------------+---------------+---------+----+---+----+-----+
+    |mux_83_32_1_1_U62  |mux_83_32_1_1  |        0|   0|  0|  42|    0|
+    |mux_83_32_1_1_U63  |mux_83_32_1_1  |        0|   0|  0|  42|    0|
+    +-------------------+---------------+---------+----+---+----+-----+
+    |Total              |               |        0|   0|  0|  84|    0|
+    +-------------------+---------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln215_fu_422_p2   |         +|   0|  0|  13|           5|           1|
+    |icmp_ln215_fu_416_p2  |      icmp|   0|  0|  10|           5|           6|
+    |ap_enable_pp0         |       xor|   0|  0|   2|           1|           2|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  25|          11|           9|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_4     |   9|          2|    5|         10|
+    |i_fu_92                  |   9|          2|    5|         10|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  36|          8|   12|         24|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+---+----+-----+-----------+
+    |           Name          | FF| LUT| Bits| Const Bits|
+    +-------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                |  1|   0|    1|          0|
+    |ap_done_reg              |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |  1|   0|    1|          0|
+    |i_4_reg_558              |  5|   0|    5|          0|
+    |i_fu_92                  |  5|   0|    5|          0|
+    |trunc_ln217_1_reg_647    |  2|   0|    2|          0|
+    +-------------------------+---+----+-----+-----------+
+    |Total                    | 15|   0|   15|          0|
+    +-------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+------------------------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |            Source Object           |    C Type    |
++-------------------------+-----+-----+------------+------------------------------------+--------------+
+|ap_clk                   |   in|    1|  ap_ctrl_hs|  fft_32pt_Pipeline_VITIS_LOOP_215_1|  return value|
+|ap_rst                   |   in|    1|  ap_ctrl_hs|  fft_32pt_Pipeline_VITIS_LOOP_215_1|  return value|
+|ap_start                 |   in|    1|  ap_ctrl_hs|  fft_32pt_Pipeline_VITIS_LOOP_215_1|  return value|
+|ap_done                  |  out|    1|  ap_ctrl_hs|  fft_32pt_Pipeline_VITIS_LOOP_215_1|  return value|
+|ap_idle                  |  out|    1|  ap_ctrl_hs|  fft_32pt_Pipeline_VITIS_LOOP_215_1|  return value|
+|ap_ready                 |  out|    1|  ap_ctrl_hs|  fft_32pt_Pipeline_VITIS_LOOP_215_1|  return value|
+|e_in_imag_V_14_address0  |  out|    2|   ap_memory|                      e_in_imag_V_14|         array|
+|e_in_imag_V_14_ce0       |  out|    1|   ap_memory|                      e_in_imag_V_14|         array|
+|e_in_imag_V_14_we0       |  out|    1|   ap_memory|                      e_in_imag_V_14|         array|
+|e_in_imag_V_14_d0        |  out|   32|   ap_memory|                      e_in_imag_V_14|         array|
+|e_in_imag_V_13_address0  |  out|    2|   ap_memory|                      e_in_imag_V_13|         array|
+|e_in_imag_V_13_ce0       |  out|    1|   ap_memory|                      e_in_imag_V_13|         array|
+|e_in_imag_V_13_we0       |  out|    1|   ap_memory|                      e_in_imag_V_13|         array|
+|e_in_imag_V_13_d0        |  out|   32|   ap_memory|                      e_in_imag_V_13|         array|
+|e_in_imag_V_12_address0  |  out|    2|   ap_memory|                      e_in_imag_V_12|         array|
+|e_in_imag_V_12_ce0       |  out|    1|   ap_memory|                      e_in_imag_V_12|         array|
+|e_in_imag_V_12_we0       |  out|    1|   ap_memory|                      e_in_imag_V_12|         array|
+|e_in_imag_V_12_d0        |  out|   32|   ap_memory|                      e_in_imag_V_12|         array|
+|e_in_imag_V_11_address0  |  out|    2|   ap_memory|                      e_in_imag_V_11|         array|
+|e_in_imag_V_11_ce0       |  out|    1|   ap_memory|                      e_in_imag_V_11|         array|
+|e_in_imag_V_11_we0       |  out|    1|   ap_memory|                      e_in_imag_V_11|         array|
+|e_in_imag_V_11_d0        |  out|   32|   ap_memory|                      e_in_imag_V_11|         array|
+|e_in_real_V_14_address0  |  out|    2|   ap_memory|                      e_in_real_V_14|         array|
+|e_in_real_V_14_ce0       |  out|    1|   ap_memory|                      e_in_real_V_14|         array|
+|e_in_real_V_14_we0       |  out|    1|   ap_memory|                      e_in_real_V_14|         array|
+|e_in_real_V_14_d0        |  out|   32|   ap_memory|                      e_in_real_V_14|         array|
+|e_in_real_V_13_address0  |  out|    2|   ap_memory|                      e_in_real_V_13|         array|
+|e_in_real_V_13_ce0       |  out|    1|   ap_memory|                      e_in_real_V_13|         array|
+|e_in_real_V_13_we0       |  out|    1|   ap_memory|                      e_in_real_V_13|         array|
+|e_in_real_V_13_d0        |  out|   32|   ap_memory|                      e_in_real_V_13|         array|
+|e_in_real_V_12_address0  |  out|    2|   ap_memory|                      e_in_real_V_12|         array|
+|e_in_real_V_12_ce0       |  out|    1|   ap_memory|                      e_in_real_V_12|         array|
+|e_in_real_V_12_we0       |  out|    1|   ap_memory|                      e_in_real_V_12|         array|
+|e_in_real_V_12_d0        |  out|   32|   ap_memory|                      e_in_real_V_12|         array|
+|e_in_real_V_11_address0  |  out|    2|   ap_memory|                      e_in_real_V_11|         array|
+|e_in_real_V_11_ce0       |  out|    1|   ap_memory|                      e_in_real_V_11|         array|
+|e_in_real_V_11_we0       |  out|    1|   ap_memory|                      e_in_real_V_11|         array|
+|e_in_real_V_11_d0        |  out|   32|   ap_memory|                      e_in_real_V_11|         array|
+|in_real_0_address0       |  out|    2|   ap_memory|                           in_real_0|         array|
+|in_real_0_ce0            |  out|    1|   ap_memory|                           in_real_0|         array|
+|in_real_0_q0             |   in|   32|   ap_memory|                           in_real_0|         array|
+|in_real_1_address0       |  out|    2|   ap_memory|                           in_real_1|         array|
+|in_real_1_ce0            |  out|    1|   ap_memory|                           in_real_1|         array|
+|in_real_1_q0             |   in|   32|   ap_memory|                           in_real_1|         array|
+|in_real_2_address0       |  out|    2|   ap_memory|                           in_real_2|         array|
+|in_real_2_ce0            |  out|    1|   ap_memory|                           in_real_2|         array|
+|in_real_2_q0             |   in|   32|   ap_memory|                           in_real_2|         array|
+|in_real_3_address0       |  out|    2|   ap_memory|                           in_real_3|         array|
+|in_real_3_ce0            |  out|    1|   ap_memory|                           in_real_3|         array|
+|in_real_3_q0             |   in|   32|   ap_memory|                           in_real_3|         array|
+|in_real_4_address0       |  out|    2|   ap_memory|                           in_real_4|         array|
+|in_real_4_ce0            |  out|    1|   ap_memory|                           in_real_4|         array|
+|in_real_4_q0             |   in|   32|   ap_memory|                           in_real_4|         array|
+|in_real_5_address0       |  out|    2|   ap_memory|                           in_real_5|         array|
+|in_real_5_ce0            |  out|    1|   ap_memory|                           in_real_5|         array|
+|in_real_5_q0             |   in|   32|   ap_memory|                           in_real_5|         array|
+|in_real_6_address0       |  out|    2|   ap_memory|                           in_real_6|         array|
+|in_real_6_ce0            |  out|    1|   ap_memory|                           in_real_6|         array|
+|in_real_6_q0             |   in|   32|   ap_memory|                           in_real_6|         array|
+|in_real_7_address0       |  out|    2|   ap_memory|                           in_real_7|         array|
+|in_real_7_ce0            |  out|    1|   ap_memory|                           in_real_7|         array|
+|in_real_7_q0             |   in|   32|   ap_memory|                           in_real_7|         array|
+|in_imag_0_address0       |  out|    2|   ap_memory|                           in_imag_0|         array|
+|in_imag_0_ce0            |  out|    1|   ap_memory|                           in_imag_0|         array|
+|in_imag_0_q0             |   in|   32|   ap_memory|                           in_imag_0|         array|
+|in_imag_1_address0       |  out|    2|   ap_memory|                           in_imag_1|         array|
+|in_imag_1_ce0            |  out|    1|   ap_memory|                           in_imag_1|         array|
+|in_imag_1_q0             |   in|   32|   ap_memory|                           in_imag_1|         array|
+|in_imag_2_address0       |  out|    2|   ap_memory|                           in_imag_2|         array|
+|in_imag_2_ce0            |  out|    1|   ap_memory|                           in_imag_2|         array|
+|in_imag_2_q0             |   in|   32|   ap_memory|                           in_imag_2|         array|
+|in_imag_3_address0       |  out|    2|   ap_memory|                           in_imag_3|         array|
+|in_imag_3_ce0            |  out|    1|   ap_memory|                           in_imag_3|         array|
+|in_imag_3_q0             |   in|   32|   ap_memory|                           in_imag_3|         array|
+|in_imag_4_address0       |  out|    2|   ap_memory|                           in_imag_4|         array|
+|in_imag_4_ce0            |  out|    1|   ap_memory|                           in_imag_4|         array|
+|in_imag_4_q0             |   in|   32|   ap_memory|                           in_imag_4|         array|
+|in_imag_5_address0       |  out|    2|   ap_memory|                           in_imag_5|         array|
+|in_imag_5_ce0            |  out|    1|   ap_memory|                           in_imag_5|         array|
+|in_imag_5_q0             |   in|   32|   ap_memory|                           in_imag_5|         array|
+|in_imag_6_address0       |  out|    2|   ap_memory|                           in_imag_6|         array|
+|in_imag_6_ce0            |  out|    1|   ap_memory|                           in_imag_6|         array|
+|in_imag_6_q0             |   in|   32|   ap_memory|                           in_imag_6|         array|
+|in_imag_7_address0       |  out|    2|   ap_memory|                           in_imag_7|         array|
+|in_imag_7_ce0            |  out|    1|   ap_memory|                           in_imag_7|         array|
+|in_imag_7_q0             |   in|   32|   ap_memory|                           in_imag_7|         array|
++-------------------------+-----+-----+------------+------------------------------------+--------------+
+

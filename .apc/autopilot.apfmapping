@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="core.cpp" path="/home/ishan/tools/Vitis_HLS/2022.2/bin/radixfft/core.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="tb_core.cpp" path="/home/ishan/tools/Vitis_HLS/2022.2/bin/radixfft/tb_core.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

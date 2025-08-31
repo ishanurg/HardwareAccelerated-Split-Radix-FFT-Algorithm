@@ -1,0 +1,61 @@
+<root versionMajor = "1" versionMinor = "5">
+  <kernel src_name="sr_fft" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
+    <args>
+      <arg id="0" access_type="r" src_name="input" src_type="complex_t*" src_isptr="1" src_bitwidth="64" src_size_or_depth="64">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="64" hw_size_or_depth="8" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="64"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="64" hw_size_or_depth="8" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="128"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="64" hw_size_or_depth="8" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="192"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="64" hw_size_or_depth="8" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="256"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="64" hw_size_or_depth="8" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="320"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="64" hw_size_or_depth="8" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="384"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="64" hw_size_or_depth="8" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="448"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="64" hw_size_or_depth="8" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="512"/>
+        </hw>
+      </arg>
+      <arg id="1" access_type="w" src_name="output" src_type="complex_t*" src_isptr="1" src_bitwidth="64" src_size_or_depth="64">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="64" hw_size_or_depth="8" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="576"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="64" hw_size_or_depth="8" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="640"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="64" hw_size_or_depth="8" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="704"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="64" hw_size_or_depth="8" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="768"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="64" hw_size_or_depth="8" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="832"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="64" hw_size_or_depth="8" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="896"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="64" hw_size_or_depth="8" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="960"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="64" hw_size_or_depth="8" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="1024"/>
+        </hw>
+      </arg>
+    </args>
+    <return src_type="void" src_bitwidth="0" offset="0x0">
+      <hw hw_usage="data" hw_interface="" hw_name="" hw_bitwidth="0" hw_kernel_support="true"/>
+    </return>
+  </kernel>
+</root>

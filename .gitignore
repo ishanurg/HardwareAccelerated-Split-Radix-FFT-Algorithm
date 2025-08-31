@@ -1,0 +1,31 @@
+# Vitis HLS build directories and artifacts
+.build/
+.ipcache/
+.log/
+.metadata/
+_synthesis/
+_x/
+vitis_hls.log
+vivado.log
+vitis_hls.jou
+
+# Vitis Unified IDE build output (exclude for source control)
+*/build-vitis/
+*/.vitis/
+*.xsa
+
+# Vivado project files
+*.xpr
+*.xpr.html
+*.xpr.old
+*.xpr.locked
+*.cache
+
+# Standard ignores
+*.jou
+*.log
+*.str
+*.tgz
+*.tar
+*.zip
+

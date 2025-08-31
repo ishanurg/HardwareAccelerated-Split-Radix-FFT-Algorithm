@@ -1,0 +1,35 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "sr_fft",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/ishan\/tools\/Vitis_HLS\/2022.2\/bin\/radixfft\/solution1\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "sr_fft"
+              }]
+          }
+        },
+        {
+          "functionName": "sr_fft",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "\/home\/ishan\/tools\/Vitis_HLS\/2022.2\/bin\/radixfft\/solution1\/csynth.tcl",
+          "sourceLine": "15",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "sr_fft"
+              }]
+          }
+        }
+      ]
+    }]}

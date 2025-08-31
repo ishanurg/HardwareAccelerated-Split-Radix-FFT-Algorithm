@@ -1,0 +1,874 @@
+
+
+================================================================
+== Synthesis Summary Report of 'sr_fft'
+================================================================
++ General Information: 
+    * Date:           Sun Aug 31 16:41:54 2025
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        radixfft
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+-----------+-------------+-------------+-----+
+    |                  Modules                  | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |           |             |             |     |
+    |                  & Loops                  | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |    DSP    |      FF     |     LUT     | URAM|
+    +-------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+-----------+-------------+-------------+-----+
+    |+ sr_fft                                   |     -|  0.10|      627|  6.270e+03|         -|      628|     -|        no|  20 (7%)|  128 (58%)|  41251 (38%)|  35699 (67%)|    -|
+    | + sr_fft_Pipeline_VITIS_LOOP_322_1        |     -|  0.35|      130|  1.300e+03|         -|      130|     -|        no|        -|          -|     68 (~0%)|    150 (~0%)|    -|
+    |  o VITIS_LOOP_322_1                       |     -|  7.30|      128|  1.280e+03|         2|        2|    64|       yes|        -|          -|            -|            -|    -|
+    | + fft_64pt                                |     -|  0.10|      362|  3.620e+03|         -|      362|     -|        no|  20 (7%)|  128 (58%)|  38296 (35%)|  32526 (61%)|    -|
+    |  + fft_64pt_Pipeline_VITIS_LOOP_265_1     |     -|  0.35|       66|    660.000|         -|       66|     -|        no|        -|          -|     20 (~0%)|    149 (~0%)|    -|
+    |   o VITIS_LOOP_265_1                      |     -|  7.30|       64|    640.000|         2|        2|    32|       yes|        -|          -|            -|            -|    -|
+    |  + fft_32pt                               |     -|  0.10|      150|  1.500e+03|         -|      150|     -|        no|  10 (3%)|   48 (21%)|  17050 (16%)|  14751 (27%)|    -|
+    |   + fft_32pt_Pipeline_VITIS_LOOP_215_1    |     -|  0.35|       18|    180.000|         -|       18|     -|        no|        -|          -|     15 (~0%)|    145 (~0%)|    -|
+    |    o VITIS_LOOP_215_1                     |     -|  7.30|       16|    160.000|         2|        1|    16|       yes|        -|          -|            -|            -|    -|
+    |   + fft_16pt                              |     -|  0.10|       54|    540.000|         -|       54|     -|        no|   4 (1%)|   32 (14%)|    7757 (7%)|   6112 (11%)|    -|
+    |    + fft_16pt_Pipeline_VITIS_LOOP_165_1   |     -|  0.83|       10|    100.000|         -|       10|     -|        no|        -|          -|     12 (~0%)|    100 (~0%)|    -|
+    |     o VITIS_LOOP_165_1                    |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|        -|          -|            -|            -|    -|
+    |    + fft_16pt_Pipeline_VITIS_LOOP_120_1   |     -|  1.07|        6|     60.000|         -|        6|     -|        no|        -|          -|      8 (~0%)|     76 (~0%)|    -|
+    |     o VITIS_LOOP_120_1                    |     -|  7.30|        4|     40.000|         2|        1|     4|       yes|        -|          -|            -|            -|    -|
+    |    + fft_16pt_Pipeline_VITIS_LOOP_171_2   |     -|  4.06|        6|     60.000|         -|        6|     -|        no|        -|          -|    517 (~0%)|     87 (~0%)|    -|
+    |     o VITIS_LOOP_171_2                    |     -|  7.30|        4|     40.000|         1|        1|     4|       yes|        -|          -|            -|            -|    -|
+    |    + fft_16pt_Pipeline_VITIS_LOOP_131_2   |     -|  0.39|       10|    100.000|         -|       10|     -|        no|  2 (~0%)|    16 (7%)|    2206 (2%)|    1475 (2%)|    -|
+    |     o VITIS_LOOP_131_2                    |     -|  7.30|        8|     80.000|         7|        2|     2|       yes|        -|          -|            -|            -|    -|
+    |    + fft_16pt_Pipeline_VITIS_LOOP_181_3   |     -|  0.10|       18|    180.000|         -|       18|     -|        no|  2 (~0%)|    16 (7%)|    2438 (2%)|    1315 (2%)|    -|
+    |     o VITIS_LOOP_181_3                    |     -|  7.30|       16|    160.000|         8|        3|     4|       yes|        -|          -|            -|            -|    -|
+    |   + fft_32pt_Pipeline_VITIS_LOOP_221_2    |     -|  2.67|       10|    100.000|         -|       10|     -|        no|        -|          -|      6 (~0%)|    217 (~0%)|    -|
+    |    o VITIS_LOOP_221_2                     |     -|  7.30|        8|     80.000|         1|        1|     8|       yes|        -|          -|            -|            -|    -|
+    |   + fft_32pt_Pipeline_VITIS_LOOP_120_1    |     -|  1.07|        6|     60.000|         -|        6|     -|        no|        -|          -|      8 (~0%)|     76 (~0%)|    -|
+    |    o VITIS_LOOP_120_1                     |     -|  7.30|        4|     40.000|         2|        1|     4|       yes|        -|          -|            -|            -|    -|
+    |   + fft_32pt_Pipeline_VITIS_LOOP_120_173  |     -|  1.07|        6|     60.000|         -|        6|     -|        no|        -|          -|      8 (~0%)|     76 (~0%)|    -|
+    |    o VITIS_LOOP_120_1                     |     -|  7.30|        4|     40.000|         2|        1|     4|       yes|        -|          -|            -|            -|    -|
+    |   + fft_32pt_Pipeline_VITIS_LOOP_131_2    |     -|  0.39|       10|    100.000|         -|       10|     -|        no|  2 (~0%)|          -|    886 (~0%)|    1075 (2%)|    -|
+    |    o VITIS_LOOP_131_2                     |     -|  7.30|        8|     80.000|         7|        2|     2|       yes|        -|          -|            -|            -|    -|
+    |   + fft_32pt_Pipeline_VITIS_LOOP_131_274  |     -|  0.39|       10|    100.000|         -|       10|     -|        no|  2 (~0%)|          -|    886 (~0%)|    1075 (2%)|    -|
+    |    o VITIS_LOOP_131_2                     |     -|  7.30|        8|     80.000|         7|        2|     2|       yes|        -|          -|            -|            -|    -|
+    |   + fft_32pt_Pipeline_VITIS_LOOP_231_3    |     -|  0.39|       38|    380.000|         -|       38|     -|        no|  2 (~0%)|          -|    1277 (1%)|     914 (1%)|    -|
+    |    o VITIS_LOOP_231_3                     |     -|  7.30|       36|    360.000|         9|        4|     8|       yes|        -|          -|            -|            -|    -|
+    |  + fft_64pt_Pipeline_VITIS_LOOP_271_2     |     -|  0.35|       34|    340.000|         -|       34|     -|        no|        -|          -|     20 (~0%)|    238 (~0%)|    -|
+    |   o VITIS_LOOP_271_2                      |     -|  7.30|       32|    320.000|         2|        2|    16|       yes|        -|          -|            -|            -|    -|
+    |  + fft_16pt                               |     -|  0.10|       54|    540.000|         -|       54|     -|        no|   4 (1%)|   32 (14%)|    7757 (7%)|   6112 (11%)|    -|
+    |   + fft_16pt_Pipeline_VITIS_LOOP_165_1    |     -|  0.83|       10|    100.000|         -|       10|     -|        no|        -|          -|     12 (~0%)|    100 (~0%)|    -|
+    |    o VITIS_LOOP_165_1                     |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|        -|          -|            -|            -|    -|
+    |   + fft_16pt_Pipeline_VITIS_LOOP_120_1    |     -|  1.07|        6|     60.000|         -|        6|     -|        no|        -|          -|      8 (~0%)|     76 (~0%)|    -|
+    |    o VITIS_LOOP_120_1                     |     -|  7.30|        4|     40.000|         2|        1|     4|       yes|        -|          -|            -|            -|    -|
+    |   + fft_16pt_Pipeline_VITIS_LOOP_171_2    |     -|  4.06|        6|     60.000|         -|        6|     -|        no|        -|          -|    517 (~0%)|     87 (~0%)|    -|
+    |    o VITIS_LOOP_171_2                     |     -|  7.30|        4|     40.000|         1|        1|     4|       yes|        -|          -|            -|            -|    -|
+    |   + fft_16pt_Pipeline_VITIS_LOOP_131_2    |     -|  0.39|       10|    100.000|         -|       10|     -|        no|  2 (~0%)|    16 (7%)|    2206 (2%)|    1475 (2%)|    -|
+    |    o VITIS_LOOP_131_2                     |     -|  7.30|        8|     80.000|         7|        2|     2|       yes|        -|          -|            -|            -|    -|
+    |   + fft_16pt_Pipeline_VITIS_LOOP_181_3    |     -|  0.10|       18|    180.000|         -|       18|     -|        no|  2 (~0%)|    16 (7%)|    2438 (2%)|    1315 (2%)|    -|
+    |    o VITIS_LOOP_181_3                     |     -|  7.30|       16|    160.000|         8|        3|     4|       yes|        -|          -|            -|            -|    -|
+    |  + fft_16pt                               |     -|  0.10|       54|    540.000|         -|       54|     -|        no|   4 (1%)|   32 (14%)|    7757 (7%)|   6112 (11%)|    -|
+    |   + fft_16pt_Pipeline_VITIS_LOOP_165_1    |     -|  0.83|       10|    100.000|         -|       10|     -|        no|        -|          -|     12 (~0%)|    100 (~0%)|    -|
+    |    o VITIS_LOOP_165_1                     |     -|  7.30|        8|     80.000|         2|        1|     8|       yes|        -|          -|            -|            -|    -|
+    |   + fft_16pt_Pipeline_VITIS_LOOP_120_1    |     -|  1.07|        6|     60.000|         -|        6|     -|        no|        -|          -|      8 (~0%)|     76 (~0%)|    -|
+    |    o VITIS_LOOP_120_1                     |     -|  7.30|        4|     40.000|         2|        1|     4|       yes|        -|          -|            -|            -|    -|
+    |   + fft_16pt_Pipeline_VITIS_LOOP_171_2    |     -|  4.06|        6|     60.000|         -|        6|     -|        no|        -|          -|    517 (~0%)|     87 (~0%)|    -|
+    |    o VITIS_LOOP_171_2                     |     -|  7.30|        4|     40.000|         1|        1|     4|       yes|        -|          -|            -|            -|    -|
+    |   + fft_16pt_Pipeline_VITIS_LOOP_131_2    |     -|  0.39|       10|    100.000|         -|       10|     -|        no|  2 (~0%)|    16 (7%)|    2206 (2%)|    1475 (2%)|    -|
+    |    o VITIS_LOOP_131_2                     |     -|  7.30|        8|     80.000|         7|        2|     2|       yes|        -|          -|            -|            -|    -|
+    |   + fft_16pt_Pipeline_VITIS_LOOP_181_3    |     -|  0.10|       18|    180.000|         -|       18|     -|        no|  2 (~0%)|    16 (7%)|    2438 (2%)|    1315 (2%)|    -|
+    |    o VITIS_LOOP_181_3                     |     -|  7.30|       16|    160.000|         8|        3|     4|       yes|        -|          -|            -|            -|    -|
+    |  + fft_64pt_Pipeline_VITIS_LOOP_281_3     |     -|  0.39|       85|    850.000|         -|       85|     -|        no|  2 (~0%)|          -|    1286 (1%)|    1000 (1%)|    -|
+    |   o VITIS_LOOP_281_3                      |     -|  7.30|       83|    830.000|         9|        5|    16|       yes|        -|          -|            -|            -|    -|
+    | + sr_fft_Pipeline_VITIS_LOOP_329_2        |     -|  0.35|      130|  1.300e+03|         -|      130|     -|        no|        -|          -|     26 (~0%)|    242 (~0%)|    -|
+    |  o VITIS_LOOP_329_2                       |     -|  7.30|      128|  1.280e+03|         3|        2|    64|       yes|        -|          -|            -|            -|    -|
+    +-------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+-----------+-------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 11            | 64     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+------------+
+| Argument | Direction | Datatype   |
++----------+-----------+------------+
+| input    | in        | complex_t* |
+| output   | out       | complex_t* |
++----------+-----------+------------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+
+| Argument | HW Interface  | HW Type   |
++----------+---------------+-----------+
+| input    | s_axi_control | interface |
+| input    | s_axi_control | interface |
+| input    | s_axi_control | interface |
+| input    | s_axi_control | interface |
+| input    | s_axi_control | interface |
+| input    | s_axi_control | interface |
+| input    | s_axi_control | interface |
+| input    | s_axi_control | interface |
+| output   | s_axi_control | interface |
+| output   | s_axi_control | interface |
+| output   | s_axi_control | interface |
+| output   | s_axi_control | interface |
+| output   | s_axi_control | interface |
+| output   | s_axi_control | interface |
+| output   | s_axi_control | interface |
+| output   | s_axi_control | interface |
++----------+---------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------------------------------------------------------+-----+--------+--------------+-----+--------+---------+
+| Name                                                                                    | DSP | Pragma | Variable     | Op  | Impl   | Latency |
++-----------------------------------------------------------------------------------------+-----+--------+--------------+-----+--------+---------+
+| + sr_fft                                                                                | 128 |        |              |     |        |         |
+|  + sr_fft_Pipeline_VITIS_LOOP_322_1                                                     | 0   |        |              |     |        |         |
+|    add_ln322_fu_430_p2                                                                  | -   |        | add_ln322    | add | fabric | 0       |
+|  + fft_64pt                                                                             | 128 |        |              |     |        |         |
+|   + fft_64pt_Pipeline_VITIS_LOOP_265_1                                                  | 0   |        |              |     |        |         |
+|     add_ln265_fu_548_p2                                                                 | -   |        | add_ln265    | add | fabric | 0       |
+|   + fft_32pt                                                                            | 48  |        |              |     |        |         |
+|     r_real_V_55_fu_1370_p2                                                              | -   |        | r_real_V_55  | add | fabric | 0       |
+|     r_imag_V_65_fu_1374_p2                                                              | -   |        | r_imag_V_65  | add | fabric | 0       |
+|     r_real_V_56_fu_1378_p2                                                              | -   |        | r_real_V_56  | sub | fabric | 0       |
+|     r_imag_V_66_fu_1382_p2                                                              | -   |        | r_imag_V_66  | sub | fabric | 0       |
+|     r_real_V_57_fu_1386_p2                                                              | -   |        | r_real_V_57  | add | fabric | 0       |
+|     r_imag_V_67_fu_1390_p2                                                              | -   |        | r_imag_V_67  | add | fabric | 0       |
+|     r_real_V_58_fu_1394_p2                                                              | -   |        | r_real_V_58  | sub | fabric | 0       |
+|     r_imag_V_68_fu_1398_p2                                                              | -   |        | r_imag_V_68  | sub | fabric | 0       |
+|     r_real_V_fu_1402_p2                                                                 | -   |        | r_real_V     | add | fabric | 0       |
+|     r_imag_V_fu_1409_p2                                                                 | -   |        | r_imag_V     | add | fabric | 0       |
+|     r_real_V_32_fu_1416_p2                                                              | -   |        | r_real_V_32  | add | fabric | 0       |
+|     r_imag_V_45_fu_1423_p2                                                              | -   |        | r_imag_V_45  | sub | fabric | 0       |
+|     r_real_V_33_fu_1430_p2                                                              | -   |        | r_real_V_33  | sub | fabric | 0       |
+|     r_imag_V_46_fu_1437_p2                                                              | -   |        | r_imag_V_46  | sub | fabric | 0       |
+|     r_real_V_34_fu_1444_p2                                                              | -   |        | r_real_V_34  | sub | fabric | 0       |
+|     r_imag_V_47_fu_1451_p2                                                              | -   |        | r_imag_V_47  | add | fabric | 0       |
+|     r_real_V_59_fu_1458_p2                                                              | -   |        | r_real_V_59  | add | fabric | 0       |
+|     r_imag_V_69_fu_1465_p2                                                              | -   |        | r_imag_V_69  | add | fabric | 0       |
+|     r_real_V_60_fu_1472_p2                                                              | -   |        | r_real_V_60  | sub | fabric | 0       |
+|     r_imag_V_70_fu_1479_p2                                                              | -   |        | r_imag_V_70  | sub | fabric | 0       |
+|     r_real_V_61_fu_1486_p2                                                              | -   |        | r_real_V_61  | add | fabric | 0       |
+|     r_imag_V_71_fu_1493_p2                                                              | -   |        | r_imag_V_71  | add | fabric | 0       |
+|     r_real_V_62_fu_1500_p2                                                              | -   |        | r_real_V_62  | sub | fabric | 0       |
+|     r_imag_V_72_fu_1507_p2                                                              | -   |        | r_imag_V_72  | sub | fabric | 0       |
+|     r_real_V_63_fu_1514_p2                                                              | -   |        | r_real_V_63  | add | fabric | 0       |
+|     r_imag_V_73_fu_1518_p2                                                              | -   |        | r_imag_V_73  | add | fabric | 0       |
+|     r_real_V_64_fu_1522_p2                                                              | -   |        | r_real_V_64  | sub | fabric | 0       |
+|     r_imag_V_74_fu_1526_p2                                                              | -   |        | r_imag_V_74  | sub | fabric | 0       |
+|     r_real_V_65_fu_1530_p2                                                              | -   |        | r_real_V_65  | add | fabric | 0       |
+|     r_imag_V_75_fu_1534_p2                                                              | -   |        | r_imag_V_75  | add | fabric | 0       |
+|     r_real_V_66_fu_1538_p2                                                              | -   |        | r_real_V_66  | sub | fabric | 0       |
+|     r_imag_V_76_fu_1542_p2                                                              | -   |        | r_imag_V_76  | sub | fabric | 0       |
+|     r_real_V_47_fu_1546_p2                                                              | -   |        | r_real_V_47  | add | fabric | 0       |
+|     r_imag_V_56_fu_1553_p2                                                              | -   |        | r_imag_V_56  | add | fabric | 0       |
+|     r_real_V_48_fu_1560_p2                                                              | -   |        | r_real_V_48  | add | fabric | 0       |
+|     r_imag_V_58_fu_1567_p2                                                              | -   |        | r_imag_V_58  | sub | fabric | 0       |
+|     r_real_V_49_fu_1574_p2                                                              | -   |        | r_real_V_49  | sub | fabric | 0       |
+|     r_imag_V_59_fu_1581_p2                                                              | -   |        | r_imag_V_59  | sub | fabric | 0       |
+|     r_real_V_50_fu_1588_p2                                                              | -   |        | r_real_V_50  | sub | fabric | 0       |
+|     r_imag_V_60_fu_1595_p2                                                              | -   |        | r_imag_V_60  | add | fabric | 0       |
+|     r_real_V_67_fu_1602_p2                                                              | -   |        | r_real_V_67  | add | fabric | 0       |
+|     r_imag_V_77_fu_1609_p2                                                              | -   |        | r_imag_V_77  | add | fabric | 0       |
+|     r_real_V_68_fu_1616_p2                                                              | -   |        | r_real_V_68  | sub | fabric | 0       |
+|     r_imag_V_78_fu_1623_p2                                                              | -   |        | r_imag_V_78  | sub | fabric | 0       |
+|     r_real_V_69_fu_1630_p2                                                              | -   |        | r_real_V_69  | add | fabric | 0       |
+|     r_imag_V_79_fu_1637_p2                                                              | -   |        | r_imag_V_79  | add | fabric | 0       |
+|     r_real_V_70_fu_1644_p2                                                              | -   |        | r_real_V_70  | sub | fabric | 0       |
+|     r_imag_V_80_fu_1651_p2                                                              | -   |        | r_imag_V_80  | sub | fabric | 0       |
+|    + fft_32pt_Pipeline_VITIS_LOOP_215_1                                                 | 0   |        |              |     |        |         |
+|      add_ln215_fu_422_p2                                                                | -   |        | add_ln215    | add | fabric | 0       |
+|    + fft_16pt (grp_fft_16pt_fu_1134)                                                    | 32  |        |              |     |        |         |
+|      r_real_V_116_fu_744_p2                                                             | -   |        | r_real_V_116 | add | fabric | 0       |
+|      r_imag_V_131_fu_748_p2                                                             | -   |        | r_imag_V_131 | add | fabric | 0       |
+|      r_real_V_117_fu_752_p2                                                             | -   |        | r_real_V_117 | sub | fabric | 0       |
+|      r_imag_V_132_fu_756_p2                                                             | -   |        | r_imag_V_132 | sub | fabric | 0       |
+|      r_real_V_118_fu_760_p2                                                             | -   |        | r_real_V_118 | add | fabric | 0       |
+|      r_imag_V_133_fu_764_p2                                                             | -   |        | r_imag_V_133 | add | fabric | 0       |
+|      r_real_V_119_fu_768_p2                                                             | -   |        | r_real_V_119 | sub | fabric | 0       |
+|      r_imag_V_134_fu_772_p2                                                             | -   |        | r_imag_V_134 | sub | fabric | 0       |
+|      r_real_V_fu_776_p2                                                                 | -   |        | r_real_V     | add | fabric | 0       |
+|      r_imag_V_fu_783_p2                                                                 | -   |        | r_imag_V     | add | fabric | 0       |
+|      r_real_V_93_fu_790_p2                                                              | -   |        | r_real_V_93  | add | fabric | 0       |
+|      r_imag_V_106_fu_797_p2                                                             | -   |        | r_imag_V_106 | sub | fabric | 0       |
+|      r_real_V_94_fu_804_p2                                                              | -   |        | r_real_V_94  | sub | fabric | 0       |
+|      r_imag_V_107_fu_811_p2                                                             | -   |        | r_imag_V_107 | sub | fabric | 0       |
+|      r_real_V_95_fu_818_p2                                                              | -   |        | r_real_V_95  | sub | fabric | 0       |
+|      r_imag_V_108_fu_825_p2                                                             | -   |        | r_imag_V_108 | add | fabric | 0       |
+|      r_real_V_120_fu_832_p2                                                             | -   |        | r_real_V_120 | add | fabric | 0       |
+|      r_imag_V_135_fu_839_p2                                                             | -   |        | r_imag_V_135 | add | fabric | 0       |
+|      r_real_V_121_fu_846_p2                                                             | -   |        | r_real_V_121 | sub | fabric | 0       |
+|      r_imag_V_136_fu_853_p2                                                             | -   |        | r_imag_V_136 | sub | fabric | 0       |
+|      r_real_V_122_fu_860_p2                                                             | -   |        | r_real_V_122 | add | fabric | 0       |
+|      r_imag_V_137_fu_867_p2                                                             | -   |        | r_imag_V_137 | add | fabric | 0       |
+|      r_real_V_123_fu_874_p2                                                             | -   |        | r_real_V_123 | sub | fabric | 0       |
+|      r_imag_V_138_fu_881_p2                                                             | -   |        | r_imag_V_138 | sub | fabric | 0       |
+|      r_real_V_124_fu_936_p2                                                             | -   |        | r_real_V_124 | add | fabric | 0       |
+|      r_imag_V_139_fu_942_p2                                                             | -   |        | r_imag_V_139 | add | fabric | 0       |
+|      r_real_V_125_fu_948_p2                                                             | -   |        | r_real_V_125 | sub | fabric | 0       |
+|      r_imag_V_140_fu_954_p2                                                             | -   |        | r_imag_V_140 | sub | fabric | 0       |
+|      cpd_real_V_fu_960_p2                                                               | -   |        | cpd_real_V   | add | fabric | 0       |
+|      cpd_imag_V_fu_966_p2                                                               | -   |        | cpd_imag_V   | add | fabric | 0       |
+|      cmd_real_V_fu_972_p2                                                               | -   |        | cmd_real_V   | sub | fabric | 0       |
+|      cmd_imag_V_fu_978_p2                                                               | -   |        | cmd_imag_V   | sub | fabric | 0       |
+|      r_real_V_126_fu_984_p2                                                             | -   |        | r_real_V_126 | add | fabric | 0       |
+|      r_imag_V_141_fu_991_p2                                                             | -   |        | r_imag_V_141 | add | fabric | 0       |
+|      r_real_V_127_fu_998_p2                                                             | -   |        | r_real_V_127 | add | fabric | 0       |
+|      r_imag_V_142_fu_1005_p2                                                            | -   |        | r_imag_V_142 | sub | fabric | 0       |
+|      r_real_V_128_fu_1012_p2                                                            | -   |        | r_real_V_128 | sub | fabric | 0       |
+|      r_imag_V_143_fu_1019_p2                                                            | -   |        | r_imag_V_143 | sub | fabric | 0       |
+|      r_real_V_129_fu_1026_p2                                                            | -   |        | r_real_V_129 | sub | fabric | 0       |
+|      r_imag_V_144_fu_1033_p2                                                            | -   |        | r_imag_V_144 | add | fabric | 0       |
+|      r_real_V_130_fu_1040_p2                                                            | -   |        | r_real_V_130 | add | fabric | 0       |
+|      r_imag_V_145_fu_1046_p2                                                            | -   |        | r_imag_V_145 | add | fabric | 0       |
+|      r_real_V_131_fu_1052_p2                                                            | -   |        | r_real_V_131 | sub | fabric | 0       |
+|      r_imag_V_146_fu_1058_p2                                                            | -   |        | r_imag_V_146 | sub | fabric | 0       |
+|      cpd_real_V_1_fu_1064_p2                                                            | -   |        | cpd_real_V_1 | add | fabric | 0       |
+|      cpd_imag_V_1_fu_1070_p2                                                            | -   |        | cpd_imag_V_1 | add | fabric | 0       |
+|      cmd_real_V_1_fu_1076_p2                                                            | -   |        | cmd_real_V_1 | sub | fabric | 0       |
+|      cmd_imag_V_1_fu_1082_p2                                                            | -   |        | cmd_imag_V_1 | sub | fabric | 0       |
+|      r_real_V_132_fu_1088_p2                                                            | -   |        | r_real_V_132 | add | fabric | 0       |
+|      r_imag_V_147_fu_1095_p2                                                            | -   |        | r_imag_V_147 | add | fabric | 0       |
+|      r_real_V_133_fu_1102_p2                                                            | -   |        | r_real_V_133 | add | fabric | 0       |
+|      r_imag_V_148_fu_1109_p2                                                            | -   |        | r_imag_V_148 | sub | fabric | 0       |
+|      r_real_V_134_fu_1116_p2                                                            | -   |        | r_real_V_134 | sub | fabric | 0       |
+|      r_imag_V_149_fu_1123_p2                                                            | -   |        | r_imag_V_149 | sub | fabric | 0       |
+|      r_real_V_135_fu_1130_p2                                                            | -   |        | r_real_V_135 | sub | fabric | 0       |
+|      r_imag_V_150_fu_1137_p2                                                            | -   |        | r_imag_V_150 | add | fabric | 0       |
+|    + fft_16pt_Pipeline_VITIS_LOOP_165_1 (grp_fft_16pt_Pipeline_VITIS_LOOP_165_1_fu_580) | 0   |        |              |     |        |         |
+|      add_ln165_fu_234_p2                                                                | -   |        | add_ln165    | add | fabric | 0       |
+|    + fft_16pt_Pipeline_VITIS_LOOP_120_1 (grp_fft_16pt_Pipeline_VITIS_LOOP_120_1_fu_608) | 0   |        |              |     |        |         |
+|      add_ln120_fu_170_p2                                                                | -   |        | add_ln120    | add | fabric | 0       |
+|    + fft_16pt_Pipeline_VITIS_LOOP_171_2 (grp_fft_16pt_Pipeline_VITIS_LOOP_171_2_fu_620) | 0   |        |              |     |        |         |
+|      add_ln171_fu_388_p2                                                                | -   |        | add_ln171    | add | fabric | 0       |
+|    + fft_16pt_Pipeline_VITIS_LOOP_131_2 (grp_fft_16pt_Pipeline_VITIS_LOOP_131_2_fu_672) | 16  |        |              |     |        |         |
+|      add_ln131_fu_352_p2                                                                | -   |        | add_ln131    | add | fabric | 0       |
+|      empty_61_fu_391_p2                                                                 | -   |        | empty_61     | sub | fabric | 0       |
+|      mul_18s_32s_48_2_1_U114                                                            | 2   |        | mul_ln813    | mul | auto   | 1       |
+|      mul_18s_32s_48_2_1_U115                                                            | 2   |        | mul_ln1348   | mul | auto   | 1       |
+|      ret_V_fu_506_p2                                                                    | -   |        | ret_V        | sub | fabric | 0       |
+|      mul_18s_32s_48_2_1_U116                                                            | 2   |        | mul_ln813_13 | mul | auto   | 1       |
+|      mul_18s_32s_48_2_1_U117                                                            | 2   |        | mul_ln1347   | mul | auto   | 1       |
+|      ret_V_18_fu_520_p2                                                                 | -   |        | ret_V_18     | add | fabric | 0       |
+|      mul_18s_32s_48_2_1_U118                                                            | 2   |        | mul_ln813_14 | mul | auto   | 1       |
+|      mul_18s_32s_48_2_1_U119                                                            | 2   |        | mul_ln1348_5 | mul | auto   | 1       |
+|      ret_V_19_fu_534_p2                                                                 | -   |        | ret_V_19     | sub | fabric | 0       |
+|      mul_18s_32s_48_2_1_U120                                                            | 2   |        | mul_ln813_15 | mul | auto   | 1       |
+|      mul_18s_32s_48_2_1_U121                                                            | 2   |        | mul_ln1347_5 | mul | auto   | 1       |
+|      ret_V_20_fu_548_p2                                                                 | -   |        | ret_V_20     | add | fabric | 0       |
+|      cpd_real_V_fu_562_p2                                                               | -   |        | cpd_real_V   | add | fabric | 0       |
+|      cpd_imag_V_fu_567_p2                                                               | -   |        | cpd_imag_V   | add | fabric | 0       |
+|      cmd_real_V_fu_572_p2                                                               | -   |        | cmd_real_V   | sub | fabric | 0       |
+|      cmd_imag_V_fu_577_p2                                                               | -   |        | cmd_imag_V   | sub | fabric | 0       |
+|      e_out_real_V_d1                                                                    | -   |        | r_real_V_82  | add | fabric | 0       |
+|      e_out_imag_V_d1                                                                    | -   |        | r_imag_V_93  | add | fabric | 0       |
+|      e_out_real_V_d0                                                                    | -   |        | r_real_V_86  | add | fabric | 0       |
+|      e_out_imag_V_d0                                                                    | -   |        | r_imag_V_98  | sub | fabric | 0       |
+|      e_out_real_V_11_d1                                                                 | -   |        | r_real_V_87  | sub | fabric | 0       |
+|      e_out_imag_V_11_d1                                                                 | -   |        | r_imag_V_99  | sub | fabric | 0       |
+|      e_out_real_V_11_d0                                                                 | -   |        | r_real_V_88  | sub | fabric | 0       |
+|      e_out_imag_V_11_d0                                                                 | -   |        | r_imag_V_100 | add | fabric | 0       |
+|    + fft_16pt_Pipeline_VITIS_LOOP_181_3 (grp_fft_16pt_Pipeline_VITIS_LOOP_181_3_fu_700) | 16  |        |              |     |        |         |
+|      add_ln181_fu_424_p2                                                                | -   |        | add_ln181    | add | fabric | 0       |
+|      empty_59_fu_519_p2                                                                 | -   |        | empty_59     | sub | fabric | 0       |
+|      mul_32s_18s_48_2_1_U187                                                            | 2   |        | mul_ln813    | mul | auto   | 1       |
+|      mul_32s_18s_48_2_1_U188                                                            | 2   |        | mul_ln1348   | mul | auto   | 1       |
+|      ret_V_fu_598_p2                                                                    | -   |        | ret_V        | sub | fabric | 0       |
+|      mul_32s_18s_48_2_1_U189                                                            | 2   |        | mul_ln813_10 | mul | auto   | 1       |
+|      mul_32s_18s_48_2_1_U190                                                            | 2   |        | mul_ln1347   | mul | auto   | 1       |
+|      ret_V_13_fu_620_p2                                                                 | -   |        | ret_V_13     | add | fabric | 0       |
+|      mul_32s_18s_48_2_1_U191                                                            | 2   |        | mul_ln813_11 | mul | auto   | 1       |
+|      mul_32s_18s_48_2_1_U192                                                            | 2   |        | mul_ln1348_4 | mul | auto   | 1       |
+|      ret_V_14_fu_634_p2                                                                 | -   |        | ret_V_14     | sub | fabric | 0       |
+|      mul_32s_18s_48_2_1_U193                                                            | 2   |        | mul_ln813_12 | mul | auto   | 1       |
+|      mul_32s_18s_48_2_1_U194                                                            | 2   |        | mul_ln1347_4 | mul | auto   | 1       |
+|      ret_V_15_fu_658_p2                                                                 | -   |        | ret_V_15     | add | fabric | 0       |
+|      r_real_V_76_fu_648_p2                                                              | -   |        | r_real_V_76  | add | fabric | 0       |
+|      r_imag_V_87_fu_672_p2                                                              | -   |        | r_imag_V_87  | add | fabric | 0       |
+|      r_real_V_77_fu_653_p2                                                              | -   |        | r_real_V_77  | sub | fabric | 0       |
+|      r_imag_V_88_fu_677_p2                                                              | -   |        | r_imag_V_88  | sub | fabric | 0       |
+|      out_real_0_d0                                                                      | -   |        | r_real_V     | add | fabric | 0       |
+|      out_imag_0_d0                                                                      | -   |        | r_imag_V     | add | fabric | 0       |
+|      out_real_1_d0                                                                      | -   |        | r_real_V_71  | add | fabric | 0       |
+|      out_imag_1_d0                                                                      | -   |        | r_imag_V_82  | sub | fabric | 0       |
+|      out_real_2_d0                                                                      | -   |        | r_real_V_72  | sub | fabric | 0       |
+|      out_imag_2_d0                                                                      | -   |        | r_imag_V_83  | sub | fabric | 0       |
+|      out_real_3_d0                                                                      | -   |        | r_real_V_73  | sub | fabric | 0       |
+|      out_imag_3_d0                                                                      | -   |        | r_imag_V_84  | add | fabric | 0       |
+|    + fft_32pt_Pipeline_VITIS_LOOP_221_2                                                 | 0   |        |              |     |        |         |
+|      add_ln221_fu_426_p2                                                                | -   |        | add_ln221    | add | fabric | 0       |
+|    + fft_32pt_Pipeline_VITIS_LOOP_120_1                                                 | 0   |        |              |     |        |         |
+|      add_ln120_fu_170_p2                                                                | -   |        | add_ln120    | add | fabric | 0       |
+|    + fft_32pt_Pipeline_VITIS_LOOP_120_173                                               | 0   |        |              |     |        |         |
+|      add_ln120_fu_170_p2                                                                | -   |        | add_ln120    | add | fabric | 0       |
+|    + fft_32pt_Pipeline_VITIS_LOOP_131_2                                                 | 0   |        |              |     |        |         |
+|      add_ln131_fu_352_p2                                                                | -   |        | add_ln131    | add | fabric | 0       |
+|      empty_57_fu_391_p2                                                                 | -   |        | empty_57     | sub | fabric | 0       |
+|      ret_V_fu_506_p2                                                                    | -   |        | ret_V        | sub | fabric | 0       |
+|      ret_V_10_fu_520_p2                                                                 | -   |        | ret_V_10     | add | fabric | 0       |
+|      ret_V_11_fu_534_p2                                                                 | -   |        | ret_V_11     | sub | fabric | 0       |
+|      ret_V_12_fu_548_p2                                                                 | -   |        | ret_V_12     | add | fabric | 0       |
+|      cpd_real_V_fu_562_p2                                                               | -   |        | cpd_real_V   | add | fabric | 0       |
+|      cpd_imag_V_fu_567_p2                                                               | -   |        | cpd_imag_V   | add | fabric | 0       |
+|      cmd_real_V_fu_572_p2                                                               | -   |        | cmd_real_V   | sub | fabric | 0       |
+|      cmd_imag_V_fu_577_p2                                                               | -   |        | cmd_imag_V   | sub | fabric | 0       |
+|      o1_out_real_V_d1                                                                   | -   |        | r_real_V_24  | add | fabric | 0       |
+|      o1_out_imag_V_d1                                                                   | -   |        | r_imag_V_31  | add | fabric | 0       |
+|      o1_out_real_V_d0                                                                   | -   |        | r_real_V_25  | add | fabric | 0       |
+|      o1_out_imag_V_d0                                                                   | -   |        | r_imag_V_33  | sub | fabric | 0       |
+|      o1_out_real_V_4_d1                                                                 | -   |        | r_real_V_26  | sub | fabric | 0       |
+|      o1_out_imag_V_4_d1                                                                 | -   |        | r_imag_V_34  | sub | fabric | 0       |
+|      o1_out_real_V_4_d0                                                                 | -   |        | r_real_V_27  | sub | fabric | 0       |
+|      o1_out_imag_V_4_d0                                                                 | -   |        | r_imag_V_35  | add | fabric | 0       |
+|    + fft_32pt_Pipeline_VITIS_LOOP_131_274                                               | 0   |        |              |     |        |         |
+|      add_ln131_fu_352_p2                                                                | -   |        | add_ln131    | add | fabric | 0       |
+|      empty_55_fu_391_p2                                                                 | -   |        | empty_55     | sub | fabric | 0       |
+|      ret_V_fu_506_p2                                                                    | -   |        | ret_V        | sub | fabric | 0       |
+|      ret_V_7_fu_520_p2                                                                  | -   |        | ret_V_7      | add | fabric | 0       |
+|      ret_V_8_fu_534_p2                                                                  | -   |        | ret_V_8      | sub | fabric | 0       |
+|      ret_V_9_fu_548_p2                                                                  | -   |        | ret_V_9      | add | fabric | 0       |
+|      cpd_real_V_fu_562_p2                                                               | -   |        | cpd_real_V   | add | fabric | 0       |
+|      cpd_imag_V_fu_567_p2                                                               | -   |        | cpd_imag_V   | add | fabric | 0       |
+|      cmd_real_V_fu_572_p2                                                               | -   |        | cmd_real_V   | sub | fabric | 0       |
+|      cmd_imag_V_fu_577_p2                                                               | -   |        | cmd_imag_V   | sub | fabric | 0       |
+|      o2_out_real_V_d1                                                                   | -   |        | r_real_V     | add | fabric | 0       |
+|      o2_out_imag_V_d1                                                                   | -   |        | r_imag_V     | add | fabric | 0       |
+|      o2_out_real_V_d0                                                                   | -   |        | r_real_V_17  | add | fabric | 0       |
+|      o2_out_imag_V_d0                                                                   | -   |        | r_imag_V_24  | sub | fabric | 0       |
+|      o2_out_real_V_4_d1                                                                 | -   |        | r_real_V_18  | sub | fabric | 0       |
+|      o2_out_imag_V_4_d1                                                                 | -   |        | r_imag_V_25  | sub | fabric | 0       |
+|      o2_out_real_V_4_d0                                                                 | -   |        | r_real_V_19  | sub | fabric | 0       |
+|      o2_out_imag_V_4_d0                                                                 | -   |        | r_imag_V_26  | add | fabric | 0       |
+|    + fft_32pt_Pipeline_VITIS_LOOP_231_3                                                 | 0   |        |              |     |        |         |
+|      add_ln231_fu_594_p2                                                                | -   |        | add_ln231    | add | fabric | 0       |
+|      empty_53_fu_632_p2                                                                 | -   |        | empty_53     | sub | fabric | 0       |
+|      ret_V_fu_738_p2                                                                    | -   |        | ret_V        | sub | fabric | 0       |
+|      ret_V_4_fu_778_p2                                                                  | -   |        | ret_V_4      | add | fabric | 0       |
+|      ret_V_5_fu_836_p2                                                                  | -   |        | ret_V_5      | sub | fabric | 0       |
+|      ret_V_6_fu_860_p2                                                                  | -   |        | ret_V_6      | add | fabric | 0       |
+|      b_real_V_6_fu_850_p2                                                               | -   |        | b_real_V_6   | add | fabric | 0       |
+|      b_imag_V_9_fu_874_p2                                                               | -   |        | b_imag_V_9   | add | fabric | 0       |
+|      a_real_V_12_fu_855_p2                                                              | -   |        | a_real_V_12  | sub | fabric | 0       |
+|      a_imag_V_5_fu_879_p2                                                               | -   |        | a_imag_V_5   | sub | fabric | 0       |
+|      r_real_V_fu_884_p2                                                                 | -   |        | r_real_V     | add | fabric | 0       |
+|      r_imag_V_fu_908_p2                                                                 | -   |        | r_imag_V     | add | fabric | 0       |
+|      r_real_V_10_fu_914_p2                                                              | -   |        | r_real_V_10  | add | fabric | 0       |
+|      r_imag_V_14_fu_890_p2                                                              | -   |        | r_imag_V_14  | sub | fabric | 0       |
+|      r_real_V_11_fu_896_p2                                                              | -   |        | r_real_V_11  | sub | fabric | 0       |
+|      r_imag_V_15_fu_920_p2                                                              | -   |        | r_imag_V_15  | sub | fabric | 0       |
+|      r_real_V_12_fu_926_p2                                                              | -   |        | r_real_V_12  | sub | fabric | 0       |
+|      r_imag_V_17_fu_902_p2                                                              | -   |        | r_imag_V_17  | add | fabric | 0       |
+|   + fft_64pt_Pipeline_VITIS_LOOP_271_2                                                  | 0   |        |              |     |        |         |
+|     add_ln271_fu_786_p2                                                                 | -   |        | add_ln271    | add | fabric | 0       |
+|   + fft_16pt (grp_fft_16pt_fu_496)                                                      | 32  |        |              |     |        |         |
+|     r_real_V_116_fu_744_p2                                                              | -   |        | r_real_V_116 | add | fabric | 0       |
+|     r_imag_V_131_fu_748_p2                                                              | -   |        | r_imag_V_131 | add | fabric | 0       |
+|     r_real_V_117_fu_752_p2                                                              | -   |        | r_real_V_117 | sub | fabric | 0       |
+|     r_imag_V_132_fu_756_p2                                                              | -   |        | r_imag_V_132 | sub | fabric | 0       |
+|     r_real_V_118_fu_760_p2                                                              | -   |        | r_real_V_118 | add | fabric | 0       |
+|     r_imag_V_133_fu_764_p2                                                              | -   |        | r_imag_V_133 | add | fabric | 0       |
+|     r_real_V_119_fu_768_p2                                                              | -   |        | r_real_V_119 | sub | fabric | 0       |
+|     r_imag_V_134_fu_772_p2                                                              | -   |        | r_imag_V_134 | sub | fabric | 0       |
+|     r_real_V_fu_776_p2                                                                  | -   |        | r_real_V     | add | fabric | 0       |
+|     r_imag_V_fu_783_p2                                                                  | -   |        | r_imag_V     | add | fabric | 0       |
+|     r_real_V_93_fu_790_p2                                                               | -   |        | r_real_V_93  | add | fabric | 0       |
+|     r_imag_V_106_fu_797_p2                                                              | -   |        | r_imag_V_106 | sub | fabric | 0       |
+|     r_real_V_94_fu_804_p2                                                               | -   |        | r_real_V_94  | sub | fabric | 0       |
+|     r_imag_V_107_fu_811_p2                                                              | -   |        | r_imag_V_107 | sub | fabric | 0       |
+|     r_real_V_95_fu_818_p2                                                               | -   |        | r_real_V_95  | sub | fabric | 0       |
+|     r_imag_V_108_fu_825_p2                                                              | -   |        | r_imag_V_108 | add | fabric | 0       |
+|     r_real_V_120_fu_832_p2                                                              | -   |        | r_real_V_120 | add | fabric | 0       |
+|     r_imag_V_135_fu_839_p2                                                              | -   |        | r_imag_V_135 | add | fabric | 0       |
+|     r_real_V_121_fu_846_p2                                                              | -   |        | r_real_V_121 | sub | fabric | 0       |
+|     r_imag_V_136_fu_853_p2                                                              | -   |        | r_imag_V_136 | sub | fabric | 0       |
+|     r_real_V_122_fu_860_p2                                                              | -   |        | r_real_V_122 | add | fabric | 0       |
+|     r_imag_V_137_fu_867_p2                                                              | -   |        | r_imag_V_137 | add | fabric | 0       |
+|     r_real_V_123_fu_874_p2                                                              | -   |        | r_real_V_123 | sub | fabric | 0       |
+|     r_imag_V_138_fu_881_p2                                                              | -   |        | r_imag_V_138 | sub | fabric | 0       |
+|     r_real_V_124_fu_936_p2                                                              | -   |        | r_real_V_124 | add | fabric | 0       |
+|     r_imag_V_139_fu_942_p2                                                              | -   |        | r_imag_V_139 | add | fabric | 0       |
+|     r_real_V_125_fu_948_p2                                                              | -   |        | r_real_V_125 | sub | fabric | 0       |
+|     r_imag_V_140_fu_954_p2                                                              | -   |        | r_imag_V_140 | sub | fabric | 0       |
+|     cpd_real_V_fu_960_p2                                                                | -   |        | cpd_real_V   | add | fabric | 0       |
+|     cpd_imag_V_fu_966_p2                                                                | -   |        | cpd_imag_V   | add | fabric | 0       |
+|     cmd_real_V_fu_972_p2                                                                | -   |        | cmd_real_V   | sub | fabric | 0       |
+|     cmd_imag_V_fu_978_p2                                                                | -   |        | cmd_imag_V   | sub | fabric | 0       |
+|     r_real_V_126_fu_984_p2                                                              | -   |        | r_real_V_126 | add | fabric | 0       |
+|     r_imag_V_141_fu_991_p2                                                              | -   |        | r_imag_V_141 | add | fabric | 0       |
+|     r_real_V_127_fu_998_p2                                                              | -   |        | r_real_V_127 | add | fabric | 0       |
+|     r_imag_V_142_fu_1005_p2                                                             | -   |        | r_imag_V_142 | sub | fabric | 0       |
+|     r_real_V_128_fu_1012_p2                                                             | -   |        | r_real_V_128 | sub | fabric | 0       |
+|     r_imag_V_143_fu_1019_p2                                                             | -   |        | r_imag_V_143 | sub | fabric | 0       |
+|     r_real_V_129_fu_1026_p2                                                             | -   |        | r_real_V_129 | sub | fabric | 0       |
+|     r_imag_V_144_fu_1033_p2                                                             | -   |        | r_imag_V_144 | add | fabric | 0       |
+|     r_real_V_130_fu_1040_p2                                                             | -   |        | r_real_V_130 | add | fabric | 0       |
+|     r_imag_V_145_fu_1046_p2                                                             | -   |        | r_imag_V_145 | add | fabric | 0       |
+|     r_real_V_131_fu_1052_p2                                                             | -   |        | r_real_V_131 | sub | fabric | 0       |
+|     r_imag_V_146_fu_1058_p2                                                             | -   |        | r_imag_V_146 | sub | fabric | 0       |
+|     cpd_real_V_1_fu_1064_p2                                                             | -   |        | cpd_real_V_1 | add | fabric | 0       |
+|     cpd_imag_V_1_fu_1070_p2                                                             | -   |        | cpd_imag_V_1 | add | fabric | 0       |
+|     cmd_real_V_1_fu_1076_p2                                                             | -   |        | cmd_real_V_1 | sub | fabric | 0       |
+|     cmd_imag_V_1_fu_1082_p2                                                             | -   |        | cmd_imag_V_1 | sub | fabric | 0       |
+|     r_real_V_132_fu_1088_p2                                                             | -   |        | r_real_V_132 | add | fabric | 0       |
+|     r_imag_V_147_fu_1095_p2                                                             | -   |        | r_imag_V_147 | add | fabric | 0       |
+|     r_real_V_133_fu_1102_p2                                                             | -   |        | r_real_V_133 | add | fabric | 0       |
+|     r_imag_V_148_fu_1109_p2                                                             | -   |        | r_imag_V_148 | sub | fabric | 0       |
+|     r_real_V_134_fu_1116_p2                                                             | -   |        | r_real_V_134 | sub | fabric | 0       |
+|     r_imag_V_149_fu_1123_p2                                                             | -   |        | r_imag_V_149 | sub | fabric | 0       |
+|     r_real_V_135_fu_1130_p2                                                             | -   |        | r_real_V_135 | sub | fabric | 0       |
+|     r_imag_V_150_fu_1137_p2                                                             | -   |        | r_imag_V_150 | add | fabric | 0       |
+|    + fft_16pt_Pipeline_VITIS_LOOP_165_1 (grp_fft_16pt_Pipeline_VITIS_LOOP_165_1_fu_580) | 0   |        |              |     |        |         |
+|      add_ln165_fu_234_p2                                                                | -   |        | add_ln165    | add | fabric | 0       |
+|    + fft_16pt_Pipeline_VITIS_LOOP_120_1 (grp_fft_16pt_Pipeline_VITIS_LOOP_120_1_fu_608) | 0   |        |              |     |        |         |
+|      add_ln120_fu_170_p2                                                                | -   |        | add_ln120    | add | fabric | 0       |
+|    + fft_16pt_Pipeline_VITIS_LOOP_171_2 (grp_fft_16pt_Pipeline_VITIS_LOOP_171_2_fu_620) | 0   |        |              |     |        |         |
+|      add_ln171_fu_388_p2                                                                | -   |        | add_ln171    | add | fabric | 0       |
+|    + fft_16pt_Pipeline_VITIS_LOOP_131_2 (grp_fft_16pt_Pipeline_VITIS_LOOP_131_2_fu_672) | 16  |        |              |     |        |         |
+|      add_ln131_fu_352_p2                                                                | -   |        | add_ln131    | add | fabric | 0       |
+|      empty_61_fu_391_p2                                                                 | -   |        | empty_61     | sub | fabric | 0       |
+|      mul_18s_32s_48_2_1_U114                                                            | 2   |        | mul_ln813    | mul | auto   | 1       |
+|      mul_18s_32s_48_2_1_U115                                                            | 2   |        | mul_ln1348   | mul | auto   | 1       |
+|      ret_V_fu_506_p2                                                                    | -   |        | ret_V        | sub | fabric | 0       |
+|      mul_18s_32s_48_2_1_U116                                                            | 2   |        | mul_ln813_13 | mul | auto   | 1       |
+|      mul_18s_32s_48_2_1_U117                                                            | 2   |        | mul_ln1347   | mul | auto   | 1       |
+|      ret_V_18_fu_520_p2                                                                 | -   |        | ret_V_18     | add | fabric | 0       |
+|      mul_18s_32s_48_2_1_U118                                                            | 2   |        | mul_ln813_14 | mul | auto   | 1       |
+|      mul_18s_32s_48_2_1_U119                                                            | 2   |        | mul_ln1348_5 | mul | auto   | 1       |
+|      ret_V_19_fu_534_p2                                                                 | -   |        | ret_V_19     | sub | fabric | 0       |
+|      mul_18s_32s_48_2_1_U120                                                            | 2   |        | mul_ln813_15 | mul | auto   | 1       |
+|      mul_18s_32s_48_2_1_U121                                                            | 2   |        | mul_ln1347_5 | mul | auto   | 1       |
+|      ret_V_20_fu_548_p2                                                                 | -   |        | ret_V_20     | add | fabric | 0       |
+|      cpd_real_V_fu_562_p2                                                               | -   |        | cpd_real_V   | add | fabric | 0       |
+|      cpd_imag_V_fu_567_p2                                                               | -   |        | cpd_imag_V   | add | fabric | 0       |
+|      cmd_real_V_fu_572_p2                                                               | -   |        | cmd_real_V   | sub | fabric | 0       |
+|      cmd_imag_V_fu_577_p2                                                               | -   |        | cmd_imag_V   | sub | fabric | 0       |
+|      e_out_real_V_d1                                                                    | -   |        | r_real_V_82  | add | fabric | 0       |
+|      e_out_imag_V_d1                                                                    | -   |        | r_imag_V_93  | add | fabric | 0       |
+|      e_out_real_V_d0                                                                    | -   |        | r_real_V_86  | add | fabric | 0       |
+|      e_out_imag_V_d0                                                                    | -   |        | r_imag_V_98  | sub | fabric | 0       |
+|      e_out_real_V_11_d1                                                                 | -   |        | r_real_V_87  | sub | fabric | 0       |
+|      e_out_imag_V_11_d1                                                                 | -   |        | r_imag_V_99  | sub | fabric | 0       |
+|      e_out_real_V_11_d0                                                                 | -   |        | r_real_V_88  | sub | fabric | 0       |
+|      e_out_imag_V_11_d0                                                                 | -   |        | r_imag_V_100 | add | fabric | 0       |
+|    + fft_16pt_Pipeline_VITIS_LOOP_181_3 (grp_fft_16pt_Pipeline_VITIS_LOOP_181_3_fu_700) | 16  |        |              |     |        |         |
+|      add_ln181_fu_424_p2                                                                | -   |        | add_ln181    | add | fabric | 0       |
+|      empty_59_fu_519_p2                                                                 | -   |        | empty_59     | sub | fabric | 0       |
+|      mul_32s_18s_48_2_1_U187                                                            | 2   |        | mul_ln813    | mul | auto   | 1       |
+|      mul_32s_18s_48_2_1_U188                                                            | 2   |        | mul_ln1348   | mul | auto   | 1       |
+|      ret_V_fu_598_p2                                                                    | -   |        | ret_V        | sub | fabric | 0       |
+|      mul_32s_18s_48_2_1_U189                                                            | 2   |        | mul_ln813_10 | mul | auto   | 1       |
+|      mul_32s_18s_48_2_1_U190                                                            | 2   |        | mul_ln1347   | mul | auto   | 1       |
+|      ret_V_13_fu_620_p2                                                                 | -   |        | ret_V_13     | add | fabric | 0       |
+|      mul_32s_18s_48_2_1_U191                                                            | 2   |        | mul_ln813_11 | mul | auto   | 1       |
+|      mul_32s_18s_48_2_1_U192                                                            | 2   |        | mul_ln1348_4 | mul | auto   | 1       |
+|      ret_V_14_fu_634_p2                                                                 | -   |        | ret_V_14     | sub | fabric | 0       |
+|      mul_32s_18s_48_2_1_U193                                                            | 2   |        | mul_ln813_12 | mul | auto   | 1       |
+|      mul_32s_18s_48_2_1_U194                                                            | 2   |        | mul_ln1347_4 | mul | auto   | 1       |
+|      ret_V_15_fu_658_p2                                                                 | -   |        | ret_V_15     | add | fabric | 0       |
+|      r_real_V_76_fu_648_p2                                                              | -   |        | r_real_V_76  | add | fabric | 0       |
+|      r_imag_V_87_fu_672_p2                                                              | -   |        | r_imag_V_87  | add | fabric | 0       |
+|      r_real_V_77_fu_653_p2                                                              | -   |        | r_real_V_77  | sub | fabric | 0       |
+|      r_imag_V_88_fu_677_p2                                                              | -   |        | r_imag_V_88  | sub | fabric | 0       |
+|      out_real_0_d0                                                                      | -   |        | r_real_V     | add | fabric | 0       |
+|      out_imag_0_d0                                                                      | -   |        | r_imag_V     | add | fabric | 0       |
+|      out_real_1_d0                                                                      | -   |        | r_real_V_71  | add | fabric | 0       |
+|      out_imag_1_d0                                                                      | -   |        | r_imag_V_82  | sub | fabric | 0       |
+|      out_real_2_d0                                                                      | -   |        | r_real_V_72  | sub | fabric | 0       |
+|      out_imag_2_d0                                                                      | -   |        | r_imag_V_83  | sub | fabric | 0       |
+|      out_real_3_d0                                                                      | -   |        | r_real_V_73  | sub | fabric | 0       |
+|      out_imag_3_d0                                                                      | -   |        | r_imag_V_84  | add | fabric | 0       |
+|   + fft_16pt (grp_fft_16pt_fu_520)                                                      | 32  |        |              |     |        |         |
+|     r_real_V_116_fu_744_p2                                                              | -   |        | r_real_V_116 | add | fabric | 0       |
+|     r_imag_V_131_fu_748_p2                                                              | -   |        | r_imag_V_131 | add | fabric | 0       |
+|     r_real_V_117_fu_752_p2                                                              | -   |        | r_real_V_117 | sub | fabric | 0       |
+|     r_imag_V_132_fu_756_p2                                                              | -   |        | r_imag_V_132 | sub | fabric | 0       |
+|     r_real_V_118_fu_760_p2                                                              | -   |        | r_real_V_118 | add | fabric | 0       |
+|     r_imag_V_133_fu_764_p2                                                              | -   |        | r_imag_V_133 | add | fabric | 0       |
+|     r_real_V_119_fu_768_p2                                                              | -   |        | r_real_V_119 | sub | fabric | 0       |
+|     r_imag_V_134_fu_772_p2                                                              | -   |        | r_imag_V_134 | sub | fabric | 0       |
+|     r_real_V_fu_776_p2                                                                  | -   |        | r_real_V     | add | fabric | 0       |
+|     r_imag_V_fu_783_p2                                                                  | -   |        | r_imag_V     | add | fabric | 0       |
+|     r_real_V_93_fu_790_p2                                                               | -   |        | r_real_V_93  | add | fabric | 0       |
+|     r_imag_V_106_fu_797_p2                                                              | -   |        | r_imag_V_106 | sub | fabric | 0       |
+|     r_real_V_94_fu_804_p2                                                               | -   |        | r_real_V_94  | sub | fabric | 0       |
+|     r_imag_V_107_fu_811_p2                                                              | -   |        | r_imag_V_107 | sub | fabric | 0       |
+|     r_real_V_95_fu_818_p2                                                               | -   |        | r_real_V_95  | sub | fabric | 0       |
+|     r_imag_V_108_fu_825_p2                                                              | -   |        | r_imag_V_108 | add | fabric | 0       |
+|     r_real_V_120_fu_832_p2                                                              | -   |        | r_real_V_120 | add | fabric | 0       |
+|     r_imag_V_135_fu_839_p2                                                              | -   |        | r_imag_V_135 | add | fabric | 0       |
+|     r_real_V_121_fu_846_p2                                                              | -   |        | r_real_V_121 | sub | fabric | 0       |
+|     r_imag_V_136_fu_853_p2                                                              | -   |        | r_imag_V_136 | sub | fabric | 0       |
+|     r_real_V_122_fu_860_p2                                                              | -   |        | r_real_V_122 | add | fabric | 0       |
+|     r_imag_V_137_fu_867_p2                                                              | -   |        | r_imag_V_137 | add | fabric | 0       |
+|     r_real_V_123_fu_874_p2                                                              | -   |        | r_real_V_123 | sub | fabric | 0       |
+|     r_imag_V_138_fu_881_p2                                                              | -   |        | r_imag_V_138 | sub | fabric | 0       |
+|     r_real_V_124_fu_936_p2                                                              | -   |        | r_real_V_124 | add | fabric | 0       |
+|     r_imag_V_139_fu_942_p2                                                              | -   |        | r_imag_V_139 | add | fabric | 0       |
+|     r_real_V_125_fu_948_p2                                                              | -   |        | r_real_V_125 | sub | fabric | 0       |
+|     r_imag_V_140_fu_954_p2                                                              | -   |        | r_imag_V_140 | sub | fabric | 0       |
+|     cpd_real_V_fu_960_p2                                                                | -   |        | cpd_real_V   | add | fabric | 0       |
+|     cpd_imag_V_fu_966_p2                                                                | -   |        | cpd_imag_V   | add | fabric | 0       |
+|     cmd_real_V_fu_972_p2                                                                | -   |        | cmd_real_V   | sub | fabric | 0       |
+|     cmd_imag_V_fu_978_p2                                                                | -   |        | cmd_imag_V   | sub | fabric | 0       |
+|     r_real_V_126_fu_984_p2                                                              | -   |        | r_real_V_126 | add | fabric | 0       |
+|     r_imag_V_141_fu_991_p2                                                              | -   |        | r_imag_V_141 | add | fabric | 0       |
+|     r_real_V_127_fu_998_p2                                                              | -   |        | r_real_V_127 | add | fabric | 0       |
+|     r_imag_V_142_fu_1005_p2                                                             | -   |        | r_imag_V_142 | sub | fabric | 0       |
+|     r_real_V_128_fu_1012_p2                                                             | -   |        | r_real_V_128 | sub | fabric | 0       |
+|     r_imag_V_143_fu_1019_p2                                                             | -   |        | r_imag_V_143 | sub | fabric | 0       |
+|     r_real_V_129_fu_1026_p2                                                             | -   |        | r_real_V_129 | sub | fabric | 0       |
+|     r_imag_V_144_fu_1033_p2                                                             | -   |        | r_imag_V_144 | add | fabric | 0       |
+|     r_real_V_130_fu_1040_p2                                                             | -   |        | r_real_V_130 | add | fabric | 0       |
+|     r_imag_V_145_fu_1046_p2                                                             | -   |        | r_imag_V_145 | add | fabric | 0       |
+|     r_real_V_131_fu_1052_p2                                                             | -   |        | r_real_V_131 | sub | fabric | 0       |
+|     r_imag_V_146_fu_1058_p2                                                             | -   |        | r_imag_V_146 | sub | fabric | 0       |
+|     cpd_real_V_1_fu_1064_p2                                                             | -   |        | cpd_real_V_1 | add | fabric | 0       |
+|     cpd_imag_V_1_fu_1070_p2                                                             | -   |        | cpd_imag_V_1 | add | fabric | 0       |
+|     cmd_real_V_1_fu_1076_p2                                                             | -   |        | cmd_real_V_1 | sub | fabric | 0       |
+|     cmd_imag_V_1_fu_1082_p2                                                             | -   |        | cmd_imag_V_1 | sub | fabric | 0       |
+|     r_real_V_132_fu_1088_p2                                                             | -   |        | r_real_V_132 | add | fabric | 0       |
+|     r_imag_V_147_fu_1095_p2                                                             | -   |        | r_imag_V_147 | add | fabric | 0       |
+|     r_real_V_133_fu_1102_p2                                                             | -   |        | r_real_V_133 | add | fabric | 0       |
+|     r_imag_V_148_fu_1109_p2                                                             | -   |        | r_imag_V_148 | sub | fabric | 0       |
+|     r_real_V_134_fu_1116_p2                                                             | -   |        | r_real_V_134 | sub | fabric | 0       |
+|     r_imag_V_149_fu_1123_p2                                                             | -   |        | r_imag_V_149 | sub | fabric | 0       |
+|     r_real_V_135_fu_1130_p2                                                             | -   |        | r_real_V_135 | sub | fabric | 0       |
+|     r_imag_V_150_fu_1137_p2                                                             | -   |        | r_imag_V_150 | add | fabric | 0       |
+|    + fft_16pt_Pipeline_VITIS_LOOP_165_1 (grp_fft_16pt_Pipeline_VITIS_LOOP_165_1_fu_580) | 0   |        |              |     |        |         |
+|      add_ln165_fu_234_p2                                                                | -   |        | add_ln165    | add | fabric | 0       |
+|    + fft_16pt_Pipeline_VITIS_LOOP_120_1 (grp_fft_16pt_Pipeline_VITIS_LOOP_120_1_fu_608) | 0   |        |              |     |        |         |
+|      add_ln120_fu_170_p2                                                                | -   |        | add_ln120    | add | fabric | 0       |
+|    + fft_16pt_Pipeline_VITIS_LOOP_171_2 (grp_fft_16pt_Pipeline_VITIS_LOOP_171_2_fu_620) | 0   |        |              |     |        |         |
+|      add_ln171_fu_388_p2                                                                | -   |        | add_ln171    | add | fabric | 0       |
+|    + fft_16pt_Pipeline_VITIS_LOOP_131_2 (grp_fft_16pt_Pipeline_VITIS_LOOP_131_2_fu_672) | 16  |        |              |     |        |         |
+|      add_ln131_fu_352_p2                                                                | -   |        | add_ln131    | add | fabric | 0       |
+|      empty_61_fu_391_p2                                                                 | -   |        | empty_61     | sub | fabric | 0       |
+|      mul_18s_32s_48_2_1_U114                                                            | 2   |        | mul_ln813    | mul | auto   | 1       |
+|      mul_18s_32s_48_2_1_U115                                                            | 2   |        | mul_ln1348   | mul | auto   | 1       |
+|      ret_V_fu_506_p2                                                                    | -   |        | ret_V        | sub | fabric | 0       |
+|      mul_18s_32s_48_2_1_U116                                                            | 2   |        | mul_ln813_13 | mul | auto   | 1       |
+|      mul_18s_32s_48_2_1_U117                                                            | 2   |        | mul_ln1347   | mul | auto   | 1       |
+|      ret_V_18_fu_520_p2                                                                 | -   |        | ret_V_18     | add | fabric | 0       |
+|      mul_18s_32s_48_2_1_U118                                                            | 2   |        | mul_ln813_14 | mul | auto   | 1       |
+|      mul_18s_32s_48_2_1_U119                                                            | 2   |        | mul_ln1348_5 | mul | auto   | 1       |
+|      ret_V_19_fu_534_p2                                                                 | -   |        | ret_V_19     | sub | fabric | 0       |
+|      mul_18s_32s_48_2_1_U120                                                            | 2   |        | mul_ln813_15 | mul | auto   | 1       |
+|      mul_18s_32s_48_2_1_U121                                                            | 2   |        | mul_ln1347_5 | mul | auto   | 1       |
+|      ret_V_20_fu_548_p2                                                                 | -   |        | ret_V_20     | add | fabric | 0       |
+|      cpd_real_V_fu_562_p2                                                               | -   |        | cpd_real_V   | add | fabric | 0       |
+|      cpd_imag_V_fu_567_p2                                                               | -   |        | cpd_imag_V   | add | fabric | 0       |
+|      cmd_real_V_fu_572_p2                                                               | -   |        | cmd_real_V   | sub | fabric | 0       |
+|      cmd_imag_V_fu_577_p2                                                               | -   |        | cmd_imag_V   | sub | fabric | 0       |
+|      e_out_real_V_d1                                                                    | -   |        | r_real_V_82  | add | fabric | 0       |
+|      e_out_imag_V_d1                                                                    | -   |        | r_imag_V_93  | add | fabric | 0       |
+|      e_out_real_V_d0                                                                    | -   |        | r_real_V_86  | add | fabric | 0       |
+|      e_out_imag_V_d0                                                                    | -   |        | r_imag_V_98  | sub | fabric | 0       |
+|      e_out_real_V_11_d1                                                                 | -   |        | r_real_V_87  | sub | fabric | 0       |
+|      e_out_imag_V_11_d1                                                                 | -   |        | r_imag_V_99  | sub | fabric | 0       |
+|      e_out_real_V_11_d0                                                                 | -   |        | r_real_V_88  | sub | fabric | 0       |
+|      e_out_imag_V_11_d0                                                                 | -   |        | r_imag_V_100 | add | fabric | 0       |
+|    + fft_16pt_Pipeline_VITIS_LOOP_181_3 (grp_fft_16pt_Pipeline_VITIS_LOOP_181_3_fu_700) | 16  |        |              |     |        |         |
+|      add_ln181_fu_424_p2                                                                | -   |        | add_ln181    | add | fabric | 0       |
+|      empty_59_fu_519_p2                                                                 | -   |        | empty_59     | sub | fabric | 0       |
+|      mul_32s_18s_48_2_1_U187                                                            | 2   |        | mul_ln813    | mul | auto   | 1       |
+|      mul_32s_18s_48_2_1_U188                                                            | 2   |        | mul_ln1348   | mul | auto   | 1       |
+|      ret_V_fu_598_p2                                                                    | -   |        | ret_V        | sub | fabric | 0       |
+|      mul_32s_18s_48_2_1_U189                                                            | 2   |        | mul_ln813_10 | mul | auto   | 1       |
+|      mul_32s_18s_48_2_1_U190                                                            | 2   |        | mul_ln1347   | mul | auto   | 1       |
+|      ret_V_13_fu_620_p2                                                                 | -   |        | ret_V_13     | add | fabric | 0       |
+|      mul_32s_18s_48_2_1_U191                                                            | 2   |        | mul_ln813_11 | mul | auto   | 1       |
+|      mul_32s_18s_48_2_1_U192                                                            | 2   |        | mul_ln1348_4 | mul | auto   | 1       |
+|      ret_V_14_fu_634_p2                                                                 | -   |        | ret_V_14     | sub | fabric | 0       |
+|      mul_32s_18s_48_2_1_U193                                                            | 2   |        | mul_ln813_12 | mul | auto   | 1       |
+|      mul_32s_18s_48_2_1_U194                                                            | 2   |        | mul_ln1347_4 | mul | auto   | 1       |
+|      ret_V_15_fu_658_p2                                                                 | -   |        | ret_V_15     | add | fabric | 0       |
+|      r_real_V_76_fu_648_p2                                                              | -   |        | r_real_V_76  | add | fabric | 0       |
+|      r_imag_V_87_fu_672_p2                                                              | -   |        | r_imag_V_87  | add | fabric | 0       |
+|      r_real_V_77_fu_653_p2                                                              | -   |        | r_real_V_77  | sub | fabric | 0       |
+|      r_imag_V_88_fu_677_p2                                                              | -   |        | r_imag_V_88  | sub | fabric | 0       |
+|      out_real_0_d0                                                                      | -   |        | r_real_V     | add | fabric | 0       |
+|      out_imag_0_d0                                                                      | -   |        | r_imag_V     | add | fabric | 0       |
+|      out_real_1_d0                                                                      | -   |        | r_real_V_71  | add | fabric | 0       |
+|      out_imag_1_d0                                                                      | -   |        | r_imag_V_82  | sub | fabric | 0       |
+|      out_real_2_d0                                                                      | -   |        | r_real_V_72  | sub | fabric | 0       |
+|      out_imag_2_d0                                                                      | -   |        | r_imag_V_83  | sub | fabric | 0       |
+|      out_real_3_d0                                                                      | -   |        | r_real_V_73  | sub | fabric | 0       |
+|      out_imag_3_d0                                                                      | -   |        | r_imag_V_84  | add | fabric | 0       |
+|   + fft_64pt_Pipeline_VITIS_LOOP_281_3                                                  | 0   |        |              |     |        |         |
+|     add_ln281_fu_838_p2                                                                 | -   |        | add_ln281    | add | fabric | 0       |
+|     sub_ln284_fu_896_p2                                                                 | -   |        | sub_ln284    | sub | fabric | 0       |
+|     ret_V_fu_1014_p2                                                                    | -   |        | ret_V        | sub | fabric | 0       |
+|     ret_V_1_fu_1054_p2                                                                  | -   |        | ret_V_1      | add | fabric | 0       |
+|     ret_V_2_fu_1076_p2                                                                  | -   |        | ret_V_2      | sub | fabric | 0       |
+|     ret_V_3_fu_1152_p2                                                                  | -   |        | ret_V_3      | add | fabric | 0       |
+|     b_real_V_3_fu_1090_p2                                                               | -   |        | b_real_V_3   | add | fabric | 0       |
+|     b_imag_V_3_fu_1166_p2                                                               | -   |        | b_imag_V_3   | add | fabric | 0       |
+|     a_real_V_6_fu_1095_p2                                                               | -   |        | a_real_V_6   | sub | fabric | 0       |
+|     a_imag_V_2_fu_1171_p2                                                               | -   |        | a_imag_V_2   | sub | fabric | 0       |
+|     r_real_V_fu_1176_p2                                                                 | -   |        | r_real_V     | add | fabric | 0       |
+|     r_imag_V_fu_1211_p2                                                                 | -   |        | r_imag_V     | add | fabric | 0       |
+|     r_real_V_5_fu_1217_p2                                                               | -   |        | r_real_V_5   | add | fabric | 0       |
+|     r_imag_V_6_fu_1193_p2                                                               | -   |        | r_imag_V_6   | sub | fabric | 0       |
+|     r_real_V_6_fu_1199_p2                                                               | -   |        | r_real_V_6   | sub | fabric | 0       |
+|     r_imag_V_7_fu_1223_p2                                                               | -   |        | r_imag_V_7   | sub | fabric | 0       |
+|     r_real_V_7_fu_1229_p2                                                               | -   |        | r_real_V_7   | sub | fabric | 0       |
+|     r_imag_V_9_fu_1205_p2                                                               | -   |        | r_imag_V_9   | add | fabric | 0       |
+|  + sr_fft_Pipeline_VITIS_LOOP_329_2                                                     | 0   |        |              |     |        |         |
+|    add_ln329_fu_441_p2                                                                  | -   |        | add_ln329    | add | fabric | 0       |
++-----------------------------------------------------------------------------------------+-----+--------+--------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-----------------------------------------------------------------------------------------+------+------+--------+-----------------+---------+------+---------+
+| Name                                                                                    | BRAM | URAM | Pragma | Variable        | Storage | Impl | Latency |
++-----------------------------------------------------------------------------------------+------+------+--------+-----------------+---------+------+---------+
+| + sr_fft                                                                                | 20   | 0    |        |                 |         |      |         |
+|   x_real_V_U                                                                            | -    | -    |        | x_real_V        | rom_np  | auto | 1       |
+|   x_real_V_1_U                                                                          | -    | -    |        | x_real_V_1      | rom_np  | auto | 1       |
+|   x_real_V_2_U                                                                          | -    | -    |        | x_real_V_2      | rom_np  | auto | 1       |
+|   x_real_V_3_U                                                                          | -    | -    |        | x_real_V_3      | rom_np  | auto | 1       |
+|   x_real_V_4_U                                                                          | -    | -    |        | x_real_V_4      | rom_np  | auto | 1       |
+|   x_real_V_5_U                                                                          | -    | -    |        | x_real_V_5      | rom_np  | auto | 1       |
+|   x_real_V_6_U                                                                          | -    | -    |        | x_real_V_6      | rom_np  | auto | 1       |
+|   x_real_V_7_U                                                                          | -    | -    |        | x_real_V_7      | rom_np  | auto | 1       |
+|   x_imag_V_U                                                                            | -    | -    |        | x_imag_V        | rom_np  | auto | 1       |
+|   x_imag_V_1_U                                                                          | -    | -    |        | x_imag_V_1      | rom_np  | auto | 1       |
+|   x_imag_V_2_U                                                                          | -    | -    |        | x_imag_V_2      | rom_np  | auto | 1       |
+|   x_imag_V_3_U                                                                          | -    | -    |        | x_imag_V_3      | rom_np  | auto | 1       |
+|   x_imag_V_4_U                                                                          | -    | -    |        | x_imag_V_4      | rom_np  | auto | 1       |
+|   x_imag_V_5_U                                                                          | -    | -    |        | x_imag_V_5      | rom_np  | auto | 1       |
+|   x_imag_V_6_U                                                                          | -    | -    |        | x_imag_V_6      | rom_np  | auto | 1       |
+|   x_imag_V_7_U                                                                          | -    | -    |        | x_imag_V_7      | rom_np  | auto | 1       |
+|   X_real_0_U                                                                            | -    | -    |        | X_real_0        | ram_1p  | auto | 1       |
+|   X_real_1_U                                                                            | -    | -    |        | X_real_1        | ram_1p  | auto | 1       |
+|   X_real_2_U                                                                            | -    | -    |        | X_real_2        | ram_1p  | auto | 1       |
+|   X_real_3_U                                                                            | -    | -    |        | X_real_3        | ram_1p  | auto | 1       |
+|   X_real_4_U                                                                            | -    | -    |        | X_real_4        | ram_1p  | auto | 1       |
+|   X_real_5_U                                                                            | -    | -    |        | X_real_5        | ram_1p  | auto | 1       |
+|   X_real_6_U                                                                            | -    | -    |        | X_real_6        | ram_1p  | auto | 1       |
+|   X_real_7_U                                                                            | -    | -    |        | X_real_7        | ram_1p  | auto | 1       |
+|   X_imag_0_U                                                                            | -    | -    |        | X_imag_0        | ram_1p  | auto | 1       |
+|   X_imag_1_U                                                                            | -    | -    |        | X_imag_1        | ram_1p  | auto | 1       |
+|   X_imag_2_U                                                                            | -    | -    |        | X_imag_2        | ram_1p  | auto | 1       |
+|   X_imag_3_U                                                                            | -    | -    |        | X_imag_3        | ram_1p  | auto | 1       |
+|   X_imag_4_U                                                                            | -    | -    |        | X_imag_4        | ram_1p  | auto | 1       |
+|   X_imag_5_U                                                                            | -    | -    |        | X_imag_5        | ram_1p  | auto | 1       |
+|   X_imag_6_U                                                                            | -    | -    |        | X_imag_6        | ram_1p  | auto | 1       |
+|   X_imag_7_U                                                                            | -    | -    |        | X_imag_7        | ram_1p  | auto | 1       |
+|  + fft_64pt                                                                             | 20   | 0    |        |                 |         |      |         |
+|    e_in_real_V_U                                                                        | -    | -    |        | e_in_real_V     | ram_s2p | auto | 1       |
+|    e_in_real_V_1_U                                                                      | -    | -    |        | e_in_real_V_1   | ram_s2p | auto | 1       |
+|    e_in_real_V_2_U                                                                      | -    | -    |        | e_in_real_V_2   | ram_s2p | auto | 1       |
+|    e_in_real_V_3_U                                                                      | -    | -    |        | e_in_real_V_3   | ram_s2p | auto | 1       |
+|    e_in_real_V_4_U                                                                      | -    | -    |        | e_in_real_V_4   | ram_s2p | auto | 1       |
+|    e_in_real_V_5_U                                                                      | -    | -    |        | e_in_real_V_5   | ram_s2p | auto | 1       |
+|    e_in_real_V_6_U                                                                      | -    | -    |        | e_in_real_V_6   | ram_s2p | auto | 1       |
+|    e_in_real_V_7_U                                                                      | -    | -    |        | e_in_real_V_7   | ram_s2p | auto | 1       |
+|    e_in_imag_V_U                                                                        | -    | -    |        | e_in_imag_V     | ram_s2p | auto | 1       |
+|    e_in_imag_V_1_U                                                                      | -    | -    |        | e_in_imag_V_1   | ram_s2p | auto | 1       |
+|    e_in_imag_V_2_U                                                                      | -    | -    |        | e_in_imag_V_2   | ram_s2p | auto | 1       |
+|    e_in_imag_V_3_U                                                                      | -    | -    |        | e_in_imag_V_3   | ram_s2p | auto | 1       |
+|    e_in_imag_V_4_U                                                                      | -    | -    |        | e_in_imag_V_4   | ram_s2p | auto | 1       |
+|    e_in_imag_V_5_U                                                                      | -    | -    |        | e_in_imag_V_5   | ram_s2p | auto | 1       |
+|    e_in_imag_V_6_U                                                                      | -    | -    |        | e_in_imag_V_6   | ram_s2p | auto | 1       |
+|    e_in_imag_V_7_U                                                                      | -    | -    |        | e_in_imag_V_7   | ram_s2p | auto | 1       |
+|    e_out_real_V_U                                                                       | -    | -    |        | e_out_real_V    | ram_1p  | auto | 1       |
+|    e_out_real_V_1_U                                                                     | -    | -    |        | e_out_real_V_1  | ram_1p  | auto | 1       |
+|    e_out_real_V_2_U                                                                     | -    | -    |        | e_out_real_V_2  | ram_1p  | auto | 1       |
+|    e_out_real_V_3_U                                                                     | -    | -    |        | e_out_real_V_3  | ram_1p  | auto | 1       |
+|    e_out_real_V_4_U                                                                     | -    | -    |        | e_out_real_V_4  | ram_1p  | auto | 1       |
+|    e_out_real_V_5_U                                                                     | -    | -    |        | e_out_real_V_5  | ram_1p  | auto | 1       |
+|    e_out_real_V_6_U                                                                     | -    | -    |        | e_out_real_V_6  | ram_1p  | auto | 1       |
+|    e_out_real_V_7_U                                                                     | -    | -    |        | e_out_real_V_7  | ram_1p  | auto | 1       |
+|    e_out_imag_V_U                                                                       | -    | -    |        | e_out_imag_V    | ram_1p  | auto | 1       |
+|    e_out_imag_V_1_U                                                                     | -    | -    |        | e_out_imag_V_1  | ram_1p  | auto | 1       |
+|    e_out_imag_V_2_U                                                                     | -    | -    |        | e_out_imag_V_2  | ram_1p  | auto | 1       |
+|    e_out_imag_V_3_U                                                                     | -    | -    |        | e_out_imag_V_3  | ram_1p  | auto | 1       |
+|    e_out_imag_V_4_U                                                                     | -    | -    |        | e_out_imag_V_4  | ram_1p  | auto | 1       |
+|    e_out_imag_V_5_U                                                                     | -    | -    |        | e_out_imag_V_5  | ram_1p  | auto | 1       |
+|    e_out_imag_V_6_U                                                                     | -    | -    |        | e_out_imag_V_6  | ram_1p  | auto | 1       |
+|    e_out_imag_V_7_U                                                                     | -    | -    |        | e_out_imag_V_7  | ram_1p  | auto | 1       |
+|    o1_in_real_V_U                                                                       | -    | -    |        | o1_in_real_V    | ram_s2p | auto | 1       |
+|    o1_in_real_V_1_U                                                                     | -    | -    |        | o1_in_real_V_1  | ram_s2p | auto | 1       |
+|    o1_in_real_V_2_U                                                                     | -    | -    |        | o1_in_real_V_2  | ram_s2p | auto | 1       |
+|    o1_in_real_V_3_U                                                                     | -    | -    |        | o1_in_real_V_3  | ram_s2p | auto | 1       |
+|    o1_in_imag_V_U                                                                       | -    | -    |        | o1_in_imag_V    | ram_s2p | auto | 1       |
+|    o1_in_imag_V_1_U                                                                     | -    | -    |        | o1_in_imag_V_1  | ram_s2p | auto | 1       |
+|    o1_in_imag_V_2_U                                                                     | -    | -    |        | o1_in_imag_V_2  | ram_s2p | auto | 1       |
+|    o1_in_imag_V_3_U                                                                     | -    | -    |        | o1_in_imag_V_3  | ram_s2p | auto | 1       |
+|    o1_out_real_V_U                                                                      | -    | -    |        | o1_out_real_V   | ram_1p  | auto | 1       |
+|    o1_out_real_V_1_U                                                                    | -    | -    |        | o1_out_real_V_1 | ram_1p  | auto | 1       |
+|    o1_out_real_V_2_U                                                                    | -    | -    |        | o1_out_real_V_2 | ram_1p  | auto | 1       |
+|    o1_out_real_V_3_U                                                                    | -    | -    |        | o1_out_real_V_3 | ram_1p  | auto | 1       |
+|    mul_32s_18s_48_2_1_U569                                                              | -    | -    |        | o1_out_imag_V   | ram_1p  | auto | 1       |
+|    mul_32s_18s_48_2_1_U570                                                              | -    | -    |        | o1_out_imag_V_1 | ram_1p  | auto | 1       |
+|    o1_out_imag_V_2_U                                                                    | -    | -    |        | o1_out_imag_V_2 | ram_1p  | auto | 1       |
+|    o1_out_imag_V_3_U                                                                    | -    | -    |        | o1_out_imag_V_3 | ram_1p  | auto | 1       |
+|    mul_32s_18s_48_2_1_U571                                                              | -    | -    |        | o2_in_real_V    | ram_s2p | auto | 1       |
+|    mul_32s_18s_48_2_1_U572                                                              | -    | -    |        | o2_in_real_V_1  | ram_s2p | auto | 1       |
+|    o2_in_real_V_2_U                                                                     | -    | -    |        | o2_in_real_V_2  | ram_s2p | auto | 1       |
+|    o2_in_real_V_3_U                                                                     | -    | -    |        | o2_in_real_V_3  | ram_s2p | auto | 1       |
+|    o2_in_imag_V_U                                                                       | -    | -    |        | o2_in_imag_V    | ram_s2p | auto | 1       |
+|    o2_in_imag_V_1_U                                                                     | -    | -    |        | o2_in_imag_V_1  | ram_s2p | auto | 1       |
+|    o2_in_imag_V_2_U                                                                     | -    | -    |        | o2_in_imag_V_2  | ram_s2p | auto | 1       |
+|    o2_in_imag_V_3_U                                                                     | -    | -    |        | o2_in_imag_V_3  | ram_s2p | auto | 1       |
+|    o2_out_real_V_U                                                                      | -    | -    |        | o2_out_real_V   | ram_1p  | auto | 1       |
+|    o2_out_real_V_1_U                                                                    | -    | -    |        | o2_out_real_V_1 | ram_1p  | auto | 1       |
+|    o2_out_real_V_2_U                                                                    | -    | -    |        | o2_out_real_V_2 | ram_1p  | auto | 1       |
+|    o2_out_real_V_3_U                                                                    | -    | -    |        | o2_out_real_V_3 | ram_1p  | auto | 1       |
+|    o2_out_imag_V_U                                                                      | -    | -    |        | o2_out_imag_V   | ram_1p  | auto | 1       |
+|    o2_out_imag_V_1_U                                                                    | -    | -    |        | o2_out_imag_V_1 | ram_1p  | auto | 1       |
+|    o2_out_imag_V_2_U                                                                    | -    | -    |        | o2_out_imag_V_2 | ram_1p  | auto | 1       |
+|    o2_out_imag_V_3_U                                                                    | -    | -    |        | o2_out_imag_V_3 | ram_1p  | auto | 1       |
+|   + fft_32pt                                                                            | 10   | 0    |        |                 |         |      |         |
+|     e_in_real_V_U                                                                       | -    | -    |        | e_in_real_V     | ram_s2p | auto | 1       |
+|     e_in_real_V_8_U                                                                     | -    | -    |        | e_in_real_V_8   | ram_s2p | auto | 1       |
+|     e_in_imag_V_U                                                                       | -    | -    |        | e_in_imag_V     | ram_s2p | auto | 1       |
+|     e_in_imag_V_8_U                                                                     | -    | -    |        | e_in_imag_V_8   | ram_s2p | auto | 1       |
+|     e_in_real_V_9_U                                                                     | -    | -    |        | e_in_real_V_9   | ram_s2p | auto | 1       |
+|     e_in_real_V_10_U                                                                    | -    | -    |        | e_in_real_V_10  | ram_s2p | auto | 1       |
+|     e_in_imag_V_9_U                                                                     | -    | -    |        | e_in_imag_V_9   | ram_s2p | auto | 1       |
+|     e_in_imag_V_10_U                                                                    | -    | -    |        | e_in_imag_V_10  | ram_s2p | auto | 1       |
+|     e_in_real_V_11_U                                                                    | -    | -    |        | e_in_real_V_11  | ram_s2p | auto | 1       |
+|     e_in_real_V_12_U                                                                    | -    | -    |        | e_in_real_V_12  | ram_s2p | auto | 1       |
+|     e_in_real_V_13_U                                                                    | -    | -    |        | e_in_real_V_13  | ram_s2p | auto | 1       |
+|     e_in_real_V_14_U                                                                    | -    | -    |        | e_in_real_V_14  | ram_s2p | auto | 1       |
+|     e_in_imag_V_11_U                                                                    | -    | -    |        | e_in_imag_V_11  | ram_s2p | auto | 1       |
+|     e_in_imag_V_12_U                                                                    | -    | -    |        | e_in_imag_V_12  | ram_s2p | auto | 1       |
+|     e_in_imag_V_13_U                                                                    | -    | -    |        | e_in_imag_V_13  | ram_s2p | auto | 1       |
+|     e_in_imag_V_14_U                                                                    | -    | -    |        | e_in_imag_V_14  | ram_s2p | auto | 1       |
+|     e_out_real_V_U                                                                      | -    | -    |        | e_out_real_V    | ram_1p  | auto | 1       |
+|     e_out_real_V_8_U                                                                    | -    | -    |        | e_out_real_V_8  | ram_1p  | auto | 1       |
+|     e_out_real_V_9_U                                                                    | -    | -    |        | e_out_real_V_9  | ram_1p  | auto | 1       |
+|     e_out_real_V_10_U                                                                   | -    | -    |        | e_out_real_V_10 | ram_1p  | auto | 1       |
+|     e_out_imag_V_U                                                                      | -    | -    |        | e_out_imag_V    | ram_1p  | auto | 1       |
+|     e_out_imag_V_8_U                                                                    | -    | -    |        | e_out_imag_V_8  | ram_1p  | auto | 1       |
+|     e_out_imag_V_9_U                                                                    | -    | -    |        | e_out_imag_V_9  | ram_1p  | auto | 1       |
+|     e_out_imag_V_10_U                                                                   | -    | -    |        | e_out_imag_V_10 | ram_1p  | auto | 1       |
+|     o1_in_real_V_U                                                                      | -    | -    |        | o1_in_real_V    | ram_s2p | auto | 1       |
+|     o1_in_real_V_4_U                                                                    | -    | -    |        | o1_in_real_V_4  | ram_s2p | auto | 1       |
+|     o1_in_imag_V_U                                                                      | -    | -    |        | o1_in_imag_V    | ram_s2p | auto | 1       |
+|     o1_in_imag_V_4_U                                                                    | -    | -    |        | o1_in_imag_V_4  | ram_s2p | auto | 1       |
+|     o1_out_real_V_U                                                                     | -    | -    |        | o1_out_real_V   | ram_t2p | auto | 1       |
+|     o1_out_real_V_1_U                                                                   | -    | -    |        | o1_out_real_V_1 | ram_t2p | auto | 1       |
+|     o1_out_imag_V_U                                                                     | -    | -    |        | o1_out_imag_V   | ram_t2p | auto | 1       |
+|     o1_out_imag_V_1_U                                                                   | -    | -    |        | o1_out_imag_V_1 | ram_t2p | auto | 1       |
+|     o2_in_real_V_U                                                                      | -    | -    |        | o2_in_real_V    | ram_s2p | auto | 1       |
+|     o2_in_real_V_4_U                                                                    | -    | -    |        | o2_in_real_V_4  | ram_s2p | auto | 1       |
+|     o2_in_imag_V_U                                                                      | -    | -    |        | o2_in_imag_V    | ram_s2p | auto | 1       |
+|     o2_in_imag_V_4_U                                                                    | -    | -    |        | o2_in_imag_V_4  | ram_s2p | auto | 1       |
+|     o2_out_real_V_U                                                                     | -    | -    |        | o2_out_real_V   | ram_t2p | auto | 1       |
+|     o2_out_real_V_1_U                                                                   | -    | -    |        | o2_out_real_V_1 | ram_t2p | auto | 1       |
+|     o2_out_imag_V_U                                                                     | -    | -    |        | o2_out_imag_V   | ram_t2p | auto | 1       |
+|     mul_18s_32s_48_2_1_U419                                                             | -    | -    |        | o2_out_imag_V_1 | ram_t2p | auto | 1       |
+|    + fft_16pt (grp_fft_16pt_fu_1134)                                                    | 4    | 0    |        |                 |         |      |         |
+|      e_in_real_V_U                                                                      | -    | -    |        | e_in_real_V     | ram_s2p | auto | 1       |
+|      e_in_real_V_15_U                                                                   | -    | -    |        | e_in_real_V_15  | ram_s2p | auto | 1       |
+|      e_in_imag_V_U                                                                      | -    | -    |        | e_in_imag_V     | ram_s2p | auto | 1       |
+|      e_in_imag_V_15_U                                                                   | -    | -    |        | e_in_imag_V_15  | ram_s2p | auto | 1       |
+|      e_in_real_V_16_U                                                                   | -    | -    |        | e_in_real_V_16  | ram_s2p | auto | 1       |
+|      e_in_real_V_17_U                                                                   | -    | -    |        | e_in_real_V_17  | ram_s2p | auto | 1       |
+|      e_in_imag_V_16_U                                                                   | -    | -    |        | e_in_imag_V_16  | ram_s2p | auto | 1       |
+|      e_in_imag_V_17_U                                                                   | -    | -    |        | e_in_imag_V_17  | ram_s2p | auto | 1       |
+|      e_out_real_V_U                                                                     | -    | -    |        | e_out_real_V    | ram_t2p | auto | 1       |
+|      e_out_real_V_1_U                                                                   | -    | -    |        | e_out_real_V_1  | ram_t2p | auto | 1       |
+|      e_out_imag_V_U                                                                     | -    | -    |        | e_out_imag_V    | ram_t2p | auto | 1       |
+|      e_out_imag_V_1_U                                                                   | -    | -    |        | e_out_imag_V_1  | ram_t2p | auto | 1       |
+|    + fft_16pt_Pipeline_VITIS_LOOP_131_2 (grp_fft_16pt_Pipeline_VITIS_LOOP_131_2_fu_672) | 2    | 0    |        |                 |         |      |         |
+|      TWIDDLE_REAL_V_U                                                                   | 1    | -    |        | TWIDDLE_REAL_V  | rom_1p  | auto | 1       |
+|      TWIDDLE_IMAG_V_U                                                                   | 1    | -    |        | TWIDDLE_IMAG_V  | rom_1p  | auto | 1       |
+|    + fft_16pt_Pipeline_VITIS_LOOP_181_3 (grp_fft_16pt_Pipeline_VITIS_LOOP_181_3_fu_700) | 2    | 0    |        |                 |         |      |         |
+|      TWIDDLE_REAL_V_U                                                                   | 1    | -    |        | TWIDDLE_REAL_V  | rom_1p  | auto | 1       |
+|      TWIDDLE_IMAG_V_U                                                                   | 1    | -    |        | TWIDDLE_IMAG_V  | rom_1p  | auto | 1       |
+|    + fft_32pt_Pipeline_VITIS_LOOP_131_2                                                 | 2    | 0    |        |                 |         |      |         |
+|      TWIDDLE_REAL_V_U                                                                   | 1    | -    |        | TWIDDLE_REAL_V  | rom_1p  | auto | 1       |
+|      TWIDDLE_IMAG_V_U                                                                   | 1    | -    |        | TWIDDLE_IMAG_V  | rom_1p  | auto | 1       |
+|    + fft_32pt_Pipeline_VITIS_LOOP_131_274                                               | 2    | 0    |        |                 |         |      |         |
+|      TWIDDLE_REAL_V_U                                                                   | 1    | -    |        | TWIDDLE_REAL_V  | rom_1p  | auto | 1       |
+|      TWIDDLE_IMAG_V_U                                                                   | 1    | -    |        | TWIDDLE_IMAG_V  | rom_1p  | auto | 1       |
+|    + fft_32pt_Pipeline_VITIS_LOOP_231_3                                                 | 2    | 0    |        |                 |         |      |         |
+|      TWIDDLE_REAL_V_U                                                                   | 1    | -    |        | TWIDDLE_REAL_V  | rom_1p  | auto | 1       |
+|      TWIDDLE_IMAG_V_U                                                                   | 1    | -    |        | TWIDDLE_IMAG_V  | rom_1p  | auto | 1       |
+|   + fft_16pt (grp_fft_16pt_fu_496)                                                      | 4    | 0    |        |                 |         |      |         |
+|     e_in_real_V_U                                                                       | -    | -    |        | e_in_real_V     | ram_s2p | auto | 1       |
+|     e_in_real_V_15_U                                                                    | -    | -    |        | e_in_real_V_15  | ram_s2p | auto | 1       |
+|     e_in_imag_V_U                                                                       | -    | -    |        | e_in_imag_V     | ram_s2p | auto | 1       |
+|     e_in_imag_V_15_U                                                                    | -    | -    |        | e_in_imag_V_15  | ram_s2p | auto | 1       |
+|     e_in_real_V_16_U                                                                    | -    | -    |        | e_in_real_V_16  | ram_s2p | auto | 1       |
+|     e_in_real_V_17_U                                                                    | -    | -    |        | e_in_real_V_17  | ram_s2p | auto | 1       |
+|     e_in_imag_V_16_U                                                                    | -    | -    |        | e_in_imag_V_16  | ram_s2p | auto | 1       |
+|     e_in_imag_V_17_U                                                                    | -    | -    |        | e_in_imag_V_17  | ram_s2p | auto | 1       |
+|     e_out_real_V_U                                                                      | -    | -    |        | e_out_real_V    | ram_t2p | auto | 1       |
+|     e_out_real_V_1_U                                                                    | -    | -    |        | e_out_real_V_1  | ram_t2p | auto | 1       |
+|     e_out_imag_V_U                                                                      | -    | -    |        | e_out_imag_V    | ram_t2p | auto | 1       |
+|     e_out_imag_V_1_U                                                                    | -    | -    |        | e_out_imag_V_1  | ram_t2p | auto | 1       |
+|    + fft_16pt_Pipeline_VITIS_LOOP_131_2 (grp_fft_16pt_Pipeline_VITIS_LOOP_131_2_fu_672) | 2    | 0    |        |                 |         |      |         |
+|      TWIDDLE_REAL_V_U                                                                   | 1    | -    |        | TWIDDLE_REAL_V  | rom_1p  | auto | 1       |
+|      TWIDDLE_IMAG_V_U                                                                   | 1    | -    |        | TWIDDLE_IMAG_V  | rom_1p  | auto | 1       |
+|    + fft_16pt_Pipeline_VITIS_LOOP_181_3 (grp_fft_16pt_Pipeline_VITIS_LOOP_181_3_fu_700) | 2    | 0    |        |                 |         |      |         |
+|      TWIDDLE_REAL_V_U                                                                   | 1    | -    |        | TWIDDLE_REAL_V  | rom_1p  | auto | 1       |
+|      TWIDDLE_IMAG_V_U                                                                   | 1    | -    |        | TWIDDLE_IMAG_V  | rom_1p  | auto | 1       |
+|   + fft_16pt (grp_fft_16pt_fu_520)                                                      | 4    | 0    |        |                 |         |      |         |
+|     e_in_real_V_U                                                                       | -    | -    |        | e_in_real_V     | ram_s2p | auto | 1       |
+|     e_in_real_V_15_U                                                                    | -    | -    |        | e_in_real_V_15  | ram_s2p | auto | 1       |
+|     e_in_imag_V_U                                                                       | -    | -    |        | e_in_imag_V     | ram_s2p | auto | 1       |
+|     e_in_imag_V_15_U                                                                    | -    | -    |        | e_in_imag_V_15  | ram_s2p | auto | 1       |
+|     e_in_real_V_16_U                                                                    | -    | -    |        | e_in_real_V_16  | ram_s2p | auto | 1       |
+|     e_in_real_V_17_U                                                                    | -    | -    |        | e_in_real_V_17  | ram_s2p | auto | 1       |
+|     e_in_imag_V_16_U                                                                    | -    | -    |        | e_in_imag_V_16  | ram_s2p | auto | 1       |
+|     e_in_imag_V_17_U                                                                    | -    | -    |        | e_in_imag_V_17  | ram_s2p | auto | 1       |
+|     e_out_real_V_U                                                                      | -    | -    |        | e_out_real_V    | ram_t2p | auto | 1       |
+|     e_out_real_V_1_U                                                                    | -    | -    |        | e_out_real_V_1  | ram_t2p | auto | 1       |
+|     e_out_imag_V_U                                                                      | -    | -    |        | e_out_imag_V    | ram_t2p | auto | 1       |
+|     e_out_imag_V_1_U                                                                    | -    | -    |        | e_out_imag_V_1  | ram_t2p | auto | 1       |
+|    + fft_16pt_Pipeline_VITIS_LOOP_131_2 (grp_fft_16pt_Pipeline_VITIS_LOOP_131_2_fu_672) | 2    | 0    |        |                 |         |      |         |
+|      TWIDDLE_REAL_V_U                                                                   | 1    | -    |        | TWIDDLE_REAL_V  | rom_1p  | auto | 1       |
+|      TWIDDLE_IMAG_V_U                                                                   | 1    | -    |        | TWIDDLE_IMAG_V  | rom_1p  | auto | 1       |
+|    + fft_16pt_Pipeline_VITIS_LOOP_181_3 (grp_fft_16pt_Pipeline_VITIS_LOOP_181_3_fu_700) | 2    | 0    |        |                 |         |      |         |
+|      TWIDDLE_REAL_V_U                                                                   | 1    | -    |        | TWIDDLE_REAL_V  | rom_1p  | auto | 1       |
+|      TWIDDLE_IMAG_V_U                                                                   | 1    | -    |        | TWIDDLE_IMAG_V  | rom_1p  | auto | 1       |
+|   + fft_64pt_Pipeline_VITIS_LOOP_281_3                                                  | 2    | 0    |        |                 |         |      |         |
+|     TWIDDLE_REAL_V_U                                                                    | 1    | -    |        | TWIDDLE_REAL_V  | rom_1p  | auto | 1       |
+|     TWIDDLE_IMAG_V_U                                                                    | 1    | -    |        | TWIDDLE_IMAG_V  | rom_1p  | auto | 1       |
++-----------------------------------------------------------------------------------------+------+------+--------+-----------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+  No pragmas found
+

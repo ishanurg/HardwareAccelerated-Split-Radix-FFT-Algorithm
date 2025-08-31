@@ -1,0 +1,394 @@
+
+
+================================================================
+== Vitis HLS Report for 'fft_16pt'
+================================================================
+* Date:           Sun Aug 31 16:41:44 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        radixfft
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.196 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       54|       54|  0.540 us|  0.540 us|   54|   54|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%o1_in_real_V_loc = alloca i64 1"   --->   Operation 12 'alloca' 'o1_in_real_V_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%o1_in_real_V_5_loc = alloca i64 1"   --->   Operation 13 'alloca' 'o1_in_real_V_5_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%o1_in_real_V_6_loc = alloca i64 1"   --->   Operation 14 'alloca' 'o1_in_real_V_6_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%o1_in_real_V_7_loc = alloca i64 1"   --->   Operation 15 'alloca' 'o1_in_real_V_7_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%o1_in_imag_V_loc = alloca i64 1"   --->   Operation 16 'alloca' 'o1_in_imag_V_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%o1_in_imag_V_5_loc = alloca i64 1"   --->   Operation 17 'alloca' 'o1_in_imag_V_5_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%o1_in_imag_V_6_loc = alloca i64 1"   --->   Operation 18 'alloca' 'o1_in_imag_V_6_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%o1_in_imag_V_7_loc = alloca i64 1"   --->   Operation 19 'alloca' 'o1_in_imag_V_7_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%o2_in_imag_V_loc = alloca i64 1"   --->   Operation 20 'alloca' 'o2_in_imag_V_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%o2_in_imag_V_5_loc = alloca i64 1"   --->   Operation 21 'alloca' 'o2_in_imag_V_5_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%o2_in_imag_V_6_loc = alloca i64 1"   --->   Operation 22 'alloca' 'o2_in_imag_V_6_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%o2_in_imag_V_7_loc = alloca i64 1"   --->   Operation 23 'alloca' 'o2_in_imag_V_7_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%o2_in_real_V_loc = alloca i64 1"   --->   Operation 24 'alloca' 'o2_in_real_V_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%o2_in_real_V_5_loc = alloca i64 1"   --->   Operation 25 'alloca' 'o2_in_real_V_5_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%o2_in_real_V_6_loc = alloca i64 1"   --->   Operation 26 'alloca' 'o2_in_real_V_6_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%o2_in_real_V_7_loc = alloca i64 1"   --->   Operation 27 'alloca' 'o2_in_real_V_7_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%e_in_real_V = alloca i64 1" [radixfft/core.cpp:115]   --->   Operation 28 'alloca' 'e_in_real_V' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%e_in_real_V_15 = alloca i64 1" [radixfft/core.cpp:115]   --->   Operation 29 'alloca' 'e_in_real_V_15' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%e_in_imag_V = alloca i64 1" [radixfft/core.cpp:115]   --->   Operation 30 'alloca' 'e_in_imag_V' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%e_in_imag_V_15 = alloca i64 1" [radixfft/core.cpp:115]   --->   Operation 31 'alloca' 'e_in_imag_V_15' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%e_in_real_V_16 = alloca i64 1" [radixfft/core.cpp:153]   --->   Operation 32 'alloca' 'e_in_real_V_16' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%e_in_real_V_17 = alloca i64 1" [radixfft/core.cpp:153]   --->   Operation 33 'alloca' 'e_in_real_V_17' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%e_in_imag_V_16 = alloca i64 1" [radixfft/core.cpp:153]   --->   Operation 34 'alloca' 'e_in_imag_V_16' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%e_in_imag_V_17 = alloca i64 1" [radixfft/core.cpp:153]   --->   Operation 35 'alloca' 'e_in_imag_V_17' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%e_out_real_V = alloca i64 1" [radixfft/core.cpp:153]   --->   Operation 36 'alloca' 'e_out_real_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%e_out_real_V_1 = alloca i64 1" [radixfft/core.cpp:153]   --->   Operation 37 'alloca' 'e_out_real_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%e_out_imag_V = alloca i64 1" [radixfft/core.cpp:153]   --->   Operation 38 'alloca' 'e_out_imag_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%e_out_imag_V_1 = alloca i64 1" [radixfft/core.cpp:153]   --->   Operation 39 'alloca' 'e_out_imag_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [2/2] (0.00ns)   --->   "%call_ln0 = call void @fft_16pt_Pipeline_VITIS_LOOP_165_1, i32 %e_in_imag_V_17, i32 %e_in_imag_V_16, i32 %e_in_real_V_17, i32 %e_in_real_V_16, i32 %in_real_0, i32 %in_real_1, i32 %in_real_2, i32 %in_real_3, i32 %in_imag_0, i32 %in_imag_1, i32 %in_imag_2, i32 %in_imag_3"   --->   Operation 40 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 41 [1/2] (0.00ns)   --->   "%call_ln0 = call void @fft_16pt_Pipeline_VITIS_LOOP_165_1, i32 %e_in_imag_V_17, i32 %e_in_imag_V_16, i32 %e_in_real_V_17, i32 %e_in_real_V_16, i32 %in_real_0, i32 %in_real_1, i32 %in_real_2, i32 %in_real_3, i32 %in_imag_0, i32 %in_imag_1, i32 %in_imag_2, i32 %in_imag_3"   --->   Operation 41 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 2.32>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%in_real_0_addr = getelementptr i32 %in_real_0, i64 0, i64 1"   --->   Operation 42 'getelementptr' 'in_real_0_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%in_real_1_addr = getelementptr i32 %in_real_1, i64 0, i64 1"   --->   Operation 43 'getelementptr' 'in_real_1_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%in_real_2_addr = getelementptr i32 %in_real_2, i64 0, i64 1"   --->   Operation 44 'getelementptr' 'in_real_2_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%in_real_3_addr = getelementptr i32 %in_real_3, i64 0, i64 1"   --->   Operation 45 'getelementptr' 'in_real_3_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%in_imag_0_addr = getelementptr i32 %in_imag_0, i64 0, i64 1"   --->   Operation 46 'getelementptr' 'in_imag_0_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%in_imag_1_addr = getelementptr i32 %in_imag_1, i64 0, i64 1"   --->   Operation 47 'getelementptr' 'in_imag_1_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%in_imag_2_addr = getelementptr i32 %in_imag_2, i64 0, i64 1"   --->   Operation 48 'getelementptr' 'in_imag_2_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%in_imag_3_addr = getelementptr i32 %in_imag_3, i64 0, i64 1"   --->   Operation 49 'getelementptr' 'in_imag_3_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 50 [2/2] (2.32ns)   --->   "%in_real_0_load = load i2 %in_real_0_addr"   --->   Operation 50 'load' 'in_real_0_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_3 : Operation 51 [2/2] (2.32ns)   --->   "%in_real_1_load = load i2 %in_real_1_addr"   --->   Operation 51 'load' 'in_real_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_3 : Operation 52 [2/2] (2.32ns)   --->   "%in_real_2_load = load i2 %in_real_2_addr"   --->   Operation 52 'load' 'in_real_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_3 : Operation 53 [2/2] (2.32ns)   --->   "%in_real_3_load = load i2 %in_real_3_addr"   --->   Operation 53 'load' 'in_real_3_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_3 : Operation 54 [2/2] (2.32ns)   --->   "%in_imag_0_load = load i2 %in_imag_0_addr"   --->   Operation 54 'load' 'in_imag_0_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_3 : Operation 55 [2/2] (2.32ns)   --->   "%in_imag_1_load = load i2 %in_imag_1_addr"   --->   Operation 55 'load' 'in_imag_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_3 : Operation 56 [2/2] (2.32ns)   --->   "%in_imag_2_load = load i2 %in_imag_2_addr"   --->   Operation 56 'load' 'in_imag_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_3 : Operation 57 [2/2] (2.32ns)   --->   "%in_imag_3_load = load i2 %in_imag_3_addr"   --->   Operation 57 'load' 'in_imag_3_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%in_real_0_addr_3 = getelementptr i32 %in_real_0, i64 0, i64 3"   --->   Operation 58 'getelementptr' 'in_real_0_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 59 [1/1] (0.00ns)   --->   "%in_real_1_addr_3 = getelementptr i32 %in_real_1, i64 0, i64 3"   --->   Operation 59 'getelementptr' 'in_real_1_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%in_real_2_addr_3 = getelementptr i32 %in_real_2, i64 0, i64 3"   --->   Operation 60 'getelementptr' 'in_real_2_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%in_real_3_addr_3 = getelementptr i32 %in_real_3, i64 0, i64 3"   --->   Operation 61 'getelementptr' 'in_real_3_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%in_imag_0_addr_3 = getelementptr i32 %in_imag_0, i64 0, i64 3"   --->   Operation 62 'getelementptr' 'in_imag_0_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%in_imag_1_addr_3 = getelementptr i32 %in_imag_1, i64 0, i64 3"   --->   Operation 63 'getelementptr' 'in_imag_1_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%in_imag_2_addr_3 = getelementptr i32 %in_imag_2, i64 0, i64 3"   --->   Operation 64 'getelementptr' 'in_imag_2_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%in_imag_3_addr_3 = getelementptr i32 %in_imag_3, i64 0, i64 3"   --->   Operation 65 'getelementptr' 'in_imag_3_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 66 [2/2] (2.32ns)   --->   "%in_real_0_load_6 = load i2 %in_real_0_addr_3"   --->   Operation 66 'load' 'in_real_0_load_6' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_3 : Operation 67 [2/2] (2.32ns)   --->   "%in_real_1_load_6 = load i2 %in_real_1_addr_3"   --->   Operation 67 'load' 'in_real_1_load_6' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_3 : Operation 68 [2/2] (2.32ns)   --->   "%b_real_V_35 = load i2 %in_real_2_addr_3"   --->   Operation 68 'load' 'b_real_V_35' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_3 : Operation 69 [2/2] (2.32ns)   --->   "%in_real_3_load_6 = load i2 %in_real_3_addr_3"   --->   Operation 69 'load' 'in_real_3_load_6' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_3 : Operation 70 [2/2] (2.32ns)   --->   "%in_imag_0_load_6 = load i2 %in_imag_0_addr_3"   --->   Operation 70 'load' 'in_imag_0_load_6' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_3 : Operation 71 [2/2] (2.32ns)   --->   "%in_imag_1_load_6 = load i2 %in_imag_1_addr_3"   --->   Operation 71 'load' 'in_imag_1_load_6' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_3 : Operation 72 [2/2] (2.32ns)   --->   "%in_imag_2_load_6 = load i2 %in_imag_2_addr_3"   --->   Operation 72 'load' 'in_imag_2_load_6' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_3 : Operation 73 [2/2] (2.32ns)   --->   "%in_imag_3_load_6 = load i2 %in_imag_3_addr_3"   --->   Operation 73 'load' 'in_imag_3_load_6' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+
+State 4 <SV = 3> <Delay = 4.14>
+ST_4 : Operation 74 [2/2] (0.00ns)   --->   "%call_ln0 = call void @fft_16pt_Pipeline_VITIS_LOOP_120_1, i32 %e_in_imag_V_15, i32 %e_in_imag_V, i32 %e_in_real_V_15, i32 %e_in_real_V, i32 %e_in_real_V_16, i32 %e_in_real_V_17, i32 %e_in_imag_V_16, i32 %e_in_imag_V_17"   --->   Operation 74 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 75 [1/2] (2.32ns)   --->   "%in_real_0_load = load i2 %in_real_0_addr"   --->   Operation 75 'load' 'in_real_0_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_4 : Operation 76 [1/2] (2.32ns)   --->   "%in_real_1_load = load i2 %in_real_1_addr"   --->   Operation 76 'load' 'in_real_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_4 : Operation 77 [1/2] (2.32ns)   --->   "%in_real_2_load = load i2 %in_real_2_addr"   --->   Operation 77 'load' 'in_real_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_4 : Operation 78 [1/2] (2.32ns)   --->   "%in_real_3_load = load i2 %in_real_3_addr"   --->   Operation 78 'load' 'in_real_3_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_4 : Operation 79 [1/2] (2.32ns)   --->   "%in_imag_0_load = load i2 %in_imag_0_addr"   --->   Operation 79 'load' 'in_imag_0_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_4 : Operation 80 [1/2] (2.32ns)   --->   "%in_imag_1_load = load i2 %in_imag_1_addr"   --->   Operation 80 'load' 'in_imag_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_4 : Operation 81 [1/2] (2.32ns)   --->   "%in_imag_2_load = load i2 %in_imag_2_addr"   --->   Operation 81 'load' 'in_imag_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_4 : Operation 82 [1/2] (2.32ns)   --->   "%in_imag_3_load = load i2 %in_imag_3_addr"   --->   Operation 82 'load' 'in_imag_3_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_4 : Operation 83 [1/2] (2.32ns)   --->   "%in_real_0_load_6 = load i2 %in_real_0_addr_3"   --->   Operation 83 'load' 'in_real_0_load_6' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_4 : Operation 84 [1/2] (2.32ns)   --->   "%in_real_1_load_6 = load i2 %in_real_1_addr_3"   --->   Operation 84 'load' 'in_real_1_load_6' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_4 : Operation 85 [1/2] (2.32ns)   --->   "%b_real_V_35 = load i2 %in_real_2_addr_3"   --->   Operation 85 'load' 'b_real_V_35' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_4 : Operation 86 [1/2] (2.32ns)   --->   "%in_real_3_load_6 = load i2 %in_real_3_addr_3"   --->   Operation 86 'load' 'in_real_3_load_6' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_4 : Operation 87 [1/2] (2.32ns)   --->   "%in_imag_0_load_6 = load i2 %in_imag_0_addr_3"   --->   Operation 87 'load' 'in_imag_0_load_6' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_4 : Operation 88 [1/2] (2.32ns)   --->   "%in_imag_1_load_6 = load i2 %in_imag_1_addr_3"   --->   Operation 88 'load' 'in_imag_1_load_6' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_4 : Operation 89 [1/2] (2.32ns)   --->   "%in_imag_2_load_6 = load i2 %in_imag_2_addr_3"   --->   Operation 89 'load' 'in_imag_2_load_6' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_4 : Operation 90 [1/2] (2.32ns)   --->   "%in_imag_3_load_6 = load i2 %in_imag_3_addr_3"   --->   Operation 90 'load' 'in_imag_3_load_6' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_4 : Operation 91 [2/2] (1.82ns)   --->   "%call_ln0 = call void @fft_16pt_Pipeline_VITIS_LOOP_171_2, i32 %in_real_3_load_6, i32 %b_real_V_35, i32 %in_real_1_load_6, i32 %in_real_0_load_6, i32 %in_imag_0_load_6, i32 %in_imag_1_load_6, i32 %in_imag_2_load_6, i32 %in_imag_3_load_6, i32 %in_real_0_load, i32 %in_real_1_load, i32 %in_real_2_load, i32 %in_real_3_load, i32 %in_imag_0_load, i32 %in_imag_1_load, i32 %in_imag_2_load, i32 %in_imag_3_load, i32 %o2_in_real_V_7_loc, i32 %o2_in_real_V_6_loc, i32 %o2_in_real_V_5_loc, i32 %o2_in_real_V_loc, i32 %o2_in_imag_V_7_loc, i32 %o2_in_imag_V_6_loc, i32 %o2_in_imag_V_5_loc, i32 %o2_in_imag_V_loc, i32 %o1_in_imag_V_7_loc, i32 %o1_in_imag_V_6_loc, i32 %o1_in_imag_V_5_loc, i32 %o1_in_imag_V_loc, i32 %o1_in_real_V_7_loc, i32 %o1_in_real_V_6_loc, i32 %o1_in_real_V_5_loc, i32 %o1_in_real_V_loc"   --->   Operation 91 'call' 'call_ln0' <Predicate = true> <Delay = 1.82> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 2.71>
+ST_5 : Operation 92 [1/2] (0.00ns)   --->   "%call_ln0 = call void @fft_16pt_Pipeline_VITIS_LOOP_120_1, i32 %e_in_imag_V_15, i32 %e_in_imag_V, i32 %e_in_real_V_15, i32 %e_in_real_V, i32 %e_in_real_V_16, i32 %e_in_real_V_17, i32 %e_in_imag_V_16, i32 %e_in_imag_V_17"   --->   Operation 92 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 93 [1/2] (2.71ns)   --->   "%call_ln0 = call void @fft_16pt_Pipeline_VITIS_LOOP_171_2, i32 %in_real_3_load_6, i32 %b_real_V_35, i32 %in_real_1_load_6, i32 %in_real_0_load_6, i32 %in_imag_0_load_6, i32 %in_imag_1_load_6, i32 %in_imag_2_load_6, i32 %in_imag_3_load_6, i32 %in_real_0_load, i32 %in_real_1_load, i32 %in_real_2_load, i32 %in_real_3_load, i32 %in_imag_0_load, i32 %in_imag_1_load, i32 %in_imag_2_load, i32 %in_imag_3_load, i32 %o2_in_real_V_7_loc, i32 %o2_in_real_V_6_loc, i32 %o2_in_real_V_5_loc, i32 %o2_in_real_V_loc, i32 %o2_in_imag_V_7_loc, i32 %o2_in_imag_V_6_loc, i32 %o2_in_imag_V_5_loc, i32 %o2_in_imag_V_loc, i32 %o1_in_imag_V_7_loc, i32 %o1_in_imag_V_6_loc, i32 %o1_in_imag_V_5_loc, i32 %o1_in_imag_V_loc, i32 %o1_in_real_V_7_loc, i32 %o1_in_real_V_6_loc, i32 %o1_in_real_V_5_loc, i32 %o1_in_real_V_loc"   --->   Operation 93 'call' 'call_ln0' <Predicate = true> <Delay = 2.71> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 2.32>
+ST_6 : Operation 94 [1/1] (0.00ns)   --->   "%e_in_real_V_addr = getelementptr i32 %e_in_real_V, i64 0, i64 0" [radixfft/core.cpp:124]   --->   Operation 94 'getelementptr' 'e_in_real_V_addr' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 95 [1/1] (0.00ns)   --->   "%e_in_imag_V_addr = getelementptr i32 %e_in_imag_V, i64 0, i64 0" [radixfft/core.cpp:124]   --->   Operation 95 'getelementptr' 'e_in_imag_V_addr' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 96 [2/2] (2.32ns)   --->   "%a_real_V = load i1 %e_in_real_V_addr" [radixfft/core.cpp:124]   --->   Operation 96 'load' 'a_real_V' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_6 : Operation 97 [2/2] (2.32ns)   --->   "%a_imag_V = load i1 %e_in_imag_V_addr" [radixfft/core.cpp:124]   --->   Operation 97 'load' 'a_imag_V' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_6 : Operation 98 [1/1] (0.00ns)   --->   "%e_in_real_V_addr_2 = getelementptr i32 %e_in_real_V, i64 0, i64 1" [radixfft/core.cpp:96]   --->   Operation 98 'getelementptr' 'e_in_real_V_addr_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 99 [1/1] (0.00ns)   --->   "%e_in_imag_V_addr_2 = getelementptr i32 %e_in_imag_V, i64 0, i64 1" [radixfft/core.cpp:96]   --->   Operation 99 'getelementptr' 'e_in_imag_V_addr_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 100 [2/2] (2.32ns)   --->   "%b_real_V = load i1 %e_in_real_V_addr_2" [radixfft/core.cpp:96]   --->   Operation 100 'load' 'b_real_V' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_6 : Operation 101 [2/2] (2.32ns)   --->   "%b_imag_V = load i1 %e_in_imag_V_addr_2" [radixfft/core.cpp:96]   --->   Operation 101 'load' 'b_imag_V' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_6 : Operation 102 [1/1] (0.00ns)   --->   "%e_in_real_V_15_addr = getelementptr i32 %e_in_real_V_15, i64 0, i64 0" [radixfft/core.cpp:98]   --->   Operation 102 'getelementptr' 'e_in_real_V_15_addr' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 103 [1/1] (0.00ns)   --->   "%e_in_imag_V_15_addr = getelementptr i32 %e_in_imag_V_15, i64 0, i64 0" [radixfft/core.cpp:98]   --->   Operation 103 'getelementptr' 'e_in_imag_V_15_addr' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 104 [2/2] (2.32ns)   --->   "%a_real_V_41 = load i1 %e_in_real_V_15_addr" [radixfft/core.cpp:98]   --->   Operation 104 'load' 'a_real_V_41' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_6 : Operation 105 [2/2] (2.32ns)   --->   "%a_imag_V_36 = load i1 %e_in_imag_V_15_addr" [radixfft/core.cpp:98]   --->   Operation 105 'load' 'a_imag_V_36' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_6 : Operation 106 [1/1] (0.00ns)   --->   "%e_in_real_V_15_addr_1 = getelementptr i32 %e_in_real_V_15, i64 0, i64 1" [radixfft/core.cpp:99]   --->   Operation 106 'getelementptr' 'e_in_real_V_15_addr_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 107 [1/1] (0.00ns)   --->   "%e_in_imag_V_15_addr_1 = getelementptr i32 %e_in_imag_V_15, i64 0, i64 1" [radixfft/core.cpp:99]   --->   Operation 107 'getelementptr' 'e_in_imag_V_15_addr_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 108 [2/2] (2.32ns)   --->   "%b_real_V_30 = load i1 %e_in_real_V_15_addr_1" [radixfft/core.cpp:99]   --->   Operation 108 'load' 'b_real_V_30' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_6 : Operation 109 [2/2] (2.32ns)   --->   "%b_imag_V_40 = load i1 %e_in_imag_V_15_addr_1" [radixfft/core.cpp:99]   --->   Operation 109 'load' 'b_imag_V_40' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+
+State 7 <SV = 6> <Delay = 2.32>
+ST_7 : Operation 110 [1/2] (2.32ns)   --->   "%a_real_V = load i1 %e_in_real_V_addr" [radixfft/core.cpp:124]   --->   Operation 110 'load' 'a_real_V' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_7 : Operation 111 [1/2] (2.32ns)   --->   "%a_imag_V = load i1 %e_in_imag_V_addr" [radixfft/core.cpp:124]   --->   Operation 111 'load' 'a_imag_V' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_7 : Operation 112 [1/2] (2.32ns)   --->   "%b_real_V = load i1 %e_in_real_V_addr_2" [radixfft/core.cpp:96]   --->   Operation 112 'load' 'b_real_V' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_7 : Operation 113 [1/2] (2.32ns)   --->   "%b_imag_V = load i1 %e_in_imag_V_addr_2" [radixfft/core.cpp:96]   --->   Operation 113 'load' 'b_imag_V' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_7 : Operation 114 [1/2] (2.32ns)   --->   "%a_real_V_41 = load i1 %e_in_real_V_15_addr" [radixfft/core.cpp:98]   --->   Operation 114 'load' 'a_real_V_41' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_7 : Operation 115 [1/2] (2.32ns)   --->   "%a_imag_V_36 = load i1 %e_in_imag_V_15_addr" [radixfft/core.cpp:98]   --->   Operation 115 'load' 'a_imag_V_36' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_7 : Operation 116 [1/2] (2.32ns)   --->   "%b_real_V_30 = load i1 %e_in_real_V_15_addr_1" [radixfft/core.cpp:99]   --->   Operation 116 'load' 'b_real_V_30' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_7 : Operation 117 [1/2] (2.32ns)   --->   "%b_imag_V_40 = load i1 %e_in_imag_V_15_addr_1" [radixfft/core.cpp:99]   --->   Operation 117 'load' 'b_imag_V_40' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_7 : Operation 118 [1/1] (0.00ns)   --->   "%e_in_real_V_16_addr = getelementptr i32 %e_in_real_V_16, i64 0, i64 1" [radixfft/core.cpp:127]   --->   Operation 118 'getelementptr' 'e_in_real_V_16_addr' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 119 [1/1] (0.00ns)   --->   "%e_in_imag_V_16_addr = getelementptr i32 %e_in_imag_V_16, i64 0, i64 1" [radixfft/core.cpp:127]   --->   Operation 119 'getelementptr' 'e_in_imag_V_16_addr' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 120 [2/2] (2.32ns)   --->   "%a_real_V_47 = load i2 %e_in_real_V_16_addr" [radixfft/core.cpp:127]   --->   Operation 120 'load' 'a_real_V_47' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_7 : Operation 121 [2/2] (2.32ns)   --->   "%a_imag_V_42 = load i2 %e_in_imag_V_16_addr" [radixfft/core.cpp:127]   --->   Operation 121 'load' 'a_imag_V_42' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_7 : Operation 122 [1/1] (0.00ns)   --->   "%e_in_real_V_17_addr = getelementptr i32 %e_in_real_V_17, i64 0, i64 1" [radixfft/core.cpp:127]   --->   Operation 122 'getelementptr' 'e_in_real_V_17_addr' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 123 [1/1] (0.00ns)   --->   "%e_in_imag_V_17_addr = getelementptr i32 %e_in_imag_V_17, i64 0, i64 1" [radixfft/core.cpp:127]   --->   Operation 123 'getelementptr' 'e_in_imag_V_17_addr' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 124 [2/2] (2.32ns)   --->   "%b_real_V_32 = load i2 %e_in_real_V_17_addr" [radixfft/core.cpp:127]   --->   Operation 124 'load' 'b_real_V_32' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_7 : Operation 125 [2/2] (2.32ns)   --->   "%b_imag_V_43 = load i2 %e_in_imag_V_17_addr" [radixfft/core.cpp:127]   --->   Operation 125 'load' 'b_imag_V_43' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_7 : Operation 126 [1/1] (0.00ns)   --->   "%e_in_real_V_16_addr_1 = getelementptr i32 %e_in_real_V_16, i64 0, i64 3" [radixfft/core.cpp:128]   --->   Operation 126 'getelementptr' 'e_in_real_V_16_addr_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 127 [1/1] (0.00ns)   --->   "%e_in_imag_V_16_addr_1 = getelementptr i32 %e_in_imag_V_16, i64 0, i64 3" [radixfft/core.cpp:128]   --->   Operation 127 'getelementptr' 'e_in_imag_V_16_addr_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 128 [2/2] (2.32ns)   --->   "%a_real_V_48 = load i2 %e_in_real_V_16_addr_1" [radixfft/core.cpp:128]   --->   Operation 128 'load' 'a_real_V_48' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_7 : Operation 129 [2/2] (2.32ns)   --->   "%a_imag_V_43 = load i2 %e_in_imag_V_16_addr_1" [radixfft/core.cpp:128]   --->   Operation 129 'load' 'a_imag_V_43' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_7 : Operation 130 [1/1] (0.00ns)   --->   "%e_in_real_V_17_addr_1 = getelementptr i32 %e_in_real_V_17, i64 0, i64 3" [radixfft/core.cpp:128]   --->   Operation 130 'getelementptr' 'e_in_real_V_17_addr_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 131 [1/1] (0.00ns)   --->   "%e_in_imag_V_17_addr_1 = getelementptr i32 %e_in_imag_V_17, i64 0, i64 3" [radixfft/core.cpp:128]   --->   Operation 131 'getelementptr' 'e_in_imag_V_17_addr_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 132 [2/2] (2.32ns)   --->   "%b_real_V_33 = load i2 %e_in_real_V_17_addr_1" [radixfft/core.cpp:128]   --->   Operation 132 'load' 'b_real_V_33' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_7 : Operation 133 [2/2] (2.32ns)   --->   "%b_imag_V_44 = load i2 %e_in_imag_V_17_addr_1" [radixfft/core.cpp:128]   --->   Operation 133 'load' 'b_imag_V_44' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+
+State 8 <SV = 7> <Delay = 5.10>
+ST_8 : Operation 134 [1/1] (2.55ns)   --->   "%r_real_V_116 = add i32 %b_real_V, i32 %a_real_V"   --->   Operation 134 'add' 'r_real_V_116' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 135 [1/1] (2.55ns)   --->   "%r_imag_V_131 = add i32 %b_imag_V, i32 %a_imag_V"   --->   Operation 135 'add' 'r_imag_V_131' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 136 [1/1] (2.55ns)   --->   "%r_real_V_117 = sub i32 %a_real_V, i32 %b_real_V"   --->   Operation 136 'sub' 'r_real_V_117' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 137 [1/1] (2.55ns)   --->   "%r_imag_V_132 = sub i32 %a_imag_V, i32 %b_imag_V"   --->   Operation 137 'sub' 'r_imag_V_132' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 138 [1/1] (2.55ns)   --->   "%r_real_V_118 = add i32 %b_real_V_30, i32 %a_real_V_41"   --->   Operation 138 'add' 'r_real_V_118' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 139 [1/1] (2.55ns)   --->   "%r_imag_V_133 = add i32 %b_imag_V_40, i32 %a_imag_V_36"   --->   Operation 139 'add' 'r_imag_V_133' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 140 [1/1] (2.55ns)   --->   "%r_real_V_119 = sub i32 %a_real_V_41, i32 %b_real_V_30"   --->   Operation 140 'sub' 'r_real_V_119' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 141 [1/1] (2.55ns)   --->   "%r_imag_V_134 = sub i32 %a_imag_V_36, i32 %b_imag_V_40"   --->   Operation 141 'sub' 'r_imag_V_134' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 142 [1/1] (2.55ns)   --->   "%r_real_V = add i32 %r_real_V_118, i32 %r_real_V_116"   --->   Operation 142 'add' 'r_real_V' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 143 [1/1] (2.55ns)   --->   "%r_imag_V = add i32 %r_imag_V_133, i32 %r_imag_V_131"   --->   Operation 143 'add' 'r_imag_V' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 144 [1/1] (2.55ns)   --->   "%r_real_V_93 = add i32 %r_imag_V_134, i32 %r_real_V_117"   --->   Operation 144 'add' 'r_real_V_93' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 145 [1/1] (2.55ns)   --->   "%r_imag_V_106 = sub i32 %r_imag_V_132, i32 %r_real_V_119"   --->   Operation 145 'sub' 'r_imag_V_106' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 146 [1/1] (2.55ns)   --->   "%r_real_V_94 = sub i32 %r_real_V_116, i32 %r_real_V_118"   --->   Operation 146 'sub' 'r_real_V_94' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 147 [1/1] (2.55ns)   --->   "%r_imag_V_107 = sub i32 %r_imag_V_131, i32 %r_imag_V_133"   --->   Operation 147 'sub' 'r_imag_V_107' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 148 [1/1] (2.55ns)   --->   "%r_real_V_95 = sub i32 %r_real_V_117, i32 %r_imag_V_134"   --->   Operation 148 'sub' 'r_real_V_95' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 149 [1/1] (2.55ns)   --->   "%r_imag_V_108 = add i32 %r_real_V_119, i32 %r_imag_V_132"   --->   Operation 149 'add' 'r_imag_V_108' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 150 [1/2] (2.32ns)   --->   "%a_real_V_47 = load i2 %e_in_real_V_16_addr" [radixfft/core.cpp:127]   --->   Operation 150 'load' 'a_real_V_47' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_8 : Operation 151 [1/2] (2.32ns)   --->   "%a_imag_V_42 = load i2 %e_in_imag_V_16_addr" [radixfft/core.cpp:127]   --->   Operation 151 'load' 'a_imag_V_42' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_8 : Operation 152 [1/2] (2.32ns)   --->   "%b_real_V_32 = load i2 %e_in_real_V_17_addr" [radixfft/core.cpp:127]   --->   Operation 152 'load' 'b_real_V_32' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_8 : Operation 153 [1/2] (2.32ns)   --->   "%b_imag_V_43 = load i2 %e_in_imag_V_17_addr" [radixfft/core.cpp:127]   --->   Operation 153 'load' 'b_imag_V_43' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_8 : Operation 154 [1/1] (2.55ns)   --->   "%r_real_V_120 = add i32 %b_real_V_32, i32 %a_real_V_47"   --->   Operation 154 'add' 'r_real_V_120' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 155 [1/1] (2.55ns)   --->   "%r_imag_V_135 = add i32 %b_imag_V_43, i32 %a_imag_V_42"   --->   Operation 155 'add' 'r_imag_V_135' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 156 [1/1] (2.55ns)   --->   "%r_real_V_121 = sub i32 %a_real_V_47, i32 %b_real_V_32"   --->   Operation 156 'sub' 'r_real_V_121' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 157 [1/1] (2.55ns)   --->   "%r_imag_V_136 = sub i32 %a_imag_V_42, i32 %b_imag_V_43"   --->   Operation 157 'sub' 'r_imag_V_136' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 158 [1/2] (2.32ns)   --->   "%a_real_V_48 = load i2 %e_in_real_V_16_addr_1" [radixfft/core.cpp:128]   --->   Operation 158 'load' 'a_real_V_48' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_8 : Operation 159 [1/2] (2.32ns)   --->   "%a_imag_V_43 = load i2 %e_in_imag_V_16_addr_1" [radixfft/core.cpp:128]   --->   Operation 159 'load' 'a_imag_V_43' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_8 : Operation 160 [1/2] (2.32ns)   --->   "%b_real_V_33 = load i2 %e_in_real_V_17_addr_1" [radixfft/core.cpp:128]   --->   Operation 160 'load' 'b_real_V_33' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_8 : Operation 161 [1/2] (2.32ns)   --->   "%b_imag_V_44 = load i2 %e_in_imag_V_17_addr_1" [radixfft/core.cpp:128]   --->   Operation 161 'load' 'b_imag_V_44' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_8 : Operation 162 [1/1] (2.55ns)   --->   "%r_real_V_122 = add i32 %b_real_V_33, i32 %a_real_V_48"   --->   Operation 162 'add' 'r_real_V_122' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 163 [1/1] (2.55ns)   --->   "%r_imag_V_137 = add i32 %b_imag_V_44, i32 %a_imag_V_43"   --->   Operation 163 'add' 'r_imag_V_137' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 164 [1/1] (2.55ns)   --->   "%r_real_V_123 = sub i32 %a_real_V_48, i32 %b_real_V_33"   --->   Operation 164 'sub' 'r_real_V_123' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 165 [1/1] (2.55ns)   --->   "%r_imag_V_138 = sub i32 %a_imag_V_43, i32 %b_imag_V_44"   --->   Operation 165 'sub' 'r_imag_V_138' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 166 [2/2] (0.00ns)   --->   "%call_ln813 = call void @fft_16pt_Pipeline_VITIS_LOOP_131_2, i32 %e_out_imag_V_1, i32 %e_out_imag_V, i32 %e_out_real_V_1, i32 %e_out_real_V, i32 %r_real_V_120, i32 %r_real_V_121, i32 %r_imag_V_135, i32 %r_imag_V_136, i32 %r_real_V_122, i32 %r_real_V_123, i32 %r_imag_V_137, i32 %r_imag_V_138, i32 %r_real_V, i32 %r_real_V_93, i32 %r_imag_V, i32 %r_imag_V_106, i32 %r_real_V_94, i32 %r_real_V_95, i32 %r_imag_V_107, i32 %r_imag_V_108, i18 %TWIDDLE_REAL_V, i18 %TWIDDLE_IMAG_V"   --->   Operation 166 'call' 'call_ln813' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 167 [1/2] (0.00ns)   --->   "%call_ln813 = call void @fft_16pt_Pipeline_VITIS_LOOP_131_2, i32 %e_out_imag_V_1, i32 %e_out_imag_V, i32 %e_out_real_V_1, i32 %e_out_real_V, i32 %r_real_V_120, i32 %r_real_V_121, i32 %r_imag_V_135, i32 %r_imag_V_136, i32 %r_real_V_122, i32 %r_real_V_123, i32 %r_imag_V_137, i32 %r_imag_V_138, i32 %r_real_V, i32 %r_real_V_93, i32 %r_imag_V, i32 %r_imag_V_106, i32 %r_real_V_94, i32 %r_real_V_95, i32 %r_imag_V_107, i32 %r_imag_V_108, i18 %TWIDDLE_REAL_V, i18 %TWIDDLE_IMAG_V"   --->   Operation 167 'call' 'call_ln813' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 6.93>
+ST_10 : Operation 168 [1/1] (0.00ns)   --->   "%o2_in_real_V_7_loc_load = load i32 %o2_in_real_V_7_loc"   --->   Operation 168 'load' 'o2_in_real_V_7_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 169 [1/1] (0.00ns)   --->   "%o2_in_real_V_6_loc_load = load i32 %o2_in_real_V_6_loc"   --->   Operation 169 'load' 'o2_in_real_V_6_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 170 [1/1] (0.00ns)   --->   "%o2_in_real_V_5_loc_load = load i32 %o2_in_real_V_5_loc"   --->   Operation 170 'load' 'o2_in_real_V_5_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 171 [1/1] (0.00ns)   --->   "%o2_in_real_V_loc_load = load i32 %o2_in_real_V_loc"   --->   Operation 171 'load' 'o2_in_real_V_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 172 [1/1] (0.00ns)   --->   "%o2_in_imag_V_7_loc_load = load i32 %o2_in_imag_V_7_loc"   --->   Operation 172 'load' 'o2_in_imag_V_7_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 173 [1/1] (0.00ns)   --->   "%o2_in_imag_V_6_loc_load = load i32 %o2_in_imag_V_6_loc"   --->   Operation 173 'load' 'o2_in_imag_V_6_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 174 [1/1] (0.00ns)   --->   "%o2_in_imag_V_5_loc_load = load i32 %o2_in_imag_V_5_loc"   --->   Operation 174 'load' 'o2_in_imag_V_5_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 175 [1/1] (0.00ns)   --->   "%o2_in_imag_V_loc_load = load i32 %o2_in_imag_V_loc"   --->   Operation 175 'load' 'o2_in_imag_V_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 176 [1/1] (0.00ns)   --->   "%o1_in_imag_V_7_loc_load = load i32 %o1_in_imag_V_7_loc"   --->   Operation 176 'load' 'o1_in_imag_V_7_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 177 [1/1] (0.00ns)   --->   "%o1_in_imag_V_6_loc_load = load i32 %o1_in_imag_V_6_loc"   --->   Operation 177 'load' 'o1_in_imag_V_6_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 178 [1/1] (0.00ns)   --->   "%o1_in_imag_V_5_loc_load = load i32 %o1_in_imag_V_5_loc"   --->   Operation 178 'load' 'o1_in_imag_V_5_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 179 [1/1] (0.00ns)   --->   "%o1_in_imag_V_loc_load = load i32 %o1_in_imag_V_loc"   --->   Operation 179 'load' 'o1_in_imag_V_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 180 [1/1] (0.00ns)   --->   "%o1_in_real_V_7_loc_load = load i32 %o1_in_real_V_7_loc"   --->   Operation 180 'load' 'o1_in_real_V_7_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 181 [1/1] (0.00ns)   --->   "%o1_in_real_V_6_loc_load = load i32 %o1_in_real_V_6_loc"   --->   Operation 181 'load' 'o1_in_real_V_6_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 182 [1/1] (0.00ns)   --->   "%o1_in_real_V_5_loc_load = load i32 %o1_in_real_V_5_loc"   --->   Operation 182 'load' 'o1_in_real_V_5_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 183 [1/1] (0.00ns)   --->   "%o1_in_real_V_loc_load = load i32 %o1_in_real_V_loc"   --->   Operation 183 'load' 'o1_in_real_V_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 184 [1/1] (2.55ns)   --->   "%r_real_V_124 = add i32 %o1_in_real_V_6_loc_load, i32 %o1_in_real_V_loc_load"   --->   Operation 184 'add' 'r_real_V_124' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 185 [1/1] (2.55ns)   --->   "%r_imag_V_139 = add i32 %o1_in_imag_V_6_loc_load, i32 %o1_in_imag_V_loc_load"   --->   Operation 185 'add' 'r_imag_V_139' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 186 [1/1] (2.55ns)   --->   "%r_real_V_125 = sub i32 %o1_in_real_V_loc_load, i32 %o1_in_real_V_6_loc_load"   --->   Operation 186 'sub' 'r_real_V_125' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 187 [1/1] (2.55ns)   --->   "%r_imag_V_140 = sub i32 %o1_in_imag_V_loc_load, i32 %o1_in_imag_V_6_loc_load"   --->   Operation 187 'sub' 'r_imag_V_140' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 188 [1/1] (2.55ns)   --->   "%cpd_real_V = add i32 %o1_in_real_V_7_loc_load, i32 %o1_in_real_V_5_loc_load"   --->   Operation 188 'add' 'cpd_real_V' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 189 [1/1] (2.55ns)   --->   "%cpd_imag_V = add i32 %o1_in_imag_V_7_loc_load, i32 %o1_in_imag_V_5_loc_load"   --->   Operation 189 'add' 'cpd_imag_V' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 190 [1/1] (2.55ns)   --->   "%cmd_real_V = sub i32 %o1_in_real_V_5_loc_load, i32 %o1_in_real_V_7_loc_load"   --->   Operation 190 'sub' 'cmd_real_V' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 191 [1/1] (2.55ns)   --->   "%cmd_imag_V = sub i32 %o1_in_imag_V_5_loc_load, i32 %o1_in_imag_V_7_loc_load"   --->   Operation 191 'sub' 'cmd_imag_V' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 192 [1/1] (2.55ns)   --->   "%r_real_V_126 = add i32 %cpd_real_V, i32 %r_real_V_124"   --->   Operation 192 'add' 'r_real_V_126' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 193 [1/1] (2.55ns)   --->   "%r_imag_V_141 = add i32 %cpd_imag_V, i32 %r_imag_V_139"   --->   Operation 193 'add' 'r_imag_V_141' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 194 [1/1] (2.55ns)   --->   "%r_real_V_127 = add i32 %cmd_imag_V, i32 %r_real_V_125"   --->   Operation 194 'add' 'r_real_V_127' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 195 [1/1] (2.55ns)   --->   "%r_imag_V_142 = sub i32 %r_imag_V_140, i32 %cmd_real_V"   --->   Operation 195 'sub' 'r_imag_V_142' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 196 [1/1] (2.55ns)   --->   "%r_real_V_128 = sub i32 %r_real_V_124, i32 %cpd_real_V"   --->   Operation 196 'sub' 'r_real_V_128' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 197 [1/1] (2.55ns)   --->   "%r_imag_V_143 = sub i32 %r_imag_V_139, i32 %cpd_imag_V"   --->   Operation 197 'sub' 'r_imag_V_143' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 198 [1/1] (2.55ns)   --->   "%r_real_V_129 = sub i32 %r_real_V_125, i32 %cmd_imag_V"   --->   Operation 198 'sub' 'r_real_V_129' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 199 [1/1] (2.55ns)   --->   "%r_imag_V_144 = add i32 %r_imag_V_140, i32 %cmd_real_V"   --->   Operation 199 'add' 'r_imag_V_144' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 200 [1/1] (2.55ns)   --->   "%r_real_V_130 = add i32 %o2_in_real_V_7_loc_load, i32 %o2_in_real_V_5_loc_load"   --->   Operation 200 'add' 'r_real_V_130' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 201 [1/1] (2.55ns)   --->   "%r_imag_V_145 = add i32 %o2_in_imag_V_7_loc_load, i32 %o2_in_imag_V_5_loc_load"   --->   Operation 201 'add' 'r_imag_V_145' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 202 [1/1] (2.55ns)   --->   "%r_real_V_131 = sub i32 %o2_in_real_V_7_loc_load, i32 %o2_in_real_V_5_loc_load"   --->   Operation 202 'sub' 'r_real_V_131' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 203 [1/1] (2.55ns)   --->   "%r_imag_V_146 = sub i32 %o2_in_imag_V_7_loc_load, i32 %o2_in_imag_V_5_loc_load"   --->   Operation 203 'sub' 'r_imag_V_146' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 204 [1/1] (2.55ns)   --->   "%cpd_real_V_1 = add i32 %o2_in_real_V_6_loc_load, i32 %o2_in_real_V_loc_load"   --->   Operation 204 'add' 'cpd_real_V_1' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 205 [1/1] (2.55ns)   --->   "%cpd_imag_V_1 = add i32 %o2_in_imag_V_6_loc_load, i32 %o2_in_imag_V_loc_load"   --->   Operation 205 'add' 'cpd_imag_V_1' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 206 [1/1] (2.55ns)   --->   "%cmd_real_V_1 = sub i32 %o2_in_real_V_6_loc_load, i32 %o2_in_real_V_loc_load"   --->   Operation 206 'sub' 'cmd_real_V_1' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 207 [1/1] (2.55ns)   --->   "%cmd_imag_V_1 = sub i32 %o2_in_imag_V_6_loc_load, i32 %o2_in_imag_V_loc_load"   --->   Operation 207 'sub' 'cmd_imag_V_1' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 208 [1/1] (2.55ns)   --->   "%r_real_V_132 = add i32 %r_real_V_130, i32 %cpd_real_V_1"   --->   Operation 208 'add' 'r_real_V_132' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 209 [1/1] (2.55ns)   --->   "%r_imag_V_147 = add i32 %r_imag_V_145, i32 %cpd_imag_V_1"   --->   Operation 209 'add' 'r_imag_V_147' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 210 [1/1] (2.55ns)   --->   "%r_real_V_133 = add i32 %r_real_V_131, i32 %cmd_imag_V_1"   --->   Operation 210 'add' 'r_real_V_133' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 211 [1/1] (2.55ns)   --->   "%r_imag_V_148 = sub i32 %r_imag_V_146, i32 %cmd_real_V_1"   --->   Operation 211 'sub' 'r_imag_V_148' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 212 [1/1] (2.55ns)   --->   "%r_real_V_134 = sub i32 %r_real_V_130, i32 %cpd_real_V_1"   --->   Operation 212 'sub' 'r_real_V_134' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 213 [1/1] (2.55ns)   --->   "%r_imag_V_149 = sub i32 %r_imag_V_145, i32 %cpd_imag_V_1"   --->   Operation 213 'sub' 'r_imag_V_149' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 214 [1/1] (2.55ns)   --->   "%r_real_V_135 = sub i32 %r_real_V_131, i32 %cmd_imag_V_1"   --->   Operation 214 'sub' 'r_real_V_135' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 215 [1/1] (2.55ns)   --->   "%r_imag_V_150 = add i32 %cmd_real_V_1, i32 %r_imag_V_146"   --->   Operation 215 'add' 'r_imag_V_150' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 216 [2/2] (1.82ns)   --->   "%call_ln813 = call void @fft_16pt_Pipeline_VITIS_LOOP_181_3, i32 %out_imag_3, i32 %out_imag_2, i32 %out_imag_1, i32 %out_imag_0, i32 %out_real_3, i32 %out_real_2, i32 %out_real_1, i32 %out_real_0, i32 %r_real_V_126, i32 %r_real_V_127, i32 %r_real_V_128, i32 %r_real_V_129, i32 %r_imag_V_141, i32 %r_imag_V_142, i32 %r_imag_V_143, i32 %r_imag_V_144, i32 %r_real_V_132, i32 %r_real_V_133, i32 %r_real_V_134, i32 %r_real_V_135, i32 %r_imag_V_147, i32 %r_imag_V_148, i32 %r_imag_V_149, i32 %r_imag_V_150, i32 %e_out_real_V, i32 %e_out_imag_V, i32 %e_out_real_V_1, i32 %e_out_imag_V_1, i18 %TWIDDLE_REAL_V, i18 %TWIDDLE_IMAG_V"   --->   Operation 216 'call' 'call_ln813' <Predicate = true> <Delay = 1.82> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 217 [1/2] (0.00ns)   --->   "%call_ln813 = call void @fft_16pt_Pipeline_VITIS_LOOP_181_3, i32 %out_imag_3, i32 %out_imag_2, i32 %out_imag_1, i32 %out_imag_0, i32 %out_real_3, i32 %out_real_2, i32 %out_real_1, i32 %out_real_0, i32 %r_real_V_126, i32 %r_real_V_127, i32 %r_real_V_128, i32 %r_real_V_129, i32 %r_imag_V_141, i32 %r_imag_V_142, i32 %r_imag_V_143, i32 %r_imag_V_144, i32 %r_real_V_132, i32 %r_real_V_133, i32 %r_real_V_134, i32 %r_real_V_135, i32 %r_imag_V_147, i32 %r_imag_V_148, i32 %r_imag_V_149, i32 %r_imag_V_150, i32 %e_out_real_V, i32 %e_out_imag_V, i32 %e_out_real_V_1, i32 %e_out_imag_V_1, i18 %TWIDDLE_REAL_V, i18 %TWIDDLE_IMAG_V"   --->   Operation 217 'call' 'call_ln813' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 218 [1/1] (0.00ns)   --->   "%ret_ln197 = ret" [radixfft/core.cpp:197]   --->   Operation 218 'ret' 'ret_ln197' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('in_real_0_addr') [106]  (0 ns)
+	'load' operation ('in_real_0_load') on array 'in_real_0' [114]  (2.32 ns)
+
+ <State 4>: 4.15ns
+The critical path consists of the following:
+	'load' operation ('in_real_0_load') on array 'in_real_0' [114]  (2.32 ns)
+	'call' operation ('call_ln0') to 'fft_16pt_Pipeline_VITIS_LOOP_171_2' [138]  (1.83 ns)
+
+ <State 5>: 2.72ns
+The critical path consists of the following:
+	'call' operation ('call_ln0') to 'fft_16pt_Pipeline_VITIS_LOOP_171_2' [138]  (2.72 ns)
+
+ <State 6>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('e_in_real_V_addr', radixfft/core.cpp:124) [49]  (0 ns)
+	'load' operation ('a.real.V', radixfft/core.cpp:124) on array 'e_in.real.V', radixfft/core.cpp:115 [51]  (2.32 ns)
+
+ <State 7>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('a.real.V', radixfft/core.cpp:124) on array 'e_in.real.V', radixfft/core.cpp:115 [51]  (2.32 ns)
+
+ <State 8>: 5.1ns
+The critical path consists of the following:
+	'add' operation ('r.real.V') [57]  (2.55 ns)
+	'add' operation ('r.real.V') [73]  (2.55 ns)
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 6.93ns
+The critical path consists of the following:
+	'load' operation ('o2_in_real_V_7_loc_load') on local variable 'o2_in_real_V_7_loc' [139]  (0 ns)
+	'add' operation ('r.real.V') [171]  (2.55 ns)
+	'add' operation ('r.real.V') [179]  (2.55 ns)
+	'call' operation ('call_ln813') to 'fft_16pt_Pipeline_VITIS_LOOP_181_3' [187]  (1.83 ns)
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

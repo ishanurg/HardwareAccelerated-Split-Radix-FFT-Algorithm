@@ -1,0 +1,1376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1756638712808">
+  <ports id="1" name="output_0" type="PortType" coreName="RAM_1P" coreId="62" bitwidth="64" direction="DirOut" iftype="IfTypeRegister" arraysize="8">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="2" name="output_7" type="PortType" coreName="RAM_1P" coreId="3621216858" bitwidth="64" direction="DirOut" iftype="IfTypeRegister" arraysize="8">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="3" name="output_6" type="PortType" coreName="RAM_1P" coreId="43" bitwidth="64" direction="DirOut" iftype="IfTypeRegister" arraysize="8">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="4" name="output_5" type="PortType" coreName="RAM_1P" coreId="3089708384" bitwidth="64" direction="DirOut" iftype="IfTypeRegister" arraysize="8">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="5" name="output_4" type="PortType" coreName="RAM_1P" coreId="4250787717" bitwidth="64" direction="DirOut" iftype="IfTypeRegister" arraysize="8">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="6" name="output_3" type="PortType" coreName="RAM_1P" coreId="61" bitwidth="64" direction="DirOut" iftype="IfTypeRegister" arraysize="8">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="7" name="output_2" type="PortType" coreName="RAM_1P" coreId="3089708384" bitwidth="64" direction="DirOut" iftype="IfTypeRegister" arraysize="8">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="8" name="output_1" type="PortType" coreName="RAM_1P" coreId="3091569424" bitwidth="64" direction="DirOut" iftype="IfTypeRegister" arraysize="8">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="9" name="X_real_0" type="PortType" coreName="RAM" coreId="3091572160" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="10" name="X_real_1" type="PortType" coreName="RAM" coreId="3090196976" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="11" name="X_real_2" type="PortType" coreName="RAM" coreId="3088869456" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="12" name="X_real_3" type="PortType" coreName="RAM" coreId="1330007625" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="13" name="X_real_4" type="PortType" coreName="RAM" coreId="3355195792" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="14" name="X_real_5" type="PortType" coreName="RAM" coreId="3090543136" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="15" name="X_real_6" type="PortType" coreName="RAM" coreId="3088869456" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="16" name="X_real_7" type="PortType" coreName="RAM" coreId="3090196272" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="17" name="X_imag_0" type="PortType" coreName="RAM" coreId="3088869456" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="18" name="X_imag_1" type="PortType" coreName="RAM" coreId="1397508187" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="19" name="X_imag_2" type="PortType" coreName="RAM" coreId="3088869456" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="20" name="X_imag_3" type="PortType" coreName="RAM" coreId="1869901417" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="21" name="X_imag_4" type="PortType" coreName="RAM" coreId="11" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="22" name="X_imag_5" type="PortType" coreName="RAM" coreId="10" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="23" name="X_imag_6" type="PortType" coreName="RAM" coreId="3088866272" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="24" name="X_imag_7" type="PortType" coreName="RAM" coreId="3090543440" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <edges id="141" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="142" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="143" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="144" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="147" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="150" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="151" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="152" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="153" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <edges id="154" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <edges id="155" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.1"/>
+  <edges id="156" source_obj="//@regions.0/@basic_blocks.8/@node_objs.0" sink_obj="//@ports.0"/>
+  <edges id="159" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.0"/>
+  <edges id="162" source_obj="//@regions.0/@basic_blocks.8/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.1"/>
+  <edges id="163" source_obj="//@regions.0/@basic_blocks.1/@node_objs.37" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.1"/>
+  <edges id="166" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.2"/>
+  <edges id="167" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="168" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="169" source_obj="//@ports.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="171" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="172" source_obj="//@ports.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="174" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="175" source_obj="//@ports.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="177" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="178" source_obj="//@ports.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="180" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="181" source_obj="//@ports.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="183" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="184" source_obj="//@ports.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="186" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="187" source_obj="//@ports.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="189" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="190" source_obj="//@ports.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="192" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="193" source_obj="//@ports.16" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="195" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="196" source_obj="//@ports.17" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="198" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="199" source_obj="//@ports.18" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="201" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="202" source_obj="//@ports.19" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="204" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="205" source_obj="//@ports.20" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="207" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="208" source_obj="//@ports.21" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="210" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="211" source_obj="//@ports.22" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="213" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="214" source_obj="//@ports.23" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="216" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="219" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="224" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="225" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
+  <edges id="226" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
+  <edges id="227" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.22"/>
+  <edges id="228" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
+  <edges id="229" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
+  <edges id="230" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
+  <edges id="231" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="234" source_obj="//@regions.0/@basic_blocks.1/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="235" source_obj="//@regions.0/@basic_blocks.1/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="236" source_obj="//@regions.0/@basic_blocks.1/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="237" source_obj="//@regions.0/@basic_blocks.1/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="238" source_obj="//@regions.0/@basic_blocks.1/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="239" source_obj="//@regions.0/@basic_blocks.1/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="240" source_obj="//@regions.0/@basic_blocks.1/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="241" source_obj="//@regions.0/@basic_blocks.1/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="242" source_obj="//@regions.0/@basic_blocks.1/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="243" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.28"/>
+  <edges id="244" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.29"/>
+  <edges id="245" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.30"/>
+  <edges id="246" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <edges id="247" source_obj="//@regions.0/@basic_blocks.1/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.32"/>
+  <edges id="248" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.33"/>
+  <edges id="249" source_obj="//@regions.0/@basic_blocks.1/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.34"/>
+  <edges id="250" source_obj="//@regions.0/@basic_blocks.1/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.35"/>
+  <edges id="252" source_obj="//@regions.0/@basic_blocks.1/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.36"/>
+  <edges id="253" source_obj="//@regions.0/@basic_blocks.1/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.36"/>
+  <edges id="254" source_obj="//@regions.0/@basic_blocks.1/@node_objs.30" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.36"/>
+  <edges id="255" source_obj="//@regions.0/@basic_blocks.1/@node_objs.31" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.36"/>
+  <edges id="256" source_obj="//@regions.0/@basic_blocks.1/@node_objs.32" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.36"/>
+  <edges id="257" source_obj="//@regions.0/@basic_blocks.1/@node_objs.33" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.36"/>
+  <edges id="258" source_obj="//@regions.0/@basic_blocks.1/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.36"/>
+  <edges id="259" source_obj="//@regions.0/@basic_blocks.1/@node_objs.35" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.36"/>
+  <edges id="260" source_obj="//@regions.0/@basic_blocks.1/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.36"/>
+  <edges id="263" source_obj="//@regions.0/@basic_blocks.1/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.37"/>
+  <edges id="264" source_obj="//@regions.0/@basic_blocks.1/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.37"/>
+  <edges id="265" source_obj="//@regions.0/@basic_blocks.1/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.38"/>
+  <edges id="266" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.38"/>
+  <edges id="269" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.38"/>
+  <edges id="272" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.38"/>
+  <edges id="275" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.38"/>
+  <edges id="278" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.38"/>
+  <edges id="281" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.38"/>
+  <edges id="284" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.38"/>
+  <edges id="287" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.38"/>
+  <edges id="288" source_obj="//@regions.0/@basic_blocks.7/@node_objs.0" sink_obj="//@ports.7"/>
+  <edges id="290" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.0"/>
+  <edges id="292" source_obj="//@regions.0/@basic_blocks.7/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.1"/>
+  <edges id="293" source_obj="//@regions.0/@basic_blocks.1/@node_objs.37" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.1"/>
+  <edges id="295" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.2"/>
+  <edges id="296" source_obj="//@regions.0/@basic_blocks.6/@node_objs.0" sink_obj="//@ports.6"/>
+  <edges id="298" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.0"/>
+  <edges id="300" source_obj="//@regions.0/@basic_blocks.6/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.1"/>
+  <edges id="301" source_obj="//@regions.0/@basic_blocks.1/@node_objs.37" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.1"/>
+  <edges id="303" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.2"/>
+  <edges id="304" source_obj="//@regions.0/@basic_blocks.5/@node_objs.0" sink_obj="//@ports.5"/>
+  <edges id="306" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <edges id="308" source_obj="//@regions.0/@basic_blocks.5/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.1"/>
+  <edges id="309" source_obj="//@regions.0/@basic_blocks.1/@node_objs.37" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.1"/>
+  <edges id="311" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.2"/>
+  <edges id="312" source_obj="//@regions.0/@basic_blocks.4/@node_objs.0" sink_obj="//@ports.4"/>
+  <edges id="314" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="316" source_obj="//@regions.0/@basic_blocks.4/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.1"/>
+  <edges id="317" source_obj="//@regions.0/@basic_blocks.1/@node_objs.37" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.1"/>
+  <edges id="319" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.2"/>
+  <edges id="320" source_obj="//@regions.0/@basic_blocks.3/@node_objs.0" sink_obj="//@ports.3"/>
+  <edges id="322" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="324" source_obj="//@regions.0/@basic_blocks.3/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.1"/>
+  <edges id="325" source_obj="//@regions.0/@basic_blocks.1/@node_objs.37" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.1"/>
+  <edges id="327" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.2"/>
+  <edges id="328" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@ports.2"/>
+  <edges id="330" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="332" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="333" source_obj="//@regions.0/@basic_blocks.1/@node_objs.37" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="335" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.2"/>
+  <edges id="336" source_obj="//@regions.0/@basic_blocks.9/@node_objs.0" sink_obj="//@ports.1"/>
+  <edges id="338" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.0"/>
+  <edges id="339" source_obj="//@regions.0/@basic_blocks.1/@node_objs.37" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.1"/>
+  <edges id="340" source_obj="//@regions.0/@basic_blocks.9/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.1"/>
+  <edges id="341" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.2"/>
+  <edges id="576" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="577" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="578" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="579" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.9"/>
+  <edges id="580" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.8"/>
+  <edges id="581" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.7"/>
+  <edges id="582" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.6"/>
+  <edges id="583" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.5"/>
+  <edges id="584" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.4"/>
+  <edges id="585" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.3"/>
+  <edges id="586" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2"/>
+  <edges id="587" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="588" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="589" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="590" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="591" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="592" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.7" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="593" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.8" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="594" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.9" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="595" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="596" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="597" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <edges id="598" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <blocks id="51" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>for.inc22</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="i" originalName="i" coreId="0" bitwidth="7" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="i_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="br_ln0" coreId="3090544832" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <controlInputObjs>for.inc22</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="136" name="for.end24.exitStub" type="BlockType">
+    <controlInputObjs>for.inc22</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="135" name="_ln0" coreId="3088124112" opcode="ret" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="2" typeName="Pipeline" iiViolation="" id="457" pipe_depth="3" RegionName="VITIS_LOOP_329_2">
+    <basic_blocks id="57" name="for.inc22" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>arrayidx21.1.0.0.0524.exit</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.end24.exitStub</controlOutputObjs>
+      <controlOutputObjs>for.inc22.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="i_1" lineNumber="329" originalName="i" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3088869456" contextFuncName="sr_fft" bitwidth="7" opcode="load" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="329" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="icmp_ln329" lineNumber="329" fileName="radixfft/core.cpp" fileDirectory=".." rtlName="icmp_ln329_fu_435_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="sr_fft" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.48" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="329" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="add_ln329" lineNumber="329" fileName="radixfft/core.cpp" fileDirectory=".." rtlName="add_ln329_fu_441_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="sr_fft" bitwidth="7" opcode="add" m_display="0" m_delay="1.87" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="329" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="br_ln329" lineNumber="329" fileName="radixfft/core.cpp" fileDirectory=".." coreId="128" contextFuncName="sr_fft" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="329" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>for.inc22.split</controlInputObjs>
+        <controlInputObjs>for.end24.exitStub</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="radixfft/core.cpp">
+        <validLinenumbers>329</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="99" name="for.inc22.split" type="BlockType">
+      <controlInputObjs>for.inc22</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>arrayidx21.1.0.0.0524.case.7</controlOutputObjs>
+      <controlOutputObjs>arrayidx21.1.0.0.0524.case.0</controlOutputObjs>
+      <controlOutputObjs>arrayidx21.1.0.0.0524.case.1</controlOutputObjs>
+      <controlOutputObjs>arrayidx21.1.0.0.0524.case.2</controlOutputObjs>
+      <controlOutputObjs>arrayidx21.1.0.0.0524.case.3</controlOutputObjs>
+      <controlOutputObjs>arrayidx21.1.0.0.0524.case.4</controlOutputObjs>
+      <controlOutputObjs>arrayidx21.1.0.0.0524.case.5</controlOutputObjs>
+      <controlOutputObjs>arrayidx21.1.0.0.0524.case.6</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="trunc_ln329" lineNumber="329" fileName="radixfft/core.cpp" fileDirectory=".." rtlName="trunc_ln329_fu_447_p1" coreId="3088938112" contextFuncName="sr_fft" bitwidth="3" opcode="trunc" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="329" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="zext_ln331" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." rtlName="zext_ln331_fu_451_p1" coreId="608" contextFuncName="sr_fft" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="X_real_0_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3090543200" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>X_real_0</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="X_real_1_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3089429968" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>X_real_1</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="X_real_2_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3088869456" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>X_real_2</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="X_real_3_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3088089584" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>X_real_3</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="X_real_4_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3087964064" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>X_real_4</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="X_real_5_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="7955819" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>X_real_5</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="X_real_6_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3088866400" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>X_real_6</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="X_real_7_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3089196688" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>X_real_7</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="X_imag_0_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3088869456" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>X_imag_0</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="X_imag_1_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="6775156" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>X_imag_1</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="X_imag_2_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3088869456" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>X_imag_2</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="X_imag_3_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3088942400" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>X_imag_3</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="X_imag_4_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="4251321493" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>X_imag_4</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="X_imag_5_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3089194016" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>X_imag_5</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="X_imag_6_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="1953510961" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>X_imag_6</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="X_imag_7_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="1936942413" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>X_imag_7</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="trunc_ln3" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." rtlName="trunc_ln3_reg_651" coreId="4251241216" contextFuncName="sr_fft" bitwidth="3" opcode="partselect" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+        <dataOutputObjs>switch</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="X_real_0_load" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sr_fft" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="X_real_1_load" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sr_fft" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="X_real_2_load" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sr_fft" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="X_real_3_load" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sr_fft" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="X_real_4_load" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sr_fft" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="X_real_5_load" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sr_fft" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="X_real_6_load" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sr_fft" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="X_real_7_load" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sr_fft" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="87" name="tmp_2" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." rtlName="mux_83_32_1_1_U610" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="sr_fft" bitwidth="32" opcode="mux" nodeLabel="1.0" m_display="0" m_delay="2.3" m_topoIndex="53" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="X_imag_0_load" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sr_fft" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="89" name="X_imag_1_load" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sr_fft" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="36" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="90" name="X_imag_2_load" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sr_fft" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="91" name="X_imag_3_load" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sr_fft" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="92" name="X_imag_4_load" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sr_fft" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="93" name="X_imag_5_load" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sr_fft" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="94" name="X_imag_6_load" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sr_fft" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="95" name="X_imag_7_load" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sr_fft" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="96" name="tmp_3" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." rtlName="mux_83_32_1_1_U611" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="sr_fft" bitwidth="32" opcode="mux" nodeLabel="1.0" m_display="0" m_delay="2.3" m_topoIndex="54" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="97" name="or_ln331_2" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." rtlName="or_ln331_2_fu_523_p3" coreId="1819113532" contextFuncName="sr_fft" bitwidth="64" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>mux</dataInputObjs>
+        <dataInputObjs>mux</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="98" name="_ln331" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3088120768" contextFuncName="sr_fft" opcode="switch" m_display="0" m_delay="0.95" m_topoIndex="43" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <controlInputObjs>arrayidx21.1.0.0.0524.case.7</controlInputObjs>
+        <controlInputObjs>arrayidx21.1.0.0.0524.case.0</controlInputObjs>
+        <controlInputObjs>arrayidx21.1.0.0.0524.case.1</controlInputObjs>
+        <controlInputObjs>arrayidx21.1.0.0.0524.case.2</controlInputObjs>
+        <controlInputObjs>arrayidx21.1.0.0.0524.case.3</controlInputObjs>
+        <controlInputObjs>arrayidx21.1.0.0.0524.case.4</controlInputObjs>
+        <controlInputObjs>arrayidx21.1.0.0.0524.case.5</controlInputObjs>
+        <controlInputObjs>arrayidx21.1.0.0.0524.case.6</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <fileValidLineNumbers fileName="radixfft/core.cpp">
+        <validLinenumbers>329</validLinenumbers>
+        <validLinenumbers>331</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="103" name="arrayidx21.1.0.0.0524.case.6" type="BlockType">
+      <controlInputObjs>for.inc22.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx21.1.0.0.0524.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="100" name="output_6_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3088276216" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>output_6</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="101" name="output_6_addr_write_ln331" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="sr_fft" opcode="store" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="57" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="102" name="br_ln331" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="176" contextFuncName="sr_fft" opcode="br" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <controlInputObjs>arrayidx21.1.0.0.0524.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="radixfft/core.cpp">
+        <validLinenumbers>331</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="107" name="arrayidx21.1.0.0.0524.case.5" type="BlockType">
+      <controlInputObjs>for.inc22.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx21.1.0.0.0524.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="104" name="output_5_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3090014784" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>output_5</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="105" name="output_5_addr_write_ln331" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="sr_fft" opcode="store" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="59" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="106" name="br_ln331" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3088869456" contextFuncName="sr_fft" opcode="br" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <controlInputObjs>arrayidx21.1.0.0.0524.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="radixfft/core.cpp">
+        <validLinenumbers>331</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="111" name="arrayidx21.1.0.0.0524.case.4" type="BlockType">
+      <controlInputObjs>for.inc22.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx21.1.0.0.0524.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="108" name="output_4_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3090015312" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>output_4</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="109" name="output_4_addr_write_ln331" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="sr_fft" opcode="store" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="61" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="110" name="br_ln331" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3090264688" contextFuncName="sr_fft" opcode="br" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <controlInputObjs>arrayidx21.1.0.0.0524.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="radixfft/core.cpp">
+        <validLinenumbers>331</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="115" name="arrayidx21.1.0.0.0524.case.3" type="BlockType">
+      <controlInputObjs>for.inc22.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx21.1.0.0.0524.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="112" name="output_3_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3088869456" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>output_3</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="113" name="output_3_addr_write_ln331" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="sr_fft" opcode="store" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="63" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="114" name="br_ln331" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3088869456" contextFuncName="sr_fft" opcode="br" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <controlInputObjs>arrayidx21.1.0.0.0524.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="radixfft/core.cpp">
+        <validLinenumbers>331</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="119" name="arrayidx21.1.0.0.0524.case.2" type="BlockType">
+      <controlInputObjs>for.inc22.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx21.1.0.0.0524.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="116" name="output_2_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="1869901417" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>output_2</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="117" name="output_2_addr_write_ln331" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="sr_fft" opcode="store" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="65" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="118" name="br_ln331" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="1397508187" contextFuncName="sr_fft" opcode="br" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <controlInputObjs>arrayidx21.1.0.0.0524.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="radixfft/core.cpp">
+        <validLinenumbers>331</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="123" name="arrayidx21.1.0.0.0524.case.1" type="BlockType">
+      <controlInputObjs>for.inc22.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx21.1.0.0.0524.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="120" name="output_1_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="4249976671" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>output_1</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="121" name="output_1_addr_write_ln331" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="sr_fft" opcode="store" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="67" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="122" name="br_ln331" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3354690656" contextFuncName="sr_fft" opcode="br" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <controlInputObjs>arrayidx21.1.0.0.0524.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="radixfft/core.cpp">
+        <validLinenumbers>331</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="127" name="arrayidx21.1.0.0.0524.case.0" type="BlockType">
+      <controlInputObjs>for.inc22.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx21.1.0.0.0524.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="124" name="output_0_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3355221472" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>output_0</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="125" name="output_0_addr_write_ln331" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="sr_fft" opcode="store" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="2.32" m_topoIndex="69" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="126" name="br_ln331" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="3355323680" contextFuncName="sr_fft" opcode="br" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <controlInputObjs>arrayidx21.1.0.0.0524.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="radixfft/core.cpp">
+        <validLinenumbers>331</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="131" name="arrayidx21.1.0.0.0524.case.7" type="BlockType">
+      <controlInputObjs>for.inc22.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx21.1.0.0.0524.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="128" name="output_7_addr" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="4250059267" contextFuncName="sr_fft" bitwidth="3" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>output_7</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="129" name="output_7_addr_write_ln331" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="86" contextFuncName="sr_fft" opcode="store" nodeLabel="1.0" m_display="0" m_delay="2.32" m_topoIndex="71" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="130" name="br_ln331" lineNumber="331" fileName="radixfft/core.cpp" fileDirectory=".." coreId="2190005658" contextFuncName="sr_fft" opcode="br" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="331" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <controlInputObjs>arrayidx21.1.0.0.0524.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="radixfft/core.cpp">
+        <validLinenumbers>331</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="134" name="arrayidx21.1.0.0.0524.exit" type="BlockType">
+      <controlInputObjs>arrayidx21.1.0.0.0524.case.6</controlInputObjs>
+      <controlInputObjs>arrayidx21.1.0.0.0524.case.5</controlInputObjs>
+      <controlInputObjs>arrayidx21.1.0.0.0524.case.4</controlInputObjs>
+      <controlInputObjs>arrayidx21.1.0.0.0524.case.3</controlInputObjs>
+      <controlInputObjs>arrayidx21.1.0.0.0524.case.2</controlInputObjs>
+      <controlInputObjs>arrayidx21.1.0.0.0524.case.1</controlInputObjs>
+      <controlInputObjs>arrayidx21.1.0.0.0524.case.0</controlInputObjs>
+      <controlInputObjs>arrayidx21.1.0.0.0524.case.7</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc22</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="132" name="i_write_ln329" lineNumber="329" fileName="radixfft/core.cpp" fileDirectory=".." coreId="4252517068" contextFuncName="sr_fft" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.58" m_topoIndex="72" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="329" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="133" name="br_ln329" lineNumber="329" fileName="radixfft/core.cpp" fileDirectory=".." coreId="4252517532" contextFuncName="sr_fft" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="radixfft/core.cpp" linenumber="329" fileDirectory="/home/ishan/tools/Vitis_HLS/2022.2/bin" functionName="sr_fft"/>
+        <controlInputObjs>for.inc22</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="radixfft/core.cpp">
+        <validLinenumbers>329</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <regnodes realName="X_imag_7_addr_reg_646">
+    <nodeIds>77</nodeIds>
+  </regnodes>
+  <regnodes realName="output_1_addr_reg_693">
+    <nodeIds>120</nodeIds>
+  </regnodes>
+  <regnodes realName="output_0_addr_reg_698">
+    <nodeIds>124</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln3_reg_651">
+    <nodeIds>78</nodeIds>
+  </regnodes>
+  <regnodes realName="X_imag_6_addr_reg_641">
+    <nodeIds>76</nodeIds>
+  </regnodes>
+  <regnodes realName="X_real_1_addr_reg_576">
+    <nodeIds>63</nodeIds>
+  </regnodes>
+  <regnodes realName="output_6_addr_reg_668">
+    <nodeIds>100</nodeIds>
+  </regnodes>
+  <regnodes realName="X_real_2_addr_reg_581">
+    <nodeIds>64</nodeIds>
+  </regnodes>
+  <regnodes realName="output_2_addr_reg_688">
+    <nodeIds>116</nodeIds>
+  </regnodes>
+  <regnodes realName="X_real_7_addr_reg_606">
+    <nodeIds>69</nodeIds>
+  </regnodes>
+  <regnodes realName="or_ln331_2_reg_657">
+    <nodeIds>97</nodeIds>
+  </regnodes>
+  <regnodes realName="X_imag_1_addr_reg_616">
+    <nodeIds>71</nodeIds>
+  </regnodes>
+  <regnodes realName="X_imag_0_addr_reg_611">
+    <nodeIds>70</nodeIds>
+  </regnodes>
+  <regnodes realName="output_3_addr_reg_683">
+    <nodeIds>112</nodeIds>
+  </regnodes>
+  <regnodes realName="X_real_6_addr_reg_601">
+    <nodeIds>68</nodeIds>
+  </regnodes>
+  <regnodes realName="X_imag_5_addr_reg_636">
+    <nodeIds>75</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln329_reg_554">
+    <nodeIds>55</nodeIds>
+  </regnodes>
+  <regnodes realName="X_real_3_addr_reg_586">
+    <nodeIds>65</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln329_reg_550">
+    <nodeIds>53</nodeIds>
+  </regnodes>
+  <regnodes realName="X_imag_4_addr_reg_631">
+    <nodeIds>74</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_543">
+    <nodeIds>25</nodeIds>
+  </regnodes>
+  <regnodes realName="X_real_0_addr_reg_571">
+    <nodeIds>62</nodeIds>
+  </regnodes>
+  <regnodes realName="X_imag_2_addr_reg_621">
+    <nodeIds>72</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln331_reg_559">
+    <nodeIds>61</nodeIds>
+  </regnodes>
+  <regnodes realName="X_real_5_addr_reg_596">
+    <nodeIds>67</nodeIds>
+  </regnodes>
+  <regnodes realName="output_5_addr_reg_673">
+    <nodeIds>104</nodeIds>
+  </regnodes>
+  <regnodes realName="X_imag_3_addr_reg_626">
+    <nodeIds>73</nodeIds>
+  </regnodes>
+  <regnodes realName="output_4_addr_reg_678">
+    <nodeIds>108</nodeIds>
+  </regnodes>
+  <regnodes realName="X_real_4_addr_reg_591">
+    <nodeIds>66</nodeIds>
+  </regnodes>
+  <expressionNodes realName="X_imag_0_addr_gep_fu_178">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="output_1_addr_gep_fu_390">
+    <nodeIds>120</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="X_imag_4_addr_gep_fu_206">
+    <nodeIds>74</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_118">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="X_real_5_addr_gep_fu_157">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="X_real_3_addr_gep_fu_143">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="X_imag_7_addr_gep_fu_227">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="X_real_6_addr_gep_fu_164">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="X_real_2_addr_gep_fu_136">
+    <nodeIds>64</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="output_6_addr_gep_fu_330">
+    <nodeIds>100</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln331_fu_451">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="X_real_1_addr_gep_fu_129">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="output_4_addr_gep_fu_354">
+    <nodeIds>108</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln329_fu_435">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="X_imag_5_addr_gep_fu_213">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="X_imag_6_addr_gep_fu_220">
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="output_5_addr_gep_fu_342">
+    <nodeIds>104</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln331_2_fu_523">
+    <nodeIds>97</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="output_7_addr_gep_fu_414">
+    <nodeIds>128</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="output_2_addr_gep_fu_378">
+    <nodeIds>116</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_3_fu_502">
+    <nodeIds>96</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="output_3_addr_gep_fu_366">
+    <nodeIds>112</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln329_fu_447">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_2_fu_481">
+    <nodeIds>87</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="output_0_addr_gep_fu_402">
+    <nodeIds>124</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="X_imag_2_addr_gep_fu_192">
+    <nodeIds>72</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="X_real_0_addr_gep_fu_122">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="X_real_7_addr_gep_fu_171">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="X_imag_1_addr_gep_fu_185">
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln329_fu_441">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="X_real_4_addr_gep_fu_150">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln3_fu_471">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="X_imag_3_addr_gep_fu_199">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="store_ln329_store_fu_539">
+    <nodeIds>132</nodeIds>
+  </ioNodes>
+  <ioNodes realName="i_1_load_fu_432">
+    <nodeIds>52</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_427">
+    <nodeIds>49</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="X_imag_0">
+    <nodeIds>88</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="X_imag_1">
+    <nodeIds>89</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="X_imag_2">
+    <nodeIds>90</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="X_imag_3">
+    <nodeIds>91</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="X_imag_4">
+    <nodeIds>92</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="X_imag_5">
+    <nodeIds>93</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="X_imag_6">
+    <nodeIds>94</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="X_imag_7">
+    <nodeIds>95</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="X_real_0">
+    <nodeIds>79</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="X_real_1">
+    <nodeIds>80</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="X_real_2">
+    <nodeIds>81</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="X_real_3">
+    <nodeIds>82</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="X_real_4">
+    <nodeIds>83</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="X_real_5">
+    <nodeIds>84</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="X_real_6">
+    <nodeIds>85</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="X_real_7">
+    <nodeIds>86</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="output_0">
+    <nodeIds>125</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="output_1">
+    <nodeIds>121</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="output_2">
+    <nodeIds>117</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="output_3">
+    <nodeIds>113</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="output_4">
+    <nodeIds>109</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="output_5">
+    <nodeIds>105</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="output_6">
+    <nodeIds>101</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="output_7">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <ioPorts name="X_imag_0(p0)">
+    <contents name="load">
+      <nodeIds>88</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="X_imag_1(p0)">
+    <contents name="load">
+      <nodeIds>89</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="X_imag_2(p0)">
+    <contents name="load">
+      <nodeIds>90</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="X_imag_3(p0)">
+    <contents name="load">
+      <nodeIds>91</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="X_imag_4(p0)">
+    <contents name="load">
+      <nodeIds>92</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="X_imag_5(p0)">
+    <contents name="load">
+      <nodeIds>93</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="X_imag_6(p0)">
+    <contents name="load">
+      <nodeIds>94</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="X_imag_7(p0)">
+    <contents name="load">
+      <nodeIds>95</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="X_real_0(p0)">
+    <contents name="load">
+      <nodeIds>79</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="X_real_1(p0)">
+    <contents name="load">
+      <nodeIds>80</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="X_real_2(p0)">
+    <contents name="load">
+      <nodeIds>81</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="X_real_3(p0)">
+    <contents name="load">
+      <nodeIds>82</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="X_real_4(p0)">
+    <contents name="load">
+      <nodeIds>83</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="X_real_5(p0)">
+    <contents name="load">
+      <nodeIds>84</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="X_real_6(p0)">
+    <contents name="load">
+      <nodeIds>85</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="X_real_7(p0)">
+    <contents name="load">
+      <nodeIds>86</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_0(p0)">
+    <contents name="store">
+      <nodeIds>125</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_1(p0)">
+    <contents name="store">
+      <nodeIds>121</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_2(p0)">
+    <contents name="store">
+      <nodeIds>117</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_3(p0)">
+    <contents name="store">
+      <nodeIds>113</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_4(p0)">
+    <contents name="store">
+      <nodeIds>109</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_5(p0)">
+    <contents name="store">
+      <nodeIds>105</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_6(p0)">
+    <contents name="store">
+      <nodeIds>101</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_7(p0)">
+    <contents name="store">
+      <nodeIds>129</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="2" latency="2"/>
+      <operations id="80" stage="2" latency="2"/>
+      <operations id="81" stage="2" latency="2"/>
+      <operations id="82" stage="2" latency="2"/>
+      <operations id="83" stage="2" latency="2"/>
+      <operations id="84" stage="2" latency="2"/>
+      <operations id="85" stage="2" latency="2"/>
+      <operations id="86" stage="2" latency="2"/>
+      <operations id="88" stage="2" latency="2"/>
+      <operations id="89" stage="2" latency="2"/>
+      <operations id="90" stage="2" latency="2"/>
+      <operations id="91" stage="2" latency="2"/>
+      <operations id="92" stage="2" latency="2"/>
+      <operations id="93" stage="2" latency="2"/>
+      <operations id="94" stage="2" latency="2"/>
+      <operations id="95" stage="2" latency="2"/>
+      <operations id="98" stage="1" latency="1"/>
+      <operations id="102" stage="1" latency="1"/>
+      <operations id="106" stage="1" latency="1"/>
+      <operations id="110" stage="1" latency="1"/>
+      <operations id="114" stage="1" latency="1"/>
+      <operations id="118" stage="1" latency="1"/>
+      <operations id="122" stage="1" latency="1"/>
+      <operations id="126" stage="1" latency="1"/>
+      <operations id="130" stage="1" latency="1"/>
+      <operations id="135" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="2"/>
+      <operations id="80" stage="1" latency="2"/>
+      <operations id="81" stage="1" latency="2"/>
+      <operations id="82" stage="1" latency="2"/>
+      <operations id="83" stage="1" latency="2"/>
+      <operations id="84" stage="1" latency="2"/>
+      <operations id="85" stage="1" latency="2"/>
+      <operations id="86" stage="1" latency="2"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="2"/>
+      <operations id="89" stage="1" latency="2"/>
+      <operations id="90" stage="1" latency="2"/>
+      <operations id="91" stage="1" latency="2"/>
+      <operations id="92" stage="1" latency="2"/>
+      <operations id="93" stage="1" latency="2"/>
+      <operations id="94" stage="1" latency="2"/>
+      <operations id="95" stage="1" latency="2"/>
+      <operations id="96" stage="1" latency="1"/>
+      <operations id="97" stage="1" latency="1"/>
+      <operations id="100" stage="1" latency="1"/>
+      <operations id="101" stage="2" latency="2"/>
+      <operations id="104" stage="1" latency="1"/>
+      <operations id="105" stage="2" latency="2"/>
+      <operations id="108" stage="1" latency="1"/>
+      <operations id="109" stage="2" latency="2"/>
+      <operations id="112" stage="1" latency="1"/>
+      <operations id="113" stage="2" latency="2"/>
+      <operations id="116" stage="1" latency="1"/>
+      <operations id="117" stage="2" latency="2"/>
+      <operations id="120" stage="1" latency="1"/>
+      <operations id="121" stage="2" latency="2"/>
+      <operations id="124" stage="1" latency="1"/>
+      <operations id="125" stage="2" latency="2"/>
+      <operations id="128" stage="1" latency="1"/>
+      <operations id="129" stage="1" latency="1"/>
+      <operations id="132" stage="1" latency="1"/>
+      <operations id="133" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="101" stage="1" latency="2"/>
+      <operations id="105" stage="1" latency="2"/>
+      <operations id="109" stage="1" latency="2"/>
+      <operations id="113" stage="1" latency="2"/>
+      <operations id="117" stage="1" latency="2"/>
+      <operations id="121" stage="1" latency="2"/>
+      <operations id="125" stage="1" latency="2"/>
+    </states>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="sr_fft_Pipeline_VITIS_LOOP_329_2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="130" mMaxLatency="130">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>51</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_329_2" mII="2" mDepth="3" mMinTripCount="64" mMaxTripCount="64" mMinLatency="128" mMaxLatency="128" mType="1">
+      <basicBlocks>57</basicBlocks>
+      <basicBlocks>99</basicBlocks>
+      <basicBlocks>103</basicBlocks>
+      <basicBlocks>107</basicBlocks>
+      <basicBlocks>111</basicBlocks>
+      <basicBlocks>115</basicBlocks>
+      <basicBlocks>119</basicBlocks>
+      <basicBlocks>123</basicBlocks>
+      <basicBlocks>127</basicBlocks>
+      <basicBlocks>131</basicBlocks>
+      <basicBlocks>134</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>136</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

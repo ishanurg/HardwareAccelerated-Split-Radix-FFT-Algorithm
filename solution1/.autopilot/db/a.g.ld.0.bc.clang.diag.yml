@@ -1,0 +1,2024 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 87, Column: 9 }
+Function:        _ZL7fft_2pt9complex_tS_RS_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_add(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 40, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_2pt(complex_t, complex_t, complex_t&, complex_t&)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 85, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 88, Column: 12 }
+Function:        _ZL7fft_2pt9complex_tS_RS_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_sub(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 48, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_2pt(complex_t, complex_t, complex_t&, complex_t&)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 85, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 96, Column: 5 }
+Function:        _ZL7fft_4ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fft_2pt(complex_t, complex_t, complex_t&, complex_t&)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 85, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_4pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 92, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 108, Column: 14 }
+Function:        _ZL7fft_4ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_add(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 40, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_4pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 92, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 108, Column: 24 }
+Function:        _ZL7fft_4ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_jmul(complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 66, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_4pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 92, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 107, Column: 14 }
+Function:        _ZL7fft_4ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_sub(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 48, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_4pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 92, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 106, Column: 14 }
+Function:        _ZL7fft_4ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_sub(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 48, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_4pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 92, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 106, Column: 24 }
+Function:        _ZL7fft_4ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_jmul(complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 66, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_4pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 92, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 105, Column: 14 }
+Function:        _ZL7fft_4ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_add(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 40, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_4pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 92, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 103, Column: 21 }
+Function:        _ZL7fft_4ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_sub(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 48, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_4pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 92, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 102, Column: 21 }
+Function:        _ZL7fft_4ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_add(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 40, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_4pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 92, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 124, Column: 5 }
+Function:        _ZL7fft_8ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fft_4pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 92, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_8pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 112, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 145, Column: 20 }
+Function:        _ZL7fft_8ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_add(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 40, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_8pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 112, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 145, Column: 38 }
+Function:        _ZL7fft_8ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_jmul(complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 66, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_8pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 112, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 144, Column: 20 }
+Function:        _ZL7fft_8ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_sub(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 48, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_8pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 112, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 143, Column: 20 }
+Function:        _ZL7fft_8ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_sub(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 48, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_8pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 112, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 143, Column: 38 }
+Function:        _ZL7fft_8ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_jmul(complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 66, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_8pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 112, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 142, Column: 18 }
+Function:        _ZL7fft_8ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_add(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 40, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_8pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 112, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 140, Column: 25 }
+Function:        _ZL7fft_8ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_sub(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 48, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_8pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 112, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 139, Column: 25 }
+Function:        _ZL7fft_8ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_add(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 40, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_8pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 112, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 137, Column: 23 }
+Function:        _ZL7fft_8ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_mul(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 56, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_8pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 112, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 136, Column: 23 }
+Function:        _ZL7fft_8ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_mul(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 56, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_8pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 112, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 134, Column: 25 }
+Function:        _ZL7fft_8ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'twiddle_WNk(int, int)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 75, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_8pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 112, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 133, Column: 17 }
+Function:        _ZL7fft_8ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'twiddle_WNk(int, int)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 75, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_8pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 112, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 128, Column: 5 }
+Function:        _ZL7fft_8ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fft_2pt(complex_t, complex_t, complex_t&, complex_t&)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 85, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_8pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 112, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 127, Column: 5 }
+Function:        _ZL7fft_8ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fft_2pt(complex_t, complex_t, complex_t&, complex_t&)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 85, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_8pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 112, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 169, Column: 5 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fft_8pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 112, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_16pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 150, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 195, Column: 21 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_add(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 40, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_16pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 150, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 195, Column: 39 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_jmul(complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 66, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_16pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 150, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 194, Column: 20 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_sub(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 48, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_16pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 150, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 193, Column: 20 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_sub(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 48, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_16pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 150, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 193, Column: 38 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_jmul(complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 66, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_16pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 150, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 192, Column: 18 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_add(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 40, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_16pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 150, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 190, Column: 25 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_sub(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 48, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_16pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 150, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 189, Column: 25 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_add(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 40, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_16pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 150, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 187, Column: 23 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_mul(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 56, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_16pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 150, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 186, Column: 23 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_mul(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 56, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_16pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 150, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 184, Column: 25 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'twiddle_WNk(int, int)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 75, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_16pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 150, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 183, Column: 17 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'twiddle_WNk(int, int)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 75, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_16pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 150, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 178, Column: 5 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fft_4pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 92, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_16pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 150, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 177, Column: 5 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fft_4pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 92, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_16pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 150, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 227, Column: 5 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fft_8pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 112, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_32pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 200, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 245, Column: 21 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_add(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 40, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_32pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 200, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 245, Column: 39 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_jmul(complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 66, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_32pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 200, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 244, Column: 21 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_sub(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 48, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_32pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 200, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 243, Column: 20 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_sub(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 48, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_32pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 200, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 243, Column: 38 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_jmul(complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 66, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_32pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 200, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 242, Column: 18 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_add(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 40, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_32pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 200, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 240, Column: 25 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_sub(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 48, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_32pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 200, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 239, Column: 25 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_add(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 40, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_32pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 200, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 237, Column: 23 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_mul(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 56, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_32pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 200, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 236, Column: 23 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_mul(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 56, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_32pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 200, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 234, Column: 25 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'twiddle_WNk(int, int)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 75, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_32pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 200, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 233, Column: 17 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'twiddle_WNk(int, int)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 75, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_32pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 200, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 228, Column: 5 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fft_8pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 112, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_32pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 200, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 283, Column: 17 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'twiddle_WNk(int, int)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 75, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_64pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 250, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 295, Column: 21 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_add(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 40, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_64pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 250, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 295, Column: 40 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_jmul(complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 66, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_64pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 250, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 294, Column: 21 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_sub(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 48, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_64pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 250, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 293, Column: 21 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_sub(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 48, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_64pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 250, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 293, Column: 40 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_jmul(complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 66, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_64pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 250, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 292, Column: 18 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_add(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 40, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_64pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 250, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 290, Column: 25 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_sub(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 48, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_64pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 250, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 289, Column: 25 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_add(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 40, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_64pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 250, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 287, Column: 23 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_mul(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 56, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_64pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 250, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 286, Column: 23 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'c_mul(complex_t, complex_t)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 56, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_64pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 250, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: radixfft/core.cpp, Line: 284, Column: 25 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'twiddle_WNk(int, int)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 75, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft_64pt(complex_t*, complex_t*)'
+    DebugLoc:        { File: radixfft/core.cpp, Line: 250, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-pragma-preprocess
+Name:            PragmaResourceTopArg
+DebugLoc:        { File: radixfft/core.cpp, Line: 310, Column: 9 }
+Function:        sr_fft
+Args:            
+  - String:          'The resource pragma (bind_storage) on top-level function argument, in '''
+  - Pragma:          call
+    DebugLoc:        { File: radixfft/core.cpp, Line: 310, Column: 9 }
+  - String:          ''' is unsupported, please use INTERFACE pragma instead'
+...
+--- !Passed
+Pass:            reflow-pragma-preprocess
+Name:            PragmaResourceTopArg
+DebugLoc:        { File: radixfft/core.cpp, Line: 311, Column: 9 }
+Function:        sr_fft
+Args:            
+  - String:          'The resource pragma (bind_storage) on top-level function argument, in '''
+  - Pragma:          call
+    DebugLoc:        { File: radixfft/core.cpp, Line: 311, Column: 9 }
+  - String:          ''' is unsupported, please use INTERFACE pragma instead'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 115, Column: 12 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_in.i.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 115, Column: 12 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_in.i.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 115, Column: 21 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_out.i.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 115, Column: 21 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_out.i.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 153, Column: 12 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_in.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 153, Column: 12 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_in.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 153, Column: 21 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_out.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 153, Column: 21 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_out.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 154, Column: 15 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o1_in.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 154, Column: 15 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o1_in.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 154, Column: 25 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o1_out.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 154, Column: 25 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o1_out.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 155, Column: 15 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o2_in.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 155, Column: 15 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o2_in.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 155, Column: 25 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o2_out.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 155, Column: 25 }
+Function:        _ZL8fft_16ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o2_out.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 115, Column: 12 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_in.i1567.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 115, Column: 12 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_in.i1567.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 115, Column: 21 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_out.i1568.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 115, Column: 21 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_out.i1568.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 115, Column: 12 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_in.i.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 115, Column: 12 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_in.i.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 115, Column: 21 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_out.i.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 115, Column: 21 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_out.i.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 203, Column: 12 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_in.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 203, Column: 12 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_in.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 203, Column: 22 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_out.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 203, Column: 22 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_out.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 204, Column: 15 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o1_in.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 204, Column: 15 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o1_in.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 204, Column: 25 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o1_out.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 204, Column: 25 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o1_out.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 205, Column: 15 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o2_in.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 205, Column: 15 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o2_in.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 205, Column: 25 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o2_out.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 205, Column: 25 }
+Function:        _ZL8fft_32ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o2_out.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 253, Column: 12 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_in.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 253, Column: 12 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_in.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 253, Column: 22 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_out.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 253, Column: 22 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          e_out.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 254, Column: 15 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o1_in.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 254, Column: 15 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o1_in.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 254, Column: 26 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o1_out.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 254, Column: 26 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o1_out.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 255, Column: 15 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o2_in.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 255, Column: 15 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o2_in.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 255, Column: 26 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o2_out.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 255, Column: 26 }
+Function:        _ZL8fft_64ptP9complex_tS0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          o2_out.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 317, Column: 12 }
+Function:        sr_fft
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          x.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 317, Column: 12 }
+Function:        sr_fft
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          x.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 317, Column: 19 }
+Function:        sr_fft
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          X.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 317, Column: 19 }
+Function:        sr_fft
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          X.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 300, Column: 0 }
+Function:        sr_fft
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: radixfft/core.cpp, Line: 300, Column: 0 }
+Function:        sr_fft
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          output
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

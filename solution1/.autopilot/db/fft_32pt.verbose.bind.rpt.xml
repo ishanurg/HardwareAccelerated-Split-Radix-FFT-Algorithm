@@ -1,0 +1,53 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'fft_32pt'" level="0">
+<item name = "Date">Sun Aug 31 16:41:46 2025
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">radixfft</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.196 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">150, 150, 1.500 us, 1.500 us, 150, 150, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_fft_32pt_Pipeline_VITIS_LOOP_215_1_fu_1082">fft_32pt_Pipeline_VITIS_LOOP_215_1, 18, 18, 0.180 us, 0.180 us, 18, 18, no</column>
+<column name="grp_fft_16pt_fu_1134">fft_16pt, 54, 54, 0.540 us, 0.540 us, 54, 54, no</column>
+<column name="grp_fft_32pt_Pipeline_VITIS_LOOP_221_2_fu_1158">fft_32pt_Pipeline_VITIS_LOOP_221_2, 10, 10, 0.100 us, 0.100 us, 10, 10, no</column>
+<column name="grp_fft_32pt_Pipeline_VITIS_LOOP_120_1_fu_1234">fft_32pt_Pipeline_VITIS_LOOP_120_1, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_fft_32pt_Pipeline_VITIS_LOOP_120_173_fu_1246">fft_32pt_Pipeline_VITIS_LOOP_120_173, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_fft_32pt_Pipeline_VITIS_LOOP_131_2_fu_1258">fft_32pt_Pipeline_VITIS_LOOP_131_2, 10, 10, 0.100 us, 0.100 us, 10, 10, no</column>
+<column name="grp_fft_32pt_Pipeline_VITIS_LOOP_131_274_fu_1286">fft_32pt_Pipeline_VITIS_LOOP_131_274, 10, 10, 0.100 us, 0.100 us, 10, 10, no</column>
+<column name="grp_fft_32pt_Pipeline_VITIS_LOOP_231_3_fu_1314">fft_32pt_Pipeline_VITIS_LOOP_231_3, 38, 38, 0.380 us, 0.380 us, 38, 38, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

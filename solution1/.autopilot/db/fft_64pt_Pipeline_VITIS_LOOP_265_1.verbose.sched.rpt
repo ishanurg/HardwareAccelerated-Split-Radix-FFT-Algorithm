@@ -1,0 +1,235 @@
+
+
+================================================================
+== Vitis HLS Report for 'fft_64pt_Pipeline_VITIS_LOOP_265_1'
+================================================================
+* Date:           Sun Aug 31 16:41:43 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        radixfft
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.948 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       66|       66|  0.660 us|  0.660 us|   66|   66|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_265_1  |       64|       64|         2|          2|          2|    32|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.32>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 5 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (1.58ns)   --->   "%store_ln0 = store i6 0, i6 %i"   --->   Operation 6 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 7 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%i_3 = load i6 %i" [radixfft/core.cpp:265]   --->   Operation 8 'load' 'i_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (1.42ns)   --->   "%icmp_ln265 = icmp_eq  i6 %i_3, i6 32" [radixfft/core.cpp:265]   --->   Operation 9 'icmp' 'icmp_ln265' <Predicate = true> <Delay = 1.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 32, i64 32, i64 32"   --->   Operation 10 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.82ns)   --->   "%add_ln265 = add i6 %i_3, i6 1" [radixfft/core.cpp:265]   --->   Operation 11 'add' 'add_ln265' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln265 = br i1 %icmp_ln265, void %for.inc.split, void %for.end.exitStub" [radixfft/core.cpp:265]   --->   Operation 12 'br' 'br_ln265' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%trunc_ln265 = trunc i6 %i_3" [radixfft/core.cpp:265]   --->   Operation 13 'trunc' 'trunc_ln265' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i3 @_ssdm_op_BitConcatenate.i3.i2.i1, i2 %trunc_ln265, i1 0" [radixfft/core.cpp:267]   --->   Operation 14 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%zext_ln267 = zext i3 %shl_ln" [radixfft/core.cpp:267]   --->   Operation 15 'zext' 'zext_ln267' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%in_real_0_addr = getelementptr i32 %in_real_0, i64 0, i64 %zext_ln267" [radixfft/core.cpp:267]   --->   Operation 16 'getelementptr' 'in_real_0_addr' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%in_real_1_addr = getelementptr i32 %in_real_1, i64 0, i64 %zext_ln267" [radixfft/core.cpp:267]   --->   Operation 17 'getelementptr' 'in_real_1_addr' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%in_real_2_addr = getelementptr i32 %in_real_2, i64 0, i64 %zext_ln267" [radixfft/core.cpp:267]   --->   Operation 18 'getelementptr' 'in_real_2_addr' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%in_real_3_addr = getelementptr i32 %in_real_3, i64 0, i64 %zext_ln267" [radixfft/core.cpp:267]   --->   Operation 19 'getelementptr' 'in_real_3_addr' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%in_real_4_addr = getelementptr i32 %in_real_4, i64 0, i64 %zext_ln267" [radixfft/core.cpp:267]   --->   Operation 20 'getelementptr' 'in_real_4_addr' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%in_real_5_addr = getelementptr i32 %in_real_5, i64 0, i64 %zext_ln267" [radixfft/core.cpp:267]   --->   Operation 21 'getelementptr' 'in_real_5_addr' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%in_real_6_addr = getelementptr i32 %in_real_6, i64 0, i64 %zext_ln267" [radixfft/core.cpp:267]   --->   Operation 22 'getelementptr' 'in_real_6_addr' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%in_real_7_addr = getelementptr i32 %in_real_7, i64 0, i64 %zext_ln267" [radixfft/core.cpp:267]   --->   Operation 23 'getelementptr' 'in_real_7_addr' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%in_imag_0_addr = getelementptr i32 %in_imag_0, i64 0, i64 %zext_ln267" [radixfft/core.cpp:267]   --->   Operation 24 'getelementptr' 'in_imag_0_addr' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%in_imag_1_addr = getelementptr i32 %in_imag_1, i64 0, i64 %zext_ln267" [radixfft/core.cpp:267]   --->   Operation 25 'getelementptr' 'in_imag_1_addr' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%in_imag_2_addr = getelementptr i32 %in_imag_2, i64 0, i64 %zext_ln267" [radixfft/core.cpp:267]   --->   Operation 26 'getelementptr' 'in_imag_2_addr' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%in_imag_3_addr = getelementptr i32 %in_imag_3, i64 0, i64 %zext_ln267" [radixfft/core.cpp:267]   --->   Operation 27 'getelementptr' 'in_imag_3_addr' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%in_imag_4_addr = getelementptr i32 %in_imag_4, i64 0, i64 %zext_ln267" [radixfft/core.cpp:267]   --->   Operation 28 'getelementptr' 'in_imag_4_addr' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%in_imag_5_addr = getelementptr i32 %in_imag_5, i64 0, i64 %zext_ln267" [radixfft/core.cpp:267]   --->   Operation 29 'getelementptr' 'in_imag_5_addr' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%in_imag_6_addr = getelementptr i32 %in_imag_6, i64 0, i64 %zext_ln267" [radixfft/core.cpp:267]   --->   Operation 30 'getelementptr' 'in_imag_6_addr' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%in_imag_7_addr = getelementptr i32 %in_imag_7, i64 0, i64 %zext_ln267" [radixfft/core.cpp:267]   --->   Operation 31 'getelementptr' 'in_imag_7_addr' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%trunc_ln4 = partselect i3 @_ssdm_op_PartSelect.i3.i6.i32.i32, i6 %i_3, i32 2, i32 4" [radixfft/core.cpp:267]   --->   Operation 32 'partselect' 'trunc_ln4' <Predicate = (!icmp_ln265)> <Delay = 0.00>
+ST_1 : Operation 33 [2/2] (2.32ns)   --->   "%in_real_0_load = load i3 %in_real_0_addr" [radixfft/core.cpp:267]   --->   Operation 33 'load' 'in_real_0_load' <Predicate = (!icmp_ln265)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_1 : Operation 34 [2/2] (2.32ns)   --->   "%in_real_1_load = load i3 %in_real_1_addr" [radixfft/core.cpp:267]   --->   Operation 34 'load' 'in_real_1_load' <Predicate = (!icmp_ln265)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_1 : Operation 35 [2/2] (2.32ns)   --->   "%in_real_2_load = load i3 %in_real_2_addr" [radixfft/core.cpp:267]   --->   Operation 35 'load' 'in_real_2_load' <Predicate = (!icmp_ln265)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_1 : Operation 36 [2/2] (2.32ns)   --->   "%in_real_3_load = load i3 %in_real_3_addr" [radixfft/core.cpp:267]   --->   Operation 36 'load' 'in_real_3_load' <Predicate = (!icmp_ln265)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_1 : Operation 37 [2/2] (2.32ns)   --->   "%in_real_4_load = load i3 %in_real_4_addr" [radixfft/core.cpp:267]   --->   Operation 37 'load' 'in_real_4_load' <Predicate = (!icmp_ln265)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_1 : Operation 38 [2/2] (2.32ns)   --->   "%in_real_5_load = load i3 %in_real_5_addr" [radixfft/core.cpp:267]   --->   Operation 38 'load' 'in_real_5_load' <Predicate = (!icmp_ln265)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_1 : Operation 39 [2/2] (2.32ns)   --->   "%in_real_6_load = load i3 %in_real_6_addr" [radixfft/core.cpp:267]   --->   Operation 39 'load' 'in_real_6_load' <Predicate = (!icmp_ln265)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_1 : Operation 40 [2/2] (2.32ns)   --->   "%in_real_7_load = load i3 %in_real_7_addr" [radixfft/core.cpp:267]   --->   Operation 40 'load' 'in_real_7_load' <Predicate = (!icmp_ln265)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_1 : Operation 41 [2/2] (2.32ns)   --->   "%in_imag_0_load = load i3 %in_imag_0_addr" [radixfft/core.cpp:267]   --->   Operation 41 'load' 'in_imag_0_load' <Predicate = (!icmp_ln265)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_1 : Operation 42 [2/2] (2.32ns)   --->   "%in_imag_1_load = load i3 %in_imag_1_addr" [radixfft/core.cpp:267]   --->   Operation 42 'load' 'in_imag_1_load' <Predicate = (!icmp_ln265)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_1 : Operation 43 [2/2] (2.32ns)   --->   "%in_imag_2_load = load i3 %in_imag_2_addr" [radixfft/core.cpp:267]   --->   Operation 43 'load' 'in_imag_2_load' <Predicate = (!icmp_ln265)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_1 : Operation 44 [2/2] (2.32ns)   --->   "%in_imag_3_load = load i3 %in_imag_3_addr" [radixfft/core.cpp:267]   --->   Operation 44 'load' 'in_imag_3_load' <Predicate = (!icmp_ln265)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_1 : Operation 45 [2/2] (2.32ns)   --->   "%in_imag_4_load = load i3 %in_imag_4_addr" [radixfft/core.cpp:267]   --->   Operation 45 'load' 'in_imag_4_load' <Predicate = (!icmp_ln265)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_1 : Operation 46 [2/2] (2.32ns)   --->   "%in_imag_5_load = load i3 %in_imag_5_addr" [radixfft/core.cpp:267]   --->   Operation 46 'load' 'in_imag_5_load' <Predicate = (!icmp_ln265)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_1 : Operation 47 [2/2] (2.32ns)   --->   "%in_imag_6_load = load i3 %in_imag_6_addr" [radixfft/core.cpp:267]   --->   Operation 47 'load' 'in_imag_6_load' <Predicate = (!icmp_ln265)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_1 : Operation 48 [2/2] (2.32ns)   --->   "%in_imag_7_load = load i3 %in_imag_7_addr" [radixfft/core.cpp:267]   --->   Operation 48 'load' 'in_imag_7_load' <Predicate = (!icmp_ln265)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 113 'ret' 'ret_ln0' <Predicate = (icmp_ln265)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 6.94>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%specpipeline_ln266 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty" [radixfft/core.cpp:266]   --->   Operation 49 'specpipeline' 'specpipeline_ln266' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%specloopname_ln265 = specloopname void @_ssdm_op_SpecLoopName, void @empty_28" [radixfft/core.cpp:265]   --->   Operation 50 'specloopname' 'specloopname_ln265' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%zext_ln267_1 = zext i2 %trunc_ln265" [radixfft/core.cpp:267]   --->   Operation 51 'zext' 'zext_ln267_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%e_in_real_V_addr = getelementptr i32 %e_in_real_V, i64 0, i64 %zext_ln267_1" [radixfft/core.cpp:267]   --->   Operation 52 'getelementptr' 'e_in_real_V_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%e_in_real_V_1_addr = getelementptr i32 %e_in_real_V_1, i64 0, i64 %zext_ln267_1" [radixfft/core.cpp:267]   --->   Operation 53 'getelementptr' 'e_in_real_V_1_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%e_in_real_V_2_addr = getelementptr i32 %e_in_real_V_2, i64 0, i64 %zext_ln267_1" [radixfft/core.cpp:267]   --->   Operation 54 'getelementptr' 'e_in_real_V_2_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%e_in_real_V_3_addr = getelementptr i32 %e_in_real_V_3, i64 0, i64 %zext_ln267_1" [radixfft/core.cpp:267]   --->   Operation 55 'getelementptr' 'e_in_real_V_3_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%e_in_real_V_4_addr = getelementptr i32 %e_in_real_V_4, i64 0, i64 %zext_ln267_1" [radixfft/core.cpp:267]   --->   Operation 56 'getelementptr' 'e_in_real_V_4_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%e_in_real_V_5_addr = getelementptr i32 %e_in_real_V_5, i64 0, i64 %zext_ln267_1" [radixfft/core.cpp:267]   --->   Operation 57 'getelementptr' 'e_in_real_V_5_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%e_in_real_V_6_addr = getelementptr i32 %e_in_real_V_6, i64 0, i64 %zext_ln267_1" [radixfft/core.cpp:267]   --->   Operation 58 'getelementptr' 'e_in_real_V_6_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%e_in_real_V_7_addr = getelementptr i32 %e_in_real_V_7, i64 0, i64 %zext_ln267_1" [radixfft/core.cpp:267]   --->   Operation 59 'getelementptr' 'e_in_real_V_7_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%e_in_imag_V_addr = getelementptr i32 %e_in_imag_V, i64 0, i64 %zext_ln267_1" [radixfft/core.cpp:267]   --->   Operation 60 'getelementptr' 'e_in_imag_V_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%e_in_imag_V_1_addr = getelementptr i32 %e_in_imag_V_1, i64 0, i64 %zext_ln267_1" [radixfft/core.cpp:267]   --->   Operation 61 'getelementptr' 'e_in_imag_V_1_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%e_in_imag_V_2_addr = getelementptr i32 %e_in_imag_V_2, i64 0, i64 %zext_ln267_1" [radixfft/core.cpp:267]   --->   Operation 62 'getelementptr' 'e_in_imag_V_2_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%e_in_imag_V_3_addr = getelementptr i32 %e_in_imag_V_3, i64 0, i64 %zext_ln267_1" [radixfft/core.cpp:267]   --->   Operation 63 'getelementptr' 'e_in_imag_V_3_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%e_in_imag_V_4_addr = getelementptr i32 %e_in_imag_V_4, i64 0, i64 %zext_ln267_1" [radixfft/core.cpp:267]   --->   Operation 64 'getelementptr' 'e_in_imag_V_4_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%e_in_imag_V_5_addr = getelementptr i32 %e_in_imag_V_5, i64 0, i64 %zext_ln267_1" [radixfft/core.cpp:267]   --->   Operation 65 'getelementptr' 'e_in_imag_V_5_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%e_in_imag_V_6_addr = getelementptr i32 %e_in_imag_V_6, i64 0, i64 %zext_ln267_1" [radixfft/core.cpp:267]   --->   Operation 66 'getelementptr' 'e_in_imag_V_6_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%e_in_imag_V_7_addr = getelementptr i32 %e_in_imag_V_7, i64 0, i64 %zext_ln267_1" [radixfft/core.cpp:267]   --->   Operation 67 'getelementptr' 'e_in_imag_V_7_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 68 [1/2] (2.32ns)   --->   "%in_real_0_load = load i3 %in_real_0_addr" [radixfft/core.cpp:267]   --->   Operation 68 'load' 'in_real_0_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_2 : Operation 69 [1/2] (2.32ns)   --->   "%in_real_1_load = load i3 %in_real_1_addr" [radixfft/core.cpp:267]   --->   Operation 69 'load' 'in_real_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_2 : Operation 70 [1/2] (2.32ns)   --->   "%in_real_2_load = load i3 %in_real_2_addr" [radixfft/core.cpp:267]   --->   Operation 70 'load' 'in_real_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_2 : Operation 71 [1/2] (2.32ns)   --->   "%in_real_3_load = load i3 %in_real_3_addr" [radixfft/core.cpp:267]   --->   Operation 71 'load' 'in_real_3_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_2 : Operation 72 [1/2] (2.32ns)   --->   "%in_real_4_load = load i3 %in_real_4_addr" [radixfft/core.cpp:267]   --->   Operation 72 'load' 'in_real_4_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_2 : Operation 73 [1/2] (2.32ns)   --->   "%in_real_5_load = load i3 %in_real_5_addr" [radixfft/core.cpp:267]   --->   Operation 73 'load' 'in_real_5_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_2 : Operation 74 [1/2] (2.32ns)   --->   "%in_real_6_load = load i3 %in_real_6_addr" [radixfft/core.cpp:267]   --->   Operation 74 'load' 'in_real_6_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_2 : Operation 75 [1/2] (2.32ns)   --->   "%in_real_7_load = load i3 %in_real_7_addr" [radixfft/core.cpp:267]   --->   Operation 75 'load' 'in_real_7_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_2 : Operation 76 [1/1] (2.30ns)   --->   "%tmp = mux i32 @_ssdm_op_Mux.ap_auto.8i32.i3, i32 %in_real_0_load, i32 %in_real_1_load, i32 %in_real_2_load, i32 %in_real_3_load, i32 %in_real_4_load, i32 %in_real_5_load, i32 %in_real_6_load, i32 %in_real_7_load, i3 %trunc_ln4" [radixfft/core.cpp:267]   --->   Operation 76 'mux' 'tmp' <Predicate = true> <Delay = 2.30> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 77 [1/2] (2.32ns)   --->   "%in_imag_0_load = load i3 %in_imag_0_addr" [radixfft/core.cpp:267]   --->   Operation 77 'load' 'in_imag_0_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_2 : Operation 78 [1/2] (2.32ns)   --->   "%in_imag_1_load = load i3 %in_imag_1_addr" [radixfft/core.cpp:267]   --->   Operation 78 'load' 'in_imag_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_2 : Operation 79 [1/2] (2.32ns)   --->   "%in_imag_2_load = load i3 %in_imag_2_addr" [radixfft/core.cpp:267]   --->   Operation 79 'load' 'in_imag_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_2 : Operation 80 [1/2] (2.32ns)   --->   "%in_imag_3_load = load i3 %in_imag_3_addr" [radixfft/core.cpp:267]   --->   Operation 80 'load' 'in_imag_3_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_2 : Operation 81 [1/2] (2.32ns)   --->   "%in_imag_4_load = load i3 %in_imag_4_addr" [radixfft/core.cpp:267]   --->   Operation 81 'load' 'in_imag_4_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_2 : Operation 82 [1/2] (2.32ns)   --->   "%in_imag_5_load = load i3 %in_imag_5_addr" [radixfft/core.cpp:267]   --->   Operation 82 'load' 'in_imag_5_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_2 : Operation 83 [1/2] (2.32ns)   --->   "%in_imag_6_load = load i3 %in_imag_6_addr" [radixfft/core.cpp:267]   --->   Operation 83 'load' 'in_imag_6_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_2 : Operation 84 [1/2] (2.32ns)   --->   "%in_imag_7_load = load i3 %in_imag_7_addr" [radixfft/core.cpp:267]   --->   Operation 84 'load' 'in_imag_7_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 8> <RAM>
+ST_2 : Operation 85 [1/1] (2.30ns)   --->   "%tmp_4 = mux i32 @_ssdm_op_Mux.ap_auto.8i32.i3, i32 %in_imag_0_load, i32 %in_imag_1_load, i32 %in_imag_2_load, i32 %in_imag_3_load, i32 %in_imag_4_load, i32 %in_imag_5_load, i32 %in_imag_6_load, i32 %in_imag_7_load, i3 %trunc_ln4" [radixfft/core.cpp:267]   --->   Operation 85 'mux' 'tmp_4' <Predicate = true> <Delay = 2.30> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 86 [1/1] (0.95ns)   --->   "%switch_ln267 = switch i3 %trunc_ln4, void %arrayidx39.1.case.7, i3 0, void %arrayidx39.1.case.0, i3 1, void %arrayidx39.1.case.1, i3 2, void %arrayidx39.1.case.2, i3 3, void %arrayidx39.1.case.3, i3 4, void %arrayidx39.1.case.4, i3 5, void %arrayidx39.1.case.5, i3 6, void %arrayidx39.1.case.6" [radixfft/core.cpp:267]   --->   Operation 86 'switch' 'switch_ln267' <Predicate = true> <Delay = 0.95>
+ST_2 : Operation 87 [1/1] (2.32ns)   --->   "%store_ln267 = store i32 %tmp, i2 %e_in_real_V_6_addr" [radixfft/core.cpp:267]   --->   Operation 87 'store' 'store_ln267' <Predicate = (trunc_ln4 == 6)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 88 [1/1] (2.32ns)   --->   "%store_ln267 = store i32 %tmp_4, i2 %e_in_imag_V_6_addr" [radixfft/core.cpp:267]   --->   Operation 88 'store' 'store_ln267' <Predicate = (trunc_ln4 == 6)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 89 [1/1] (0.00ns)   --->   "%br_ln267 = br void %arrayidx39.1.exit" [radixfft/core.cpp:267]   --->   Operation 89 'br' 'br_ln267' <Predicate = (trunc_ln4 == 6)> <Delay = 0.00>
+ST_2 : Operation 90 [1/1] (2.32ns)   --->   "%store_ln267 = store i32 %tmp, i2 %e_in_real_V_5_addr" [radixfft/core.cpp:267]   --->   Operation 90 'store' 'store_ln267' <Predicate = (trunc_ln4 == 5)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 91 [1/1] (2.32ns)   --->   "%store_ln267 = store i32 %tmp_4, i2 %e_in_imag_V_5_addr" [radixfft/core.cpp:267]   --->   Operation 91 'store' 'store_ln267' <Predicate = (trunc_ln4 == 5)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 92 [1/1] (0.00ns)   --->   "%br_ln267 = br void %arrayidx39.1.exit" [radixfft/core.cpp:267]   --->   Operation 92 'br' 'br_ln267' <Predicate = (trunc_ln4 == 5)> <Delay = 0.00>
+ST_2 : Operation 93 [1/1] (2.32ns)   --->   "%store_ln267 = store i32 %tmp, i2 %e_in_real_V_4_addr" [radixfft/core.cpp:267]   --->   Operation 93 'store' 'store_ln267' <Predicate = (trunc_ln4 == 4)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 94 [1/1] (2.32ns)   --->   "%store_ln267 = store i32 %tmp_4, i2 %e_in_imag_V_4_addr" [radixfft/core.cpp:267]   --->   Operation 94 'store' 'store_ln267' <Predicate = (trunc_ln4 == 4)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 95 [1/1] (0.00ns)   --->   "%br_ln267 = br void %arrayidx39.1.exit" [radixfft/core.cpp:267]   --->   Operation 95 'br' 'br_ln267' <Predicate = (trunc_ln4 == 4)> <Delay = 0.00>
+ST_2 : Operation 96 [1/1] (2.32ns)   --->   "%store_ln267 = store i32 %tmp, i2 %e_in_real_V_3_addr" [radixfft/core.cpp:267]   --->   Operation 96 'store' 'store_ln267' <Predicate = (trunc_ln4 == 3)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 97 [1/1] (2.32ns)   --->   "%store_ln267 = store i32 %tmp_4, i2 %e_in_imag_V_3_addr" [radixfft/core.cpp:267]   --->   Operation 97 'store' 'store_ln267' <Predicate = (trunc_ln4 == 3)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 98 [1/1] (0.00ns)   --->   "%br_ln267 = br void %arrayidx39.1.exit" [radixfft/core.cpp:267]   --->   Operation 98 'br' 'br_ln267' <Predicate = (trunc_ln4 == 3)> <Delay = 0.00>
+ST_2 : Operation 99 [1/1] (2.32ns)   --->   "%store_ln267 = store i32 %tmp, i2 %e_in_real_V_2_addr" [radixfft/core.cpp:267]   --->   Operation 99 'store' 'store_ln267' <Predicate = (trunc_ln4 == 2)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 100 [1/1] (2.32ns)   --->   "%store_ln267 = store i32 %tmp_4, i2 %e_in_imag_V_2_addr" [radixfft/core.cpp:267]   --->   Operation 100 'store' 'store_ln267' <Predicate = (trunc_ln4 == 2)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 101 [1/1] (0.00ns)   --->   "%br_ln267 = br void %arrayidx39.1.exit" [radixfft/core.cpp:267]   --->   Operation 101 'br' 'br_ln267' <Predicate = (trunc_ln4 == 2)> <Delay = 0.00>
+ST_2 : Operation 102 [1/1] (2.32ns)   --->   "%store_ln267 = store i32 %tmp, i2 %e_in_real_V_1_addr" [radixfft/core.cpp:267]   --->   Operation 102 'store' 'store_ln267' <Predicate = (trunc_ln4 == 1)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 103 [1/1] (2.32ns)   --->   "%store_ln267 = store i32 %tmp_4, i2 %e_in_imag_V_1_addr" [radixfft/core.cpp:267]   --->   Operation 103 'store' 'store_ln267' <Predicate = (trunc_ln4 == 1)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 104 [1/1] (0.00ns)   --->   "%br_ln267 = br void %arrayidx39.1.exit" [radixfft/core.cpp:267]   --->   Operation 104 'br' 'br_ln267' <Predicate = (trunc_ln4 == 1)> <Delay = 0.00>
+ST_2 : Operation 105 [1/1] (2.32ns)   --->   "%store_ln267 = store i32 %tmp, i2 %e_in_real_V_addr" [radixfft/core.cpp:267]   --->   Operation 105 'store' 'store_ln267' <Predicate = (trunc_ln4 == 0)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 106 [1/1] (2.32ns)   --->   "%store_ln267 = store i32 %tmp_4, i2 %e_in_imag_V_addr" [radixfft/core.cpp:267]   --->   Operation 106 'store' 'store_ln267' <Predicate = (trunc_ln4 == 0)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 107 [1/1] (0.00ns)   --->   "%br_ln267 = br void %arrayidx39.1.exit" [radixfft/core.cpp:267]   --->   Operation 107 'br' 'br_ln267' <Predicate = (trunc_ln4 == 0)> <Delay = 0.00>
+ST_2 : Operation 108 [1/1] (2.32ns)   --->   "%store_ln267 = store i32 %tmp, i2 %e_in_real_V_7_addr" [radixfft/core.cpp:267]   --->   Operation 108 'store' 'store_ln267' <Predicate = (trunc_ln4 == 7)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 109 [1/1] (2.32ns)   --->   "%store_ln267 = store i32 %tmp_4, i2 %e_in_imag_V_7_addr" [radixfft/core.cpp:267]   --->   Operation 109 'store' 'store_ln267' <Predicate = (trunc_ln4 == 7)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 110 [1/1] (0.00ns)   --->   "%br_ln267 = br void %arrayidx39.1.exit" [radixfft/core.cpp:267]   --->   Operation 110 'br' 'br_ln267' <Predicate = (trunc_ln4 == 7)> <Delay = 0.00>
+ST_2 : Operation 111 [1/1] (1.58ns)   --->   "%store_ln265 = store i6 %add_ln265, i6 %i" [radixfft/core.cpp:265]   --->   Operation 111 'store' 'store_ln265' <Predicate = true> <Delay = 1.58>
+ST_2 : Operation 112 [1/1] (0.00ns)   --->   "%br_ln265 = br void %for.inc" [radixfft/core.cpp:265]   --->   Operation 112 'br' 'br_ln265' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 2.32ns
+The critical path consists of the following:
+	'alloca' operation ('i') [33]  (0 ns)
+	'load' operation ('i', radixfft/core.cpp:265) on local variable 'i' [37]  (0 ns)
+	'getelementptr' operation ('in_real_0_addr', radixfft/core.cpp:267) [48]  (0 ns)
+	'load' operation ('in_real_0_load', radixfft/core.cpp:267) on array 'in_real_0' [82]  (2.32 ns)
+
+ <State 2>: 6.95ns
+The critical path consists of the following:
+	'load' operation ('in_real_0_load', radixfft/core.cpp:267) on array 'in_real_0' [82]  (2.32 ns)
+	'mux' operation ('tmp', radixfft/core.cpp:267) [90]  (2.3 ns)
+	'store' operation ('store_ln267', radixfft/core.cpp:267) of variable 'tmp', radixfft/core.cpp:267 on array 'e_in_real_V_2' [118]  (2.32 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

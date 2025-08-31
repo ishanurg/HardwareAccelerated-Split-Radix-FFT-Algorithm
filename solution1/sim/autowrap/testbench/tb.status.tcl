@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/ishan/tools/Vitis_HLS/2022.2/bin/radixfft/solution1/./sim/autowrap/testbench/core.cpp_pre.cpp.tb.cpp
