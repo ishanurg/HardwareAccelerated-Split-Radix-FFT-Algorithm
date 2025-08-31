@@ -26,13 +26,13 @@ This project implements the Split-Radix FFT algorithm based on the research pape
 
 ## Features
 
-- ** Research-Based Implementation**: Based on peer-reviewed algorithm from EURASIP Journal
-- ** Python Reference**: Complete Split-Radix FFT implementation with normalization options
-- ** HLS IP Core**: Ready-to-use Vitis HLS implementation for FPGA deployment
-- ** Vivado Integration**: Complete block design with AXI interfaces
-- ** Performance Analysis**: Comprehensive comparison with Radix-2 and Radix-4
-- ** Jupyter Notebooks**: Interactive analysis and visualization tools
-- ** PYNQ Support**: Hardware validation on PYNQ-Z2 boards
+- Research-Based Implementation: Based on peer-reviewed algorithm from EURASIP Journal
+- Python Reference: Complete Split-Radix FFT implementation with normalization options
+- HLS IP Core: Ready-to-use Vitis HLS implementation for FPGA deployment
+- Vivado Integration: Complete block design with AXI interfaces
+- Performance Analysis: Comprehensive comparison with Radix-2 and Radix-4
+- Jupyter Notebooks: Interactive analysis and visualization tools
+- PYNQ Support: Hardware validation on PYNQ-Z2 boards
 
 ## 🔧 Prerequisites
 
