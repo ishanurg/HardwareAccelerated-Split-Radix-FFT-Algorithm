@@ -152,7 +152,6 @@ scp bitstreams/* xilinx@[PYNQ_IP]:/home/xilinx/jupyter_notebooks/
 - **Xilinx/AMD:** FPGA development tools and documentation
 - **PYNQ Project:** Python-FPGA integration framework  
 - **NumPy Community:** Reference FFT implementation
-- **Open Source Community:** Various optimization techniques and best practices
 
 ---
 
