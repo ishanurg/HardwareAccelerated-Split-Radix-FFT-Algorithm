@@ -87,12 +87,6 @@ source /opt/Xilinx/Vitis_HLS/2022.2/settings64.sh
 
 ## Instructions to Build and Test Project
 
-### Step 2: HLS Synthesis
-```bash
-cd src/hls
-vitis_hls -f script.tcl
-# Or use automation script:
-./scripts/build_hls.sh
 ```
 **Expected Output:** 
 - Resource utilization: 42.44% LUT, 58.18% DSP
@@ -100,12 +94,12 @@ vitis_hls -f script.tcl
 - Generated IP core in `hls_project/solution1/impl/ip/`
 
 ### Step 3: Vivado Project Creation
-```bash
-cd src/vivado
-vivado -mode batch -source create_project.tcl
-# Or use automation:
-./scripts/build_vivado.sh
-```
+Now go at 
+cd Vivado-Design/hardware/
+and you will see the blockdesign.tcl file and source it in your vivado project 
+then generate the bitstream and export the hardware design for the ease of access we have already uploaded the design_1_wrapper.xsa file only for PYNQ Z2 board 
+which is our reference board 
+
 **Expected Output:**
 - Block design with Zynq PS + FFT IP
 - Address mapping: 0x4000_0000 base address
