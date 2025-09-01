@@ -28,6 +28,8 @@ Email: aryasadanand.patil2022@vitstudent.ac.in
 
 **Brief description of project:**  
 This project implements a hardware-accelerated Split-Radix FFT algorithm on FPGA, achieving theoretical minimum computational complexity of N·log₂(N) - 3N + 4 complex multiplications. The implementation demonstrates 92% performance improvement over software-based NumPy FFT, utilizing optimized pipeline architecture with DSP48E1 blocks and dual-port BRAM memory management.
+<img width="971" height="900" alt="Screenshot 2025-09-01 at 12 17 53 PM" src="https://github.com/user-attachments/assets/789a4dfd-0f7f-4f9c-8afc-342ea319c42f" />
+
 
 ## Overview
 
@@ -64,6 +66,10 @@ This project implements the Split-Radix FFT algorithm based on cutting-edge rese
 pip install numpy>=1.21.0 matplotlib>=3.5.0 jupyter>=1.0.0 scipy>=1.7.0 pynq>=3.0.1
 ```
 
+## Our IP Core Design 
+<img width="1320" height="900" alt="Screenshot 2025-09-01 at 12 24 23 PM" src="https://github.com/user-attachments/assets/bc615b7c-5f01-4cd8-9641-ce180c80d587" />
+
+<img width="1440" height="585" alt="Screenshot 2025-09-01 at 12 19 47 PM" src="https://github.com/user-attachments/assets/a5204431-9f62-46e9-b6f8-a195d42e118d" />
 
 ## Installation
 
