@@ -1,180 +1,174 @@
-# Split-Radix FFT Implementation on FPGA
+# Hardware Accelerated Split-Radix FFT Algorithm
 
 [![Xilinx Vivado](https://img.shields.io/badge/Xilinx-Vivado%202022.2-red.svg)](https://www.xilinx.com/products/design-tools/vivado.html)
+[![PYNQ](https://img.shields.io/badge/PYNQ-Z2-blue.svg)](http://www.pynq.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+## Project Information
 
+**Team number:** AOHW25_320  
+**Project name:** Hardware Accelerated Split-Radix FFT Algorithm  
+**Link to YouTube Video(s):** [Project Video](https://youtu.be/IIg88hu80qc)  
+**Link to project repository:** https://github.com/ishanurg/HardwareAccelerated-Split-Radix-FFT-Algorithm.git  
+
+**University name:** Vellore Institute of Technology, Vellore 
+**Participant 1:**  
+Name: Ishan Urgaonkar  
+Email: ishan.urgaonkar2022@vitstudent.ac.in
+
+**Participant 2:**  
+Name: Arya Patil  
+Email: aryasadanand.patil2022@vitstudent.ac.in
+
+**Supervisor name:** Dr. Sumit Kumar Jindal  
+**Supervisor e-mail:** sumit.jindal@vit.ac.in 
+
+**Board used:** PYNQ-Z2 (Zynq-7020)  
+**Software Version:** Xilinx Vivado 2022.2, Vitis HLS 2022.2, PYNQ v3.0.1  
+
+**Brief description of project:**  
+This project implements a hardware-accelerated Split-Radix FFT algorithm on FPGA, achieving theoretical minimum computational complexity of N·log₂(N) - 3N + 4 complex multiplications. The implementation demonstrates 92% performance improvement over software-based NumPy FFT, utilizing optimized pipeline architecture with DSP48E1 blocks and dual-port BRAM memory management.
 
 ## Overview
 
-This project implements the Split-Radix FFT algorithm based on the research paper *"Optimized power and speed of Split-Radix, Radix-4 and Radix-2 FFT structures"* by Gilan & Maham (2024). The implementation covers the complete development flow from Vitis HLS IP core creation to Python validation.
-
-
-## Table of Contents
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Python Implementation](#python-implementation)
-- [HLS Development](#hls-development)
-- [Vivado Integration](#vivado-integration)
-- [PYNQ Hardware Testing](#pynq-hardware-testing)
-- [Performance Analysis](#performance-analysis)
-- [Results](#results)
-- [Contributing](#contributing)
-- [License](#license)
-- [Citation](#citation)
+This project implements the Split-Radix FFT algorithm based on cutting-edge research, providing a complete development flow from algorithm analysis to hardware deployment. The implementation achieves optimal computational efficiency through resource-constrained design and demonstrates significant performance gains over traditional software implementations.
 
 ## Features
 
-- Research-Based Implementation: Based on peer-reviewed algorithm from EURASIP Journal
-- Python Reference: Complete Split-Radix FFT implementation with normalization options
-- HLS IP Core: Ready-to-use Vitis HLS implementation for FPGA deployment
-- Vivado Integration: Complete block design with AXI interfaces
-- Performance Analysis: Comprehensive comparison with Radix-2 and Radix-4
-- Jupyter Notebooks: Interactive analysis and visualization tools
-- PYNQ Support: Hardware validation on PYNQ-Z2 boards
+- **Research-Based Implementation**: Based on theoretical minimum complexity analysis
+- **HLS IP Core**: Ready-to-deploy Vitis HLS implementation for FPGA
+- **Resource Optimization**: Fixed-point arithmetic with controlled DSP allocation
+- **Pipeline Architecture**: 5-stage pipeline with II=2 throughput optimization  
+- **Memory Management**: Dual-port BRAM with ping-pong buffer architecture
+- **AXI Integration**: Seamless PS-PL communication via AXI4-Lite interface
+- **Performance Validation**: Hardware-in-loop testing with Python framework
 
-## 🔧 Prerequisites
+## Prerequisites
 
 ### Software Requirements
-- **Xilinx Vitis HLS 2022.2+**
-- **Xilinx Vivado 2022.2+**
-- **Python 3.8+**
-- **Git**
+- **Xilinx Vivado 2022.2+** (Design Suite)
+- **Xilinx Vitis HLS 2022.2+** (High-Level Synthesis)
+- **PYNQ Image - v3.1**
+- **Python 3.8+** with pip package manager
+- **Git** for repository management
+- **Jupyter Notebook** for interactive analysis
 
-### Hardware 
-- **PYNQ-Z2** or compatible Zynq-7000 board
-- **USB JTAG Cable**
+### Hardware Requirements
+- **PYNQ-Z2 Board** (Zynq-7020 SoC)
+- **USB JTAG Cable** (included with PYNQ-Z2)
+- **MicroSD Card** (16GB+)
+- **Ethernet Cable**
 
-### Python Packages
+### Python Dependencies
+```bash
+pip install numpy>=1.21.0 matplotlib>=3.5.0 jupyter>=1.0.0 scipy>=1.7.0 pynq>=3.0.1
+```
 
-numpy>=1.21.0
-matplotlib>=3.5.0
-jupyter>=1.0.0
-scipy>=1.7.0
-
-text
 
 ## Installation
 
+### 1. Clone Repository
+```bash
+git clone https://github.com/ishanurg/HardwareAccelerated-Split-Radix-FFT-Algorithm.git
+cd HardwareAccelerated-Split-Radix-FFT-Algorithm
+```
+
+### 2. Setup Environment
+```bash
+# Setup Xilinx tools environment
+source /opt/Xilinx/Vivado/2022.2/settings64.sh
+source /opt/Xilinx/Vitis_HLS/2022.2/settings64.sh
+
+## Instructions to Build and Test Project
+
+### Step 1: Algorithm Verification (Software)
+```bash
+cd src/python
+python split_radix_fft.py --test --size 64
+```
+**Expected Output:** Algorithm correctness validation with test vectors
+
+### Step 2: HLS Synthesis
+```bash
+cd src/hls
+vitis_hls -f script.tcl
+# Or use automation script:
+./scripts/build_hls.sh
+```
+**Expected Output:** 
+- Resource utilization: 42.44% LUT, 58.18% DSP
+- Latency: 67 cycles for 64-point FFT
+- Generated IP core in `hls_project/solution1/impl/ip/`
+
+### Step 3: Vivado Project Creation
+```bash
+cd src/vivado
+vivado -mode batch -source create_project.tcl
+# Or use automation:
+./scripts/build_vivado.sh
+```
+**Expected Output:**
+- Block design with Zynq PS + FFT IP
+- Address mapping: 0x4000_0000 base address
+- Generated bitstream: `vivado_project/project.runs/impl_1/design_1_wrapper.bit`
+
+### Step 4: PYNQ Board Setup
+```bash
+# Copy bitstream and overlay files to PYNQ board
+scp bitstreams/* xilinx@[PYNQ_IP]:/home/xilinx/jupyter_notebooks/
+```
+
+**Expected Results:**
+- Hardware FFT: 0.077 ms execution time
+- Software FFT: 0.148 ms execution time  
+- **Performance Gain: 92% faster execution**
 
 
 
 
-##  Quick Start
+## Quick Start Guide
 
 
+### For Hardware Testing (PYNQ):
 
 
+## Performance Analysis
 
-### Run Jupyter Analysis
+### Resource Utilization (PYNQ-Z2):
+| Resource | Available | Used | Utilization |
+|----------|-----------|------|-------------|
+| LUT      | 53,200    | 22,578 | 42.44% |
+| FF       | 106,400   | 28,113 | 26.42% |
+| BRAM     | 140       | 25     | 17.86% |
+| DSP      | 220       | 128    | 58.18% |
 
-jupyter notebook notebooks/split_radix_analysis.ipynb
+### Performance Comparison:
+| Implementation | Execution Time | Relative Speed |
+|----------------|----------------|----------------|
+| Hardware FFT   | 0.077 ms       | **1.92x faster** |
+| NumPy FFT      | 0.148 ms       | 1.0x baseline |
 
-text
-
-### Advanced Features
-
-With normalization (1/N scaling)
-
-X_normalized = split_radix_fft(x, normalize=True)
-Performance comparison
-
-from split_radix_fft import compare_fft_algorithms
-compare_fft_algorithms(x)
-
-text
-
-##  HLS Development
-
-
-
-
-## Vivado Integration
-
-
-
-### Block Design Components
-- **Zynq PS**: ARM processor subsystem
-- **Split-Radix FFT IP**: Custom HLS-generated core
-- **AXI Interconnect**: High-speed data communication
-- **Clock Management**: 450 MHz domain generation
-
-
-##  PYNQ Hardware Testing
-
-### Load Hardware Design and Test
-
-
-
-text
-
-
-
-### Performance Visualization
-
-Generate comparison charts:
-
-cd notebooks
-jupyter notebook performance_analysis.ipynb
-
-text
-
-## Contributing
-
-Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-
-
-
-
-## Citation
-
-If you use this implementation in your research, please cite:
-
-@article{gilan2024optimized,
-title={Optimized power and speed of Split-Radix, Radix-4 and Radix-2 FFT structures},
-author={Gilan, Mahsa Shirzadian and Maham, Behrouz},
-journal={EURASIP Journal on Advances in Signal Processing},
-volume={2024},
-number={1},
-pages={81},
-year={2024},
-publisher={SpringerOpen},
-doi={10.1186/s13634-024-01178-4}
-}
-
+### Power Consumption:
+- **Dynamic Power:** 1.656 W (92%)
+- **Static Power:** 0.147 W (8%)
+- **Total Power:** 1.803 W
 
 
 ## Acknowledgments
 
-- **Gilan, M. S. & Maham, B.** for the original research and algorithm development
-- **Xilinx/AMD** for providing excellent FPGA development tools
-- **NumPy Community** for the reference FFT implementation
-- **PYNQ Project** for the Python-FPGA integration framework
+- **Research Foundation:** Split-Radix algorithm theoretical analysis
+- **Xilinx/AMD:** FPGA development tools and documentation
+- **PYNQ Project:** Python-FPGA integration framework  
+- **NumPy Community:** Reference FFT implementation
+- **Open Source Community:** Various optimization techniques and best practices
 
 ---
 
 ## Related Links
 
-- [Original Paper](https://doi.org/10.1186/s13634-024-01178-4)
 - [Xilinx Vitis HLS Documentation](https://docs.xilinx.com/r/en-US/ug1399-vitis-hls)
 - [PYNQ Documentation](https://pynq.readthedocs.io/)
-- [NumPy FFT Documentation](https://numpy.org/doc/stable/reference/routines.fft.html)
+- [Zynq-7000 Technical Reference](https://www.xilinx.com/support/documentation/user_guides/ug585-Zynq-7000-TRM.pdf)
+- [DSP48E1 User Guide](https://www.xilinx.com/support/documentation/user_guides/ug369.pdf)
 
 ---
-
-
-
-
-
----
-
-*This project demonstrates the practical implementation of cutting-edge FFT research, bridging the gap between academic papers and deployable FPGA solutions.*
-
