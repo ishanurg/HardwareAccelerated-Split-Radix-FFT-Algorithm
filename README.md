@@ -71,7 +71,7 @@ pip install numpy>=1.21.0 matplotlib>=3.5.0 jupyter>=1.0.0 scipy>=1.7.0 pynq>=3.
 
 <img width="1440" height="585" alt="Screenshot 2025-09-01 at 12 19 47 PM" src="https://github.com/user-attachments/assets/a5204431-9f62-46e9-b6f8-a195d42e118d" />
 
-## Installation
+## How to run the project 
 
 ### 1. Clone Repository
 ```bash
