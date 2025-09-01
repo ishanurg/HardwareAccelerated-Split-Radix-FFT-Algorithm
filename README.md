@@ -2,7 +2,6 @@
 
 [![Xilinx Vivado](https://img.shields.io/badge/Xilinx-Vivado%202022.2-red.svg)](https://www.xilinx.com/products/design-tools/vivado.html)
 [![PYNQ](https://img.shields.io/badge/PYNQ-Z2-blue.svg)](http://www.pynq.io/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Project Information
 
