@@ -131,18 +131,6 @@ scp bitstreams/* xilinx@[PYNQ_IP]:/home/xilinx/jupyter_notebooks/
 
 
 
-## Quick Start Guide
-
-
-### For Hardware Testing (PYNQ):
-from pynq import Overlay
-from pynq import allocate
-import numpy as np
-
-# Adjust path to your bitstream here
-overlay = Overlay("/home/xilinx/jupyter_notebooks/design_1_wrapper.xsa")
-fft_ip = overlay.sr_fft_0
-
 
 ## Performance Analysis
 
