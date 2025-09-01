@@ -11,6 +11,7 @@
 **Link to project repository:** https://github.com/ishanurg/HardwareAccelerated-Split-Radix-FFT-Algorithm.git  
 
 **University name:** Vellore Institute of Technology, Vellore 
+
 **Participant 1:**  
 Name: Ishan Urgaonkar  
 Email: ishan.urgaonkar2022@vitstudent.ac.in
