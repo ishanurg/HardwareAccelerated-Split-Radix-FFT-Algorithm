@@ -87,13 +87,6 @@ source /opt/Xilinx/Vitis_HLS/2022.2/settings64.sh
 
 ## Instructions to Build and Test Project
 
-### Step 1: Algorithm Verification (Software)
-```bash
-cd src/python
-python split_radix_fft.py --test --size 64
-```
-**Expected Output:** Algorithm correctness validation with test vectors
-
 ### Step 2: HLS Synthesis
 ```bash
 cd src/hls
