@@ -103,6 +103,7 @@ cd Vivado-Design/hardware/
 - you will see the blockdesign.tcl file and source it in your vivado project 
 - generate the bitstream and export the hardware design for the ease of access we have already uploaded the design_1_wrapper.xsa file only for PYNQ Z2 board 
 
+![Screenshot 2025-09-01 at 5 27 19 PM (1)](https://github.com/user-attachments/assets/560d9973-6927-4ebe-ac43-563ba6e3b571)
 
 **Expected Output:**
 - Block design with Zynq PS + FFT IP
