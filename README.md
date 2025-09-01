@@ -93,6 +93,10 @@ source /opt/Xilinx/Vitis_HLS/2022.2/settings64.sh
 - Latency: 67 cycles for 64-point FFT
 - Generated IP core in `hls_project/solution1/impl/ip/`
 
+**Vitis HLS IP**
+-Already you can find zip file of the IP /HLS-IP/HLS-Exported-IP.zip
+-Extract it and add that IP in the Vivado Design 
+
 ### Step 3: Vivado Project Creation
 Now go at 
 cd Vivado-Design/hardware/
