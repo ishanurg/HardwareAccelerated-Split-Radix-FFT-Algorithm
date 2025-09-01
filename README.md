@@ -96,9 +96,9 @@ source /opt/Xilinx/Vitis_HLS/2022.2/settings64.sh
 ### Step 3: Vivado Project Creation
 Now go at 
 cd Vivado-Design/hardware/
-and you will see the blockdesign.tcl file and source it in your vivado project 
-then generate the bitstream and export the hardware design for the ease of access we have already uploaded the design_1_wrapper.xsa file only for PYNQ Z2 board 
-which is our reference board 
+- you will see the blockdesign.tcl file and source it in your vivado project 
+- generate the bitstream and export the hardware design for the ease of access we have already uploaded the design_1_wrapper.xsa file only for PYNQ Z2 board 
+
 
 **Expected Output:**
 - Block design with Zynq PS + FFT IP
